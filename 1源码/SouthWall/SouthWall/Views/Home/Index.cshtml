@@ -1,8 +1,80 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "时光录";
+    int count = 20;
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@for (int i = 0; i < count; i++)
+{
+    if (i % 7 == 0)
+    {
+        <div class="card bg-dark border-secondary text-light mb-3">
+            <div class="card-body">
+                <p class="card-text fs-6 mb-1">今天是个好天气，元气满满的去上班！</p>
+                <i class="fs-7 text-secondary">2024-11-18 13:14</i>
+            </div>
+        </div>
+    }
+    if(i%7==1)
+    {
+        <div class="card bg-dark border-secondary text-light mb-3">
+            <div class="card-body">
+                <p class="card-text fs-6 mb-1">今天是个好天气，元气满满的去上班！</p>
+                <div class="clearfix mt-2" style="width:340px">
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                </div>
+                <i class="fs-7 text-secondary">2024-11-18 13:14</i>
+            </div>
+        </div>
+    }
+    if (i % 7 == 2)
+    {
+        <div class="card bg-dark border-secondary text-light mb-3">
+            <div class="card-body">
+                <p class="card-text fs-6 mb-1">今天是个好天气，元气满满的去上班！</p>
+                <div class="clearfix mt-2" style="width:340px">
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:100px;margin:0 0 10px 10px" />
+                </div>
+                <i class="fs-7 text-secondary">2024-11-18 13:14</i>
+            </div>
+        </div>
+    }
+    if (i % 7 == 3)
+    {
+        <div class="card bg-dark border-secondary text-light mb-3">
+            <div class="card-body">
+                <p class="card-text fs-6 mb-1">今天是个好天气，元气满满的去上班！</p>
+                <div class="clearfix mt-2" style="width:340px">
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:155px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:155px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:155px;margin:0 0 10px 10px" />
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:155px;margin:0 0 10px 10px" />
+                </div>
+                <i class="fs-7 text-secondary">2024-11-18 13:14</i>
+            </div>
+        </div>
+    }
+    if (i % 7 == 4)
+    {
+        <div class="card bg-dark border-secondary text-light mb-3">
+            <div class="card-body">
+                <p class="card-text fs-6 mb-1">今天是个好天气，元气满满的去上班！今天是个好天气，元气满满的去上班！今天是个好天气，元气满满的去上班！今天是个好天气，元气满满的去上班！今天是个好天气，元气满满的去上班！今天是个好天气，元气满满的去上班！今天是个好天气，元气满满的去上班！</p>
+                <div class="clearfix mt-2" style="width:320px">
+                    <img src="~/img/myphoto.jpg" class="float-start rounded" style="width:300px;margin:0 0 10px 10px" />
+                </div>
+                <i class="fs-7 text-secondary">2024-11-18 13:14</i>
+            </div>
+        </div>
+    }
+}

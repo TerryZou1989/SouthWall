@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "文书阁";
+    int count = 20;
+}
+@for (int i = 0; i < count; i++)
+{
+    <div class="card bg-dark text-light border-0 m-0 mb-4">
+        <div class="card-body row m-0 px-2">
+            <div class="col-2 px-2">
+                <img src="~/img/1.png" class="rounded-3 w-100" alt="...">
+            </div>
+            <div class="col-10 px-2">
+                <h5 class="fs-6">暂停更新视频说明：最近备战北京马拉松。。。</h5>
+                <p class="fs-7 text-aaa mb-1">大家可能注意到了，我将近一个月没有更新视频了，因为十月份我参加了2024天津马拉松，一直在锻炼，然后得知北京马拉松也中签了，两个马拉松相隔也就两周，所以又在备战2024北京马拉松，上班的疲累和下班的锻炼，外加上精力优先，只能暂停更新视频，11月3日周日，北京马拉松结束后，会继续更新视频。。。</p>
+                <i class="fs-7 text-secondary">2024-10-01 12:36</i>
+            </div>            
+        </div>
+    </div>
+}
+

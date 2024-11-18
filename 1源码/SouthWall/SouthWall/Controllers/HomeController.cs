@@ -18,7 +18,20 @@ namespace SouthWall.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Videos()
+        {
+            return View();
+        }
+        public IActionResult Articles()
+        {
+            return View();
+        }
+        public IActionResult Messages()
+        {
+            return View();
+        }
+
+        public IActionResult Owner()
         {
             return View();
         }

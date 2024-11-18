@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SouthWall.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 </head>
-<body>
+<body class="bg-black">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SouthWall</a>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom border-secondary box-shadow">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">编城的南墙</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,30 +23,63 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">时光录</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Videos">放映厅</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Articles">文书阁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Messages">留言吧</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Owner">城主传</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
+    <div id="pagebody" class="container">
+        <main role="main" class="py-3 clearfix h-100">
+            <div class="page-left float-start position-fixed">
+                <div class="card bg-dark text-light border-secondary p-3">
+                    <img src="~/img/myphoto.jpg" style="width:140px;" class="card-img-top rounded-circle mx-auto my-3" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">邹学良</h5>
+                        <p class="card-text">生命中所有的不期而遇都是最好的安排！</p>
+                        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Owner">想深入了解我？</a>
+                    </div>
+                </div>
+                <div class="card bg-dark text-light border-secondary mt-3">
+                    <h5 class="card-header">相对我说点啥？</h5>
+                    <div class="card-body py-2 pb-3">
+                        <input type="text" class="form-control-sm w-100 bg-dark border-secondary" placeholder="留言之前，报上名来！" />
+                        <textarea class="form-control-sm w-100 mt-1 bg-dark" rows="5" placeholder="遵纪守法，别说不该说的，分分钟后台Delete掉！好了，开始你的表演。。。"></textarea>                        
+                        <a href="#" class="btn btn-primary btn-sm">点一下，我就收到了</a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-main float-end ps-3 h-100">
+                <h5 class="text-light px-2 fw-bold">@(ViewData["Title"])</h5>
+                <hr class="bg-secondary" />
+                <div style="height:calc(100% - 50px)" class="overflow-auto pe-2">
+                    @RenderBody()
+                </div>                
+            </div>
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted border-secondary">
         <div class="container">
-            &copy; 2024 - SouthWall - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - 编城的南墙
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        $("#pagebody").height($(window).height() - 117);
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

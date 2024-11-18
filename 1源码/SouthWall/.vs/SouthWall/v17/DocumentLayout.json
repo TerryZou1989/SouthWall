@@ -1,7 +1,44 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\owner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\owner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +46,127 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Owner.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Owner.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Owner.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Owner.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Home\\Owner.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T06:09:04.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Articles.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Articles.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Articles.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Articles.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Home\\Articles.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T04:03:01.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Videos.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Videos.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Videos.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Videos.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Home\\Videos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T03:47:22.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SouthWall\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwCEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T03:46:38.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "SouthWall\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-18T02:59:00.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "SouthWall\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAmwEgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-18T02:36:22.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAQwDIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T02:17:46.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Messages.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Messages.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Messages.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Messages.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Home\\Messages.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwEMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T05:53:16.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T02:17:24.189Z",
+              "EditorCaption": ""
             }
           ]
         }
