@@ -1,0 +1,81 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_MatrixLayout";
+    ViewData["Title"] = "放映厅";
+    int count = 20;
+}
+<div class="row p-0 m-0">
+    @for (int i = 0; i < count; i++)
+    {
+        <div class="col-3 p-2">
+            <div class="card bg-dark text-light border-1 border-secondary">
+                <img src="~/img/1.png" class="card-img-top rounded-3" alt="...">
+                <div class="card-body">
+                    <p class="card-text fs-6">【编程小课堂】第一节课，编程如此简单</p>
+                </div>
+                <div class="card-footer text-end border-secondary">
+                    <button class="btn btn-sm btn-outline-primary">编辑</button>
+                    <button class="btn btn-sm btn-outline-danger">删除</button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h1 class="modal-title fs-5" id="modalFormLabel">编辑</h1>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="txtContext" class="form-label">标题</label>
+                    <textarea class="form-control bg-dark text-light" id="txtContext" rows="3" placeholder="视频的标题，不要太长，容易影响样式哦"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtContext" class="form-label">视频地址</label>
+                    <textarea class="form-control bg-dark text-light" id="txtContext" rows="3" placeholder="视频地址"></textarea>
+                </div>
+                <div class="input-group mb-3">
+                    <input id="txtImgSrc" type="text" class="form-control bg-dark text-light" placeholder="写上封面地址，咱就不存图片了哈" aria-describedby="btnAddImg">
+                    <button class="btn btn-outline-secondary border-light text-light" type="button" id="btnAddImg">设置封面</button>
+                </div>
+                <div id="imgbox">
+                </div>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var pageMatrix = function () {
+        const modalFormEl = document.getElementById('modalForm');
+        const modalForm = new bootstrap.Modal('#modalForm', { keyboard: false });
+        modalFormEl.addEventListener('shown.bs.modal', event => { });
+        modalFormEl.addEventListener('hidden.bs.modal', event => { });
+        $("#btnCreate").click(function () {
+            $("#modalFormLabel").html("新增");
+            modalForm.show();
+        });
+        var coverImgSrc = "";
+        $("#btnAddImg").click(function () {
+            coverImgSrc = $.trim($("#txtImgSrc").val());
+            if (coverImgSrc == "") {
+                alert("图片地址不能为空");
+                return;
+            }
+            var img = $("<div class='float-start p-1'><img src='" + coverImgSrc + "' class='img-thumbnail' style='width:200px;' /></div>");
+            $("#imgbox").html(img);
+            $("#txtImgSrc").val("");
+        });
+    };
+    $(function () {
+        new pageMatrix();
+    });
+</script>

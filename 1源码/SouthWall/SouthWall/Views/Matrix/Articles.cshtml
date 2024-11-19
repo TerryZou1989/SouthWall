@@ -1,0 +1,88 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_MatrixLayout";
+    ViewData["Title"] = "文书阁";
+    int count = 20;
+}
+@for (int i = 0; i < count; i++)
+{
+    <div class="card bg-dark text-light border-0 m-0 mb-4">
+        <div class="card-body row m-0 px-2">
+            <div class="col-2 px-2">
+                <img src="~/img/1.png" class="rounded-3 w-100" alt="...">
+            </div>
+            <div class="col-10 px-2">
+                <h5 class="fs-6">暂停更新视频说明：最近备战北京马拉松。。。</h5>
+                <p class="fs-7 text-aaa mb-1">大家可能注意到了，我将近一个月没有更新视频了，因为十月份我参加了2024天津马拉松，一直在锻炼，然后得知北京马拉松也中签了，两个马拉松相隔也就两周，所以又在备战2024北京马拉松，上班的疲累和下班的锻炼，外加上精力优先，只能暂停更新视频，11月3日周日，北京马拉松结束后，会继续更新视频。。。</p>
+                <i class="fs-7 text-secondary">2024-10-01 12:36</i>
+            </div>
+        </div>
+        <div class="card-footer text-end border-secondary">
+            <button class="btn btn-sm btn-outline-primary">编辑</button>
+            <button class="btn btn-sm btn-outline-danger">删除</button>
+        </div>
+    </div>
+}
+<div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h1 class="modal-title fs-5" id="modalFormLabel">编辑</h1>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="txtTitle" class="form-label">标题</label>
+                    <textarea class="form-control bg-dark text-light" id="txtTitle" rows="1" placeholder="文章的标题，不要太长，容易影响样式哦"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtContext" class="form-label">摘要</label>
+                    <textarea class="form-control bg-dark text-light" id="txtContext" rows="3" placeholder="文章的摘要，不要太长，容易影响样式哦"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtContext" class="form-label">文章地址</label>
+                    <textarea class="form-control bg-dark text-light" id="txtContext" rows="3" placeholder="文章地址，文章我也不存了，我会在别的地方发表，到时候可以跳转哈"></textarea>
+                </div>
+                <div class="input-group mb-3">
+                    <input id="txtImgSrc" type="text" class="form-control bg-dark text-light" placeholder="写上封面地址，咱就不存图片了哈" aria-describedby="btnAddImg">
+                    <button class="btn btn-outline-secondary border-light text-light" type="button" id="btnAddImg">设置封面</button>
+                </div>
+                <div id="imgbox">
+                </div>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var pageMatrix = function () {
+        const modalFormEl = document.getElementById('modalForm');
+        const modalForm = new bootstrap.Modal('#modalForm', { keyboard: false });
+        modalFormEl.addEventListener('shown.bs.modal', event => { });
+        modalFormEl.addEventListener('hidden.bs.modal', event => { });
+        $("#btnCreate").click(function () {
+            $("#modalFormLabel").html("新增");
+            modalForm.show();
+        });
+        var coverImgSrc = "";
+        $("#btnAddImg").click(function () {
+            coverImgSrc = $.trim($("#txtImgSrc").val());
+            if (coverImgSrc == "") {
+                alert("图片地址不能为空");
+                return;
+            }
+            var img = $("<div class='float-start p-1'><img src='" + coverImgSrc + "' class='img-thumbnail' style='width:200px;' /></div>");
+            $("#imgbox").html(img);
+            $("#txtImgSrc").val("");
+        });
+    };
+    $(function () {
+        new pageMatrix();
+    });
+</script>
+

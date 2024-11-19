@@ -1,0 +1,110 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - 编城的内阁</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SouthWall.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</head>
+<body class="bg-black">
+    <div class="container">
+        <main role="main" style="padding-top:100px">
+            <h2 class="text-center text-light">编城的内阁</h2>
+            <div class="card bg-dark border-1 border-secondary text-light" style="width:400px;margin:50px auto;">
+                <div class="card-header border-secondary">
+                    <h5>验证身份</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="txtAccount" class="form-label">报上名来</label>
+                            <input type="text" class="form-control bg-black text-light" id="txtAccount">
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtCode" class="form-label">口令</label>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-black text-light" id="txtCode" aria-describedby="btnSendLoginCode">
+                                <button class="btn btn-outline-secondary" type="button" id="btnSendLoginCode">获取口令</button>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="button" class="btn btn-primary" id="btnLogin">核查口令</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center border-secondary">
+                    v1.0
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        var Matrix = function () {
+            //com.RemoveLoginInfo();
+            var timeCount = 60;
+            $("#btnSendLoginCode").click(function () {
+                var account = $("#txtAccount").val();
+                apiClient.auth.sendLoginCode(account, function (d) {
+                    if (d.code == 200) {
+                        $("#btnSendLoginCode").attr("disabled", "disabled");
+                        alert("验证码已发送。");
+                        timeCount = 60;
+                        enabledBtnSendLoginCodeStatus();
+                        return;
+                    }
+                    alert("验证码发送失败。" + d.message);
+                }, function (err) {
+                    alert("验证码发送失败。" + err.message);
+                });
+            });
+
+            var enabledBtnSendLoginCodeStatus = function () {
+                var timer = setTimeout(function () {
+                    clearTimeout(timer);
+                    if (timeCount == 0) {
+                        $("#btnSendLoginCode").removeAttr("disabled");
+                        $("#btnSendLoginCode").html("发送验证码");
+                    } else {
+                        timeCount--;
+                        console.log(timeCount);
+                        $("#btnSendLoginCode").html(timeCount + "秒后重新发送");
+                        enabledBtnSendLoginCodeStatus();
+                    }
+                }, 1000);
+            };
+            $("#btnLogin").click(function () {
+                location.href = "/matrix/index";
+                // var account = $("#txtAccount").val();
+                // var code = $("#txtCode").val();
+                // apiClient.auth.loginForCode(account, code, function (d) {
+                //     if (d.code == 200 && d.data && d.data.f_UserToken) {
+                //         com.SetLoginInfo(d.data);
+                //         location.href = "/";
+                //         return;
+                //     }
+                //     alert("登录失败，用户名或验证码错误。" + d.message);
+                // }, function (err) {
+                //     alert("登录失败，用户名或验证码错误。" + err.message);
+                // });
+            });
+            $("#txtAccount,#txtCode").keyup(function (event) {
+                if (event.code == "Enter") {
+                    $("#btnLogin").click();
+                }
+            });
+        };
+        $(function () {
+            new Matrix();
+        });
+    </script>
+</body>
+</html>
