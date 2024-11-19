@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="~/SouthWall.styles.css" asp-append-version="true" />
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-cookie/jquery.cookie.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/apis.js" asp-append-version="true"></script>
 </head>
 <body class="bg-black">
     <div class="container">
@@ -25,12 +27,7 @@
                 <div class="card-body">
                     <form>
                         <div class="mb-3">
-                            <label for="txtAccount" class="form-label">报上名来</label>
-                            <input type="text" class="form-control bg-black text-light" id="txtAccount">
-                        </div>
-                        <div class="mb-3">
                             <label for="txtCode" class="form-label">口令</label>
-
                             <div class="input-group">
                                 <input type="text" class="form-control bg-black text-light" id="txtCode" aria-describedby="btnSendLoginCode">
                                 <button class="btn btn-outline-secondary" type="button" id="btnSendLoginCode">获取口令</button>
@@ -49,19 +46,15 @@
     </div>
     <script>
         var Matrix = function () {
-            //com.RemoveLoginInfo();
+            com.RemoveLoginInfo();
             var timeCount = 60;
             $("#btnSendLoginCode").click(function () {
-                var account = $("#txtAccount").val();
-                apiClient.auth.sendLoginCode(account, function (d) {
-                    if (d.code == 200) {
-                        $("#btnSendLoginCode").attr("disabled", "disabled");
-                        alert("验证码已发送。");
-                        timeCount = 60;
-                        enabledBtnSendLoginCodeStatus();
-                        return;
-                    }
-                    alert("验证码发送失败。" + d.message);
+                apiClient.auth.sendLoginCode(function (d) {
+                    $("#btnSendLoginCode").attr("disabled", "disabled");
+                    alert("验证码已发送。");
+                    timeCount = 60;
+                    enabledBtnSendLoginCodeStatus();
+                    return;
                 }, function (err) {
                     alert("验证码发送失败。" + err.message);
                 });
@@ -81,20 +74,18 @@
                     }
                 }, 1000);
             };
-            $("#btnLogin").click(function () {
-                location.href = "/matrix/index";
-                // var account = $("#txtAccount").val();
-                // var code = $("#txtCode").val();
-                // apiClient.auth.loginForCode(account, code, function (d) {
-                //     if (d.code == 200 && d.data && d.data.f_UserToken) {
-                //         com.SetLoginInfo(d.data);
-                //         location.href = "/";
-                //         return;
-                //     }
-                //     alert("登录失败，用户名或验证码错误。" + d.message);
-                // }, function (err) {
-                //     alert("登录失败，用户名或验证码错误。" + err.message);
-                // });
+            $("#btnLogin").click(function () {                
+                var code = $("#txtCode").val();
+                apiClient.auth.loginByCode(code, function (d) {
+                    if (d && d.f_Token) {
+                        com.SetLoginInfo(d);                        
+                        location.href = "/matrix/index";
+                        return;
+                    }
+                    alert("登录失败，用户名或验证码错误。" + d.message);
+                }, function (err) {
+                    alert("登录失败，用户名或验证码错误。" + err.message);
+                });
             });
             $("#txtAccount,#txtCode").keyup(function (event) {
                 if (event.code == "Enter") {

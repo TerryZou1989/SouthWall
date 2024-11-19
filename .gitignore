@@ -5,4 +5,4 @@
 *\.angular
 *\.vscode
 *.suo
-*\2.版本
+*\appsettings.Development.json

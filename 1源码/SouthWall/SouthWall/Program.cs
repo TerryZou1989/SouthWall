@@ -1,9 +1,12 @@
+using SouthWall;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<IAuthService, AuthService>();
 var app = builder.Build();
+AppSettingsHelper.SetAppSettings(app.Configuration.GetSection("AppSettings"));
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
