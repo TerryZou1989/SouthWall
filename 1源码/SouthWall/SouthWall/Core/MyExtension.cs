@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using Newtonsoft.Json;
+using System.Linq.Expressions;
 
 namespace SouthWall
 {
@@ -11,6 +12,14 @@ namespace SouthWall
         public static bool ToBoolean(this string s)
         {           
             return bool.Parse(s);
+        }
+        public static T ToObject<T>(this string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return default(T);
+            }
+            return JsonConvert.DeserializeObject<T>(s);
         }
 
         public static Expression<Func<T, bool>> And<T>(this Expression<Func<T, bool>> expr1, Expression<Func<T, bool>> expr2) {

@@ -31,6 +31,48 @@ var apiClient = {
             });
         }
     },
+    times: {
+        save: function (F_Id, F_Content, F_Imgs, succ, err) {
+            apiPostAction({
+                action: "times/save",
+                data: {
+                    F_Id, F_Content, F_Imgs
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        delete: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "times/delete",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        get: function (F_Id,succ, err) {
+            apiPostAction({
+                action: "times/get",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        list: function (succ, err) {
+            apiPostAction({
+                action: "times/list",
+                data: {
+                    
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+    }
 }
 var apiPostAction = function (opt) {
     postAction(api_url, opt);

@@ -1,10 +1,18 @@
+using Microsoft.EntityFrameworkCore;
 using SouthWall;
 
 var builder = WebApplication.CreateBuilder(args);
-
+// 从 appsettings.json 中获取连接字符串
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<SWDbContext>(options =>
+    options.UseMySql(connectionString,
+         new MySqlServerVersion(new Version()))
+);
+builder.Services.AddScoped<ITimesDBAccess, TimesDBAccess>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ITimesService, TimesService>();
 var app = builder.Build();
 AppSettingsHelper.SetAppSettings(app.Configuration.GetSection("AppSettings"));
 

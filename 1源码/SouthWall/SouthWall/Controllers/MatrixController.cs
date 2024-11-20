@@ -4,6 +4,15 @@ namespace SouthWall.Controllers
 {
     public class MatrixController : Controller
     {
+        protected readonly IAuthService _AuthService;
+        protected readonly ITimesService _TimesService;
+        public MatrixController(
+            IAuthService authService,
+             ITimesService timesService)
+        {
+            _AuthService = authService;
+            _TimesService = timesService;
+        }
         public IActionResult Login()
         {
             return View();
@@ -12,8 +21,10 @@ namespace SouthWall.Controllers
         {
             return View();
         }
-        public IActionResult Times()
+        public async Task<IActionResult> Times()
         {
+            var list =await this._TimesService.GetList(null);
+            this.ViewData["timeslist"] = list.OrderByDescending(t=>t.F_CreateTime).ToList();
             return View();
         }
         public IActionResult Videos()

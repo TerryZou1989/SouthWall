@@ -8,8 +8,11 @@ namespace SouthWall.Controllers
     [ApiController]
     public class WellDoneController : TZControllerBase
     {
-        public WellDoneController(IAuthService authService) :
-            base(authService)
+        public WellDoneController(
+             IAuthService authService,
+             ITimesService timesService
+            ) :
+            base(authService, timesService)
         {
         }
         #region Auth   
@@ -19,7 +22,7 @@ namespace SouthWall.Controllers
         {
             return RunAction(CheckAuthType.None, async () =>
             {
-                var data = await AuthService.LoginByCode(args.F_Code);
+                var data = await _AuthService.LoginByCode(args.F_Code);
                 return Success("登录成功", data);
             });
         }
@@ -28,14 +31,13 @@ namespace SouthWall.Controllers
             public string F_Code { get; set; }
         }
         #endregion        
-
         #region Auth_SendLoginCode
         [HttpPost("auth/sendlogincode")]
         public Task<TZResponse> Auth_SendLoginCode([FromBody] Auth_SendLoginCode_Args args)
         {
             return RunAction(CheckAuthType.None, async () =>
             {
-                await AuthService.SendCodeToEmail();
+                await _AuthService.SendCodeToEmail();
                 return Success("发送成功");
             });
         }
@@ -43,14 +45,13 @@ namespace SouthWall.Controllers
         {
         }
         #endregion Auth_SendLoginCode
-
         #region Auth_CheckToken
         [HttpPost("auth/checktoken")]
         public Task<TZResponse> Auth_CheckToken([FromBody] AuthCheckTokenArgs args)
         {
             return RunAction(CheckAuthType.None, async () =>
             {
-                var isok = await AuthService.CheckToken(args.F_Token);
+                var isok = await _AuthService.CheckToken(args.F_Token);
                 return Success("操作成功", isok);
             });
         }
@@ -60,6 +61,85 @@ namespace SouthWall.Controllers
         }
         #endregion
         #endregion Auth
+
+        #region Times
+        #region Times_List
+        [HttpPost("times/list")]
+        public Task<TZResponse> Times_List([FromBody] Times_List_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var list = await _TimesService.GetList(null);
+                return Success("获取成功", list.Select(t => new
+                {
+                    t.F_Id,
+                    t.F_Content,
+                    t.F_Imgs
+                }).ToList());
+            });
+        }
+        public class Times_List_Args
+        {
+        }
+        #endregion Times_List
+        #region Times_Save
+        [HttpPost("times/save")]
+        public Task<TZResponse> Times_Save([FromBody] Times_Save_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _TimesService.Save(new TimesEntity
+                {
+                    F_Id = args.F_Id,
+                    F_Content = args.F_Content,
+                    F_Imgs = args.F_Imgs
+                });
+                return Success("保存成功");
+            });
+        }
+        public class Times_Save_Args
+        {
+            public string? F_Id { get; set; }
+            public string? F_Content { get; set; }
+            public string? F_Imgs { get; set; }
+        }
+        #endregion Times_Save
+        #region Times_Delete
+        [HttpPost("times/delete")]
+        public Task<TZResponse> Times_Delete([FromBody] Times_Delete_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _TimesService.Delete(args.F_Id);
+                return Success("删除成功");
+            });
+        }
+        public class Times_Delete_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Times_Delete
+        #region Times_Get
+        [HttpPost("times/get")]
+        public Task<TZResponse> Times_Get([FromBody] Times_Get_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+               var entity=  await _TimesService.GetById(args.F_Id);
+                return Success("获取成功", new
+                {
+                    entity.F_Id,
+                    entity.F_Content,
+                    F_ImgSrcList =entity.E_ImgSrcList
+                });
+            });
+        }
+        public class Times_Get_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Times_Get
+        #endregion
 
         public class List_Page_Args_Base : List_Args_Base
         {

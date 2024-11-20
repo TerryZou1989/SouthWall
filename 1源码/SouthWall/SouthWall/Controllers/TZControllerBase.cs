@@ -1,13 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
 namespace SouthWall
 {
     public class TZControllerBase : ControllerBase
     {
-        protected readonly IAuthService AuthService;
-        public TZControllerBase(IAuthService authService)
+        protected readonly IAuthService _AuthService;
+        protected readonly ITimesService _TimesService;
+        public TZControllerBase(
+            IAuthService authService,
+            ITimesService timesService
+            )
         {
-            AuthService = authService;
+            _AuthService = authService;
+            _TimesService = timesService;
         }
 
         protected Task<TZResponse> RunAction(CheckAuthType checkAuthType, WellDoneHandler action)
@@ -54,7 +58,7 @@ namespace SouthWall
                 if (Request.Query.ContainsKey("token"))
                 {
                     string token = Request.Query["token"];
-                    bool isAuth = await AuthService.CheckToken(token);
+                    bool isAuth = await _AuthService.CheckToken(token);
                     if (isAuth)
                     {
                         return;
