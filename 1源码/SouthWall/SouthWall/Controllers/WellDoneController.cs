@@ -10,9 +10,10 @@ namespace SouthWall.Controllers
     {
         public WellDoneController(
              IAuthService authService,
-             ITimesService timesService
+             ITimesService timesService,
+             IVideosService videosService
             ) :
-            base(authService, timesService)
+            base(authService, timesService, videosService)
         {
         }
         #region Auth   
@@ -139,6 +140,94 @@ namespace SouthWall.Controllers
             public string? F_Id { get; set; }
         }
         #endregion Times_Get
+        #endregion
+
+        #region Videos
+        #region Videos_List
+        [HttpPost("videos/list")]
+        public Task<TZResponse> Videos_List([FromBody] Videos_List_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var list = await _VideosService.GetList(null);
+                return Success("获取成功", list.Select(t => new
+                {
+                    t.F_Id,
+                    t.F_Title,
+                    t.F_ConverImg,
+                    t.F_VideoUrl,
+                    t.F_VideoCode,
+                    t.F_CreateTime
+                }).ToList());
+            });
+        }
+        public class Videos_List_Args
+        {
+        }
+        #endregion Videos_List
+        #region Videos_Save
+        [HttpPost("videos/save")]
+        public Task<TZResponse> Videos_Save([FromBody] Videos_Save_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _VideosService.Save(new VideosEntity
+                {
+                    F_Id = args.F_Id,
+                     F_ConverImg=args.F_ConverImg,
+                      F_Title=args.F_Title,
+                       F_VideoUrl = args.F_VideoUrl,
+                        F_VideoCode=args.F_VideoCode
+                });
+                return Success("保存成功");
+            });
+        }
+        public class Videos_Save_Args
+        {
+            public string? F_Id { get; set; }
+            public string? F_ConverImg { get; set; }
+            public string? F_Title { get; set; }
+            public string? F_VideoUrl {  get; set; }
+            public string? F_VideoCode { get; set; }
+        }
+        #endregion Videos_Save
+        #region Videos_Delete
+        [HttpPost("videos/delete")]
+        public Task<TZResponse> Videos_Delete([FromBody] Videos_Delete_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _VideosService.Delete(args.F_Id);
+                return Success("删除成功");
+            });
+        }
+        public class Videos_Delete_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Videos_Delete
+        #region Videos_Get
+        [HttpPost("videos/get")]
+        public Task<TZResponse> Videos_Get([FromBody] Videos_Get_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var entity = await _VideosService.GetById(args.F_Id);
+                return Success("获取成功", new
+                {
+                    entity.F_Id,
+                    entity.F_ConverImg,
+                    entity.F_Title,
+                    entity.F_VideoUrl,
+                    entity.F_VideoCode
+                });
+            });
+        }
+        public class Videos_Get_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Videos_Get
         #endregion
 
         public class List_Page_Args_Base : List_Args_Base

@@ -5,13 +5,16 @@ namespace SouthWall
     {
         protected readonly IAuthService _AuthService;
         protected readonly ITimesService _TimesService;
+        protected readonly IVideosService _VideosService;
         public TZControllerBase(
             IAuthService authService,
-            ITimesService timesService
+            ITimesService timesService,
+            IVideosService videosService
             )
         {
             _AuthService = authService;
             _TimesService = timesService;
+            _VideosService = videosService;
         }
 
         protected Task<TZResponse> RunAction(CheckAuthType checkAuthType, WellDoneHandler action)

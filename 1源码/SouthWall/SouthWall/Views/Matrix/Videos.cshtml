@@ -4,16 +4,17 @@
 @{
     Layout = "_MatrixLayout";
     ViewData["Title"] = "放映厅";
-    int count = 20;
+    var list = this.ViewData["list"] as List<VideosEntity>;    
 }
+<img src="https://upload-images.jianshu.io/upload_images/6854064-fd2c6f8b4875b7af.png" alt="222" />
 <div class="row p-0 m-0">
-    @for (int i = 0; i < count; i++)
+    @foreach (var item in list)
     {
         <div class="col-3 p-2">
             <div class="card bg-dark text-light border-1 border-secondary">
-                <img src="~/img/1.png" class="card-img-top rounded-3" alt="...">
+                <img src="@(item.F_ConverImg)" class="card-img-top rounded-3" alt="...">
                 <div class="card-body">
-                    <p class="card-text fs-6">【编程小课堂】第一节课，编程如此简单</p>
+                    <a href="@(item.F_VideoUrl)" target="_blank" class="card-text fs-6">@(item.F_Title)</a>
                 </div>
                 <div class="card-footer text-end border-secondary">
                     <button class="btn btn-sm btn-outline-primary">编辑</button>
@@ -32,12 +33,16 @@
             </div>
             <div class="modal-body">
                 <div class="mb-3">
-                    <label for="txtContext" class="form-label">标题</label>
-                    <textarea class="form-control bg-dark text-light" id="txtContext" rows="3" placeholder="视频的标题，不要太长，容易影响样式哦"></textarea>
+                    <label for="txtTitle" class="form-label">标题</label>
+                    <textarea class="form-control bg-dark text-light" id="txtTitle" rows="3" placeholder="视频的标题，不要太长，容易影响样式哦"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="txtContext" class="form-label">视频地址</label>
-                    <textarea class="form-control bg-dark text-light" id="txtContext" rows="3" placeholder="视频地址"></textarea>
+                    <label for="txtVideoUrl" class="form-label">视频地址</label>
+                    <textarea class="form-control bg-dark text-light" id="txtVideoUrl" rows="3" placeholder="视频地址"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtVideoCode" class="form-label">嵌入代码</label>
+                    <textarea class="form-control bg-dark text-light" id="txtVideoCode" rows="3" placeholder="嵌入代码，主要是哔哩哔哩视频哦"></textarea>
                 </div>
                 <div class="input-group mb-3">
                     <input id="txtImgSrc" type="text" class="form-control bg-dark text-light" placeholder="写上封面地址，咱就不存图片了哈" aria-describedby="btnAddImg">
@@ -48,7 +53,7 @@
             </div>
             <div class="modal-footer border-secondary">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary">保存</button>
+                <button type="button" class="btn btn-primary" id="btnSave">保存</button>
             </div>
         </div>
     </div>
@@ -63,6 +68,7 @@
             $("#modalFormLabel").html("新增");
             modalForm.show();
         });
+        var editId = "";
         var coverImgSrc = "";
         $("#btnAddImg").click(function () {
             coverImgSrc = $.trim($("#txtImgSrc").val());
@@ -70,9 +76,25 @@
                 alert("图片地址不能为空");
                 return;
             }
-            var img = $("<div class='float-start p-1'><img src='" + coverImgSrc + "' class='img-thumbnail' style='width:200px;' /></div>");
+            getImg(coverImgSrc, function (d) {
+
+            });
+            var img = $("<div class='float-start p-1'><img src='" + coverImgSrc + "' class='img-thumbnail' loading='lazy' style='width:200px;' /></div>");
             $("#imgbox").html(img);
             $("#txtImgSrc").val("");
+        });
+
+        $("#btnSave").click(function () {            
+            var title = $.trim($("#txtTitle").val());
+            var videoUrl = $.trim($("#txtVideoUrl").val());
+            var videoCode = $.trim($("#txtVideoCode").val());
+            apiClient.times.save(editId, title, videoUrl, videoCode, coverImgSrc, function (d) {
+                alert(d);
+                modalForm.hide();
+                location.reload();
+            }, function (err) {
+                alert(err.message);
+            });
         });
     };
     $(function () {

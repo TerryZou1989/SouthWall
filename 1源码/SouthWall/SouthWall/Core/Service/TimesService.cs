@@ -9,10 +9,7 @@
     }
     public class TimesService : ServiceBase, ITimesService
     {
-        public TimesService(ITimesDBAccess timesDBAccess)
-        {
-            _TimesDBAccess = timesDBAccess;
-        }
+        public TimesService(ITimesDBAccess timesDBAccess):base(timesDBAccess) { }        
         public Task<List<TimesEntity>> GetList(TimesEntity query)
         {
             return _TimesDBAccess.GetList(query);

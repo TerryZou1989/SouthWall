@@ -52,7 +52,7 @@ var apiClient = {
                 err: function (ex) { if (err) err(ex) }
             });
         },
-        get: function (F_Id,succ, err) {
+        get: function (F_Id, succ, err) {
             apiPostAction({
                 action: "times/get",
                 data: {
@@ -66,7 +66,49 @@ var apiClient = {
             apiPostAction({
                 action: "times/list",
                 data: {
-                    
+
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+    },
+    videos: {
+        save: function (F_Id, F_Title, F_VideoUrl, F_VideoCode, F_ConverImg, succ, err) {
+            apiPostAction({
+                action: "videos/save",
+                data: {
+                    F_Id, F_Title, F_VideoUrl, F_VideoCode, F_ConverImg
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        delete: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "videos/delete",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        get: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "videos/get",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        list: function (succ, err) {
+            apiPostAction({
+                action: "videos/list",
+                data: {
+
                 },
                 succ: function (d) { if (succ) succ(d) },
                 err: function (ex) { if (err) err(ex) }
@@ -141,4 +183,18 @@ var watchTime = function () {
         return scope.ts2 - scope.ts1;
     }
     return scope;
+}
+
+var getImg = function (url,f) {
+    $.ajax({
+        type: "GET",
+        url: url,
+        success: function (d) {        
+            if (f) {
+                console.log(d);
+                f(d);
+            }
+        }, error: function (ex) {            
+        }
+    });
 }

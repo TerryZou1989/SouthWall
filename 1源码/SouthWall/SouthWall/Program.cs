@@ -11,8 +11,10 @@ builder.Services.AddDbContext<SWDbContext>(options =>
          new MySqlServerVersion(new Version()))
 );
 builder.Services.AddScoped<ITimesDBAccess, TimesDBAccess>();
+builder.Services.AddScoped<IVideosDBAccess, VideosDBAccess>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITimesService, TimesService>();
+builder.Services.AddScoped<IVideosService, VideosService>();
 var app = builder.Build();
 AppSettingsHelper.SetAppSettings(app.Configuration.GetSection("AppSettings"));
 

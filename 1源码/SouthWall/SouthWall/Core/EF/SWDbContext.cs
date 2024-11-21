@@ -28,5 +28,6 @@ namespace SouthWall
         }
 
         public DbSet<TimesEntity> Times { get; set; }
+        public DbSet<VideosEntity> Videos { get; set; }
     }
 }
