@@ -11,9 +11,17 @@ namespace SouthWall.Controllers
         public WellDoneController(
              IAuthService authService,
              ITimesService timesService,
-             IVideosService videosService
+             IVideosService videosService,
+             IArticlesService articlesService,
+             IMessagesService messagesService,
+             IShiJusService shiJusService
             ) :
-            base(authService, timesService, videosService)
+            base(authService,
+                timesService,
+                videosService,
+                articlesService,
+                messagesService,
+                shiJusService)
         {
         }
         #region Auth   
@@ -126,12 +134,12 @@ namespace SouthWall.Controllers
         {
             return RunAction(CheckAuthType.User, async () =>
             {
-               var entity=  await _TimesService.GetById(args.F_Id);
+                var entity = await _TimesService.GetById(args.F_Id);
                 return Success("获取成功", new
                 {
                     entity.F_Id,
                     entity.F_Content,
-                    F_ImgSrcList =entity.E_ImgSrcList
+                    F_ImgSrcList = entity.E_ImgSrcList
                 });
             });
         }
@@ -154,7 +162,7 @@ namespace SouthWall.Controllers
                 {
                     t.F_Id,
                     t.F_Title,
-                    t.F_ConverImg,
+                    t.F_CoverImg,
                     t.F_VideoUrl,
                     t.F_VideoCode,
                     t.F_CreateTime
@@ -174,10 +182,10 @@ namespace SouthWall.Controllers
                 await _VideosService.Save(new VideosEntity
                 {
                     F_Id = args.F_Id,
-                     F_ConverImg=args.F_ConverImg,
-                      F_Title=args.F_Title,
-                       F_VideoUrl = args.F_VideoUrl,
-                        F_VideoCode=args.F_VideoCode
+                    F_CoverImg = args.F_CoverImg,
+                    F_Title = args.F_Title,
+                    F_VideoUrl = args.F_VideoUrl,
+                    F_VideoCode = args.F_VideoCode
                 });
                 return Success("保存成功");
             });
@@ -185,9 +193,9 @@ namespace SouthWall.Controllers
         public class Videos_Save_Args
         {
             public string? F_Id { get; set; }
-            public string? F_ConverImg { get; set; }
+            public string? F_CoverImg { get; set; }
             public string? F_Title { get; set; }
-            public string? F_VideoUrl {  get; set; }
+            public string? F_VideoUrl { get; set; }
             public string? F_VideoCode { get; set; }
         }
         #endregion Videos_Save
@@ -216,7 +224,7 @@ namespace SouthWall.Controllers
                 return Success("获取成功", new
                 {
                     entity.F_Id,
-                    entity.F_ConverImg,
+                    entity.F_CoverImg,
                     entity.F_Title,
                     entity.F_VideoUrl,
                     entity.F_VideoCode
@@ -228,6 +236,266 @@ namespace SouthWall.Controllers
             public string? F_Id { get; set; }
         }
         #endregion Videos_Get
+        #endregion
+
+        #region Articles
+        #region Articles_List
+        [HttpPost("articles/list")]
+        public Task<TZResponse> Articles_List([FromBody] Articles_List_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var list = await _ArticlesService.GetList(null);
+                return Success("获取成功", list.Select(t => new
+                {
+                    t.F_Id,
+                    t.F_Title,
+                    t.F_CoverImg,
+                    t.F_Content,
+                    t.F_ArticleUrl,
+                    t.F_CreateTime
+                }).ToList());
+            });
+        }
+        public class Articles_List_Args
+        {
+        }
+        #endregion Articles_List
+        #region Articles_Save
+        [HttpPost("articles/save")]
+        public Task<TZResponse> Articles_Save([FromBody] Articles_Save_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _ArticlesService.Save(new ArticlesEntity
+                {
+                    F_Id = args.F_Id,
+                    F_CoverImg = args.F_CoverImg,
+                    F_Title = args.F_Title,
+                    F_Content = args.F_Content,
+                    F_ArticleUrl = args.F_ArticleUrl
+                });
+                return Success("保存成功");
+            });
+        }
+        public class Articles_Save_Args
+        {
+            public string? F_Id { get; set; }
+            public string? F_CoverImg { get; set; }
+            public string? F_Title { get; set; }
+            public string? F_Content { get; set; }
+            public string? F_ArticleUrl { get; set; }
+        }
+        #endregion Articles_Save
+        #region Articles_Delete
+        [HttpPost("articles/delete")]
+        public Task<TZResponse> Articles_Delete([FromBody] Articles_Delete_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _ArticlesService.Delete(args.F_Id);
+                return Success("删除成功");
+            });
+        }
+        public class Articles_Delete_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Articles_Delete
+        #region Articles_Get
+        [HttpPost("articles/get")]
+        public Task<TZResponse> Articles_Get([FromBody] Articles_Get_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var entity = await _ArticlesService.GetById(args.F_Id);
+                return Success("获取成功", new
+                {
+                    entity.F_Id,
+                    entity.F_CoverImg,
+                    entity.F_Title,
+                    entity.F_Content,
+                    entity.F_ArticleUrl
+                });
+            });
+        }
+        public class Articles_Get_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Articles_Get
+        #endregion
+
+        #region Messages
+        #region Messages_List
+        [HttpPost("messages/list")]
+        public Task<TZResponse> Messages_List([FromBody] Messages_List_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var list = await _MessagesService.GetList(null);
+                return Success("获取成功", list.Select(t => new
+                {
+                    t.F_Id,
+                    t.F_Content,
+                    t.F_UserName,
+                    t.F_CreateTime
+                }).ToList());
+            });
+        }
+        public class Messages_List_Args
+        {
+        }
+        #endregion Messages_List
+        #region Messages_Save
+        [HttpPost("messages/save")]
+        public Task<TZResponse> Messages_Save([FromBody] Messages_Save_Args args)
+        {
+            return RunAction(CheckAuthType.None, async () =>
+            {
+                var shiju = await _ShiJusService.GetById(args.F_ShiJuId);
+                if (shiju != null && shiju.F_N == args.F_ShiJuN)
+                {
+                    await _MessagesService.Save(new MessagesEntity
+                    {
+                        F_Id = args.F_Id,
+                        F_Content = args.F_Content,
+                        F_UserName = args.F_UserName
+                    });
+                    return Success("保存成功");
+                }
+                else
+                {
+                    return Error500("诗句的下句不对哦，你可以百度一下。");
+                }
+                
+            });
+        }
+        public class Messages_Save_Args
+        {
+            public string? F_Id { get; set; }
+            public string? F_UserName { get; set; }
+            public string? F_Content { get; set; }
+            public string? F_ShiJuId { get; set; }
+            public string? F_ShiJuN { get; set; }
+        }
+        #endregion Messages_Save
+        #region Messages_Delete
+        [HttpPost("messages/delete")]
+        public Task<TZResponse> Messages_Delete([FromBody] Messages_Delete_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _MessagesService.Delete(args.F_Id);
+                return Success("删除成功");
+            });
+        }
+        public class Messages_Delete_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Messages_Delete
+        #region Messages_Get
+        [HttpPost("messages/get")]
+        public Task<TZResponse> Messages_Get([FromBody] Messages_Get_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var entity = await _MessagesService.GetById(args.F_Id);
+                return Success("获取成功", new
+                {
+                    entity.F_Id,
+                    entity.F_UserName,
+                    entity.F_Content,
+                });
+            });
+        }
+        public class Messages_Get_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Messages_Get
+        #endregion
+
+        #region ShiJuss
+        #region ShiJus_List
+        [HttpPost("shijus/list")]
+        public Task<TZResponse> ShiJus_List([FromBody] ShiJus_List_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var list = await _ShiJusService.GetList(null);
+                return Success("获取成功", list.Select(t => new
+                {
+                    t.F_Id,
+                    t.F_P,
+                    t.F_N,
+                    t.F_CreateTime
+                }).ToList());
+            });
+        }
+        public class ShiJus_List_Args
+        {
+        }
+        #endregion ShiJus_List
+        #region ShiJus_Save
+        [HttpPost("shijus/save")]
+        public Task<TZResponse> ShiJus_Save([FromBody] ShiJus_Save_Args args)
+        {
+            return RunAction(CheckAuthType.None, async () =>
+            {
+                await _ShiJusService.Save(new ShiJusEntity
+                {
+                    F_Id = args.F_Id,
+                    F_N = args.F_N,
+                    F_P = args.F_P
+                });
+                return Success("保存成功");
+            });
+        }
+        public class ShiJus_Save_Args
+        {
+            public string? F_Id { get; set; }
+            public string? F_N { get; set; }
+            public string? F_P { get; set; }
+        }
+        #endregion ShiJus_Save
+        #region ShiJus_Delete
+        [HttpPost("shijus/delete")]
+        public Task<TZResponse> ShiJus_Delete([FromBody] ShiJus_Delete_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _ShiJusService.Delete(args.F_Id);
+                return Success("删除成功");
+            });
+        }
+        public class ShiJus_Delete_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion ShiJus_Delete
+        #region ShiJus_Get
+        [HttpPost("shijus/get")]
+        public Task<TZResponse> ShiJus_Get([FromBody] ShiJus_Get_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var entity = await _ShiJusService.GetById(args.F_Id);
+                return Success("获取成功", new
+                {
+                    entity.F_Id,
+                    entity.F_N,
+                    entity.F_P,
+                });
+
+            });
+        }
+        public class ShiJus_Get_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion ShiJus_Get
         #endregion
 
         public class List_Page_Args_Base : List_Args_Base

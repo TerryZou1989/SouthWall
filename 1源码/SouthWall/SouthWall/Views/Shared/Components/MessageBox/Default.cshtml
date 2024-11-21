@@ -1,0 +1,83 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+    ShiJusEntity shiju = this.ViewData["shiju"] as ShiJusEntity;
+}
+<div class="card bg-dark text-light border-secondary mt-3">
+    <h5 class="card-header">相对我说点啥？</h5>
+    <div class="card-body py-2 pb-3">
+        <input type="text" id="txtUserName" class="form-control-sm w-100 bg-dark border-secondary text-light" placeholder="留言之前，报上名来！" />
+        <textarea id="txtContent" class="form-control-sm w-100 mt-1 bg-dark text-light" rows="5" placeholder="遵纪守法，别说不该说的，分分钟后台Delete掉！好了，开始你的表演。。。"></textarea>
+        <button class="btn btn-primary btn-sm" id="btnSendMessage">点一下，我就收到了</button>
+    </div>
+</div>
+<div class="modal fade" id="modalSendMessage" tabindex="-1" aria-labelledby="modalSendMessageLabel" aria-hidden="true">
+    <div class="modal-dialog z-3">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalSendMessageLabel">对上我的诗，证明你不是机器人。</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="txtP" class="form-label">我的上句</label>
+                    <textarea class="form-control bg-dark text-light" id="txtP" rows="1" placeholder="上句" disabled>@(shiju.F_P)</textarea>
+                    <input type="hidden" id="hid_id" value="@(shiju.F_Id)" />
+                </div>
+                <div class="mb-3">
+                    <label for="txtN" class="form-label">说出你的下句</label>
+                    <textarea class="form-control bg-dark text-light" id="txtN" rows="1" placeholder="下句"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btnOK">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var pageMatrix = function () {
+        const modalSendMessageEl = document.getElementById('modalSendMessage');
+        const modalSendMessage = new bootstrap.Modal('#modalSendMessage', { keyboard: false });
+        modalSendMessageEl.addEventListener('shown.bs.modal', event => { });
+        modalSendMessageEl.addEventListener('hidden.bs.modal', event => { });
+        $("#btnSendMessage").click(function () {
+            var userName = $.trim($("#txtUserName").val());
+            if (userName == null || userName == "") {
+                alert("你不自报家门，我怎么知道你是谁？哪怕是个加名字呢？");
+                return;
+            }
+            if(userName.length>20){
+                alert("你的名字这么长？我记不住啊！");
+                return;
+            }
+            var content = $.trim($("#txtContent").val());
+            if (content == null || content == "") {
+                alert("多少写两句吧！哪怕是一句“吃了吗”呢");
+                return;
+            }
+            if (content.length>200) {
+                alert("说这么多话？流量不要钱啊？200个字的小作文我还能接受，太多了，我就不看了！哼！");
+                return;
+            }
+            modalSendMessage.show();
+        });
+
+        $("#btnOK").click(function(){
+            var shijuId = $("#hid_id").val();
+            var shijuN = $.trim($("#txtN").val());
+            apiClient.messages.save(userName, content,shijuId,shijuN, function (d) {
+                alert("你的消息我已收到，我会认真阅读你的消息，如果有悄悄话可以给我发邮件哦！");
+                location.reload();
+            }, function (err) {
+                alert(err.message);
+            });
+        })
+    };
+    $(function () {
+        new pageMatrix();
+    });
+</script>

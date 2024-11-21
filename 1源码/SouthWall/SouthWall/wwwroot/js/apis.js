@@ -74,11 +74,11 @@ var apiClient = {
         },
     },
     videos: {
-        save: function (F_Id, F_Title, F_VideoUrl, F_VideoCode, F_ConverImg, succ, err) {
+        save: function (F_Id, F_Title, F_VideoUrl, F_VideoCode, F_CoverImg, succ, err) {
             apiPostAction({
                 action: "videos/save",
                 data: {
-                    F_Id, F_Title, F_VideoUrl, F_VideoCode, F_ConverImg
+                    F_Id, F_Title, F_VideoUrl, F_VideoCode, F_CoverImg
                 },
                 succ: function (d) { if (succ) succ(d) },
                 err: function (ex) { if (err) err(ex) }
@@ -107,6 +107,132 @@ var apiClient = {
         list: function (succ, err) {
             apiPostAction({
                 action: "videos/list",
+                data: {
+
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+    },
+    articles: {
+        save: function (F_Id, F_Title, F_Content, F_ArticleUrl, F_CoverImg, succ, err) {
+            apiPostAction({
+                action: "articles/save",
+                data: {
+                    F_Id, F_Title, F_Content, F_ArticleUrl, F_CoverImg
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        delete: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "articles/delete",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        get: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "articles/get",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        list: function (succ, err) {
+            apiPostAction({
+                action: "articles/list",
+                data: {
+
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+    },
+    messages: {
+        save: function (F_Content, F_UserName,succ, err) {
+            apiPostAction({
+                action: "messages/save",
+                data: {
+                    F_Content, F_UserName
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        delete: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "messages/delete",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        get: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "messages/get",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        list: function (succ, err) {
+            apiPostAction({
+                action: "messages/list",
+                data: {
+
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+    },
+    shijus: {
+        save: function (F_Id,F_P, F_N, succ, err) {
+            apiPostAction({
+                action: "shijus/save",
+                data: {
+                    F_Id, F_P, F_N
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        delete: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "shijus/delete",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        get: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "shijus/get",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        list: function (succ, err) {
+            apiPostAction({
+                action: "shijus/list",
                 data: {
 
                 },
@@ -183,18 +309,4 @@ var watchTime = function () {
         return scope.ts2 - scope.ts1;
     }
     return scope;
-}
-
-var getImg = function (url,f) {
-    $.ajax({
-        type: "GET",
-        url: url,
-        success: function (d) {        
-            if (f) {
-                console.log(d);
-                f(d);
-            }
-        }, error: function (ex) {            
-        }
-    });
 }

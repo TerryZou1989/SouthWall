@@ -12,6 +12,7 @@ namespace SouthWall
 
         private const string _CacheKey_Login_Token = "_CacheKey_Login_Token";
         private const string _CacheKey_Login_Code = "_CacheKey_Login_Code";
+        public static int RandomInt(int max) { return _Random.Next(max); }
         public static string GenLoginCode()
         {
             return _Random.Next(100000, 999999).ToString();
@@ -55,6 +56,17 @@ namespace SouthWall
                      Config.ServiceMailPort,
                      Config.ServiceMailSSL,
                      toEmail, "亲爱的用户", $"【{Config.ServiceMailName}】登录验证码", $"验证码：{code}，5分钟内有效。");
+        }
+        public static Task SendMessageToEmail(string userName,string content, string toEmail)
+        {
+            return SendEmail(
+                      Config.ServiceMail,
+                      Config.ServiceMailName,
+                      Config.ServiceMailPassword,
+                      Config.ServiceMailSMTP,
+                      Config.ServiceMailPort,
+                      Config.ServiceMailSSL,
+                      toEmail, "亲爱的主人", $"【{Config.ServiceMailName}】有人留言啦", $"亲爱的主人：游客{userName}给您留言啦，他（她）说：{content}");
         }
         public static async Task SendEmail(string fromMail, string fromMailName, string fromMailPassword, string smtp, int port, bool ssl, string toMail, string toMailName, string subject, string body, bool isHtmlBody = false)
         {

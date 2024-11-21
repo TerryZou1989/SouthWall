@@ -4,89 +4,82 @@
 @{
     Layout = "_MatrixLayout";
     ViewData["Title"] = "留言吧";
+    var list = this.ViewData["list"] as List<MessagesEntity>;
+    List<List<MessagesEntity>> colList = new List<List<MessagesEntity>>();
+    List<MessagesEntity> list0 = new List<MessagesEntity>();
+    List<MessagesEntity> list1 = new List<MessagesEntity>();
+    List<MessagesEntity> list2 = new List<MessagesEntity>();
+    List<MessagesEntity> list3 = new List<MessagesEntity>();
+    int i = 0;
+    foreach(var item in list)
+    {
+        switch (i)
+        {
+            case 0:
+                list0.Add(item);
+                break;
+            case 1:
+                list1.Add(item);
+                break;
+            case 2:
+                list2.Add(item);
+                break;
+            case 3:
+                list3.Add(item);
+                i = -1;
+                break;
+        }
+        i++;
+    }
+    colList.Add(list0);
+    colList.Add(list1);
+    colList.Add(list2);
+    colList.Add(list3);
     int count = 20;
 }
 <div class="row m-0">
-    <div class="col px-1">
-        @for (int i = 0; i < count; i++)
-        {
-            <div class="card bg-dark border-1 border-secondary text-light mb-2">
-                <div class="card-body">
-                    <p class="fs-6 mb-2">愿世界和平</p>
-                    <div class="fs-7">
-                        <img src="~/img/myphoto.jpg" class="rounded-circle" style="width:26px" />
-                        TZ1989
+    @foreach (var col in colList)
+    {
+        <div class="col px-1">
+            @foreach (var item in col)
+            {
+                <div class="card bg-dark border-1 border-secondary text-light mb-2">
+                    <div class="card-body">
+                        <p class="fs-6 mb-2">@(item.F_Content)</p>
+                        <div class="fs-7">
+                            <img src="~/img/myphoto.jpg" class="rounded-circle" style="width:26px" />
+                            @(item.F_UserName)
+                        </div>
+                        <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
                     </div>
-                    <i class="fs-7 text-secondary">2024-10-01 12:36</i>
-                </div>
-                <div class="card-footer text-end border-secondary">
-                    <button class="btn btn-sm btn-outline-primary">编辑</button>
-                    <button class="btn btn-sm btn-outline-danger">删除</button>
-                </div>
-            </div>
-        }
-    </div>
-    <div class="col px-1">
-        @for (int i = 0; i < count; i++)
-        {
-            <div class="card bg-dark border-1 border-secondary text-light mb-2">
-                <div class="card-body">
-                    <p class="fs-6 mb-2">愿世界和平愿世界和平愿世界和平</p>
-                    <div class="fs-7">
-                        <img src="~/img/myphoto.jpg" class="rounded-circle" style="width:26px" />
-                        TZ1989
+                    <div class="card-footer text-end border-secondary">
+                        <button class="btn btn-sm btn-outline-danger btndelete" data-id="@(item.F_Id)">删除</button>
                     </div>
-                    <i class="fs-7 text-secondary">2024-10-01 12:36</i>
-                </div>     
-                <div class="card-footer text-end border-secondary">
-                    <button class="btn btn-sm btn-outline-primary">编辑</button>
-                    <button class="btn btn-sm btn-outline-danger">删除</button>
                 </div>
-            </div>
-        }
-    </div>
-    <div class="col px-1">
-        @for (int i = 0; i < count; i++)
-        {
-            <div class="card bg-dark border-1 border-secondary text-light mb-2">
-                <div class="card-body">
-                    <p class="fs-6 mb-2">愿世界和平</p>
-                    <div class="fs-7">
-                        <img src="~/img/myphoto.jpg" class="rounded-circle" style="width:26px" />
-                        TZ1989
-                    </div>
-                    <i class="fs-7 text-secondary">2024-10-01 12:36</i>
-                </div>
-                <div class="card-footer text-end border-secondary">
-                    <button class="btn btn-sm btn-outline-primary">编辑</button>
-                    <button class="btn btn-sm btn-outline-danger">删除</button>
-                </div>
-            </div>
-        }
-    </div>
-    <div class="col px-1">
-        @for (int i = 0; i < count; i++)
-        {
-            <div class="card bg-dark border-1 border-secondary text-light mb-2">
-                <div class="card-body">
-                    <p class="fs-6 mb-2">愿世界和平愿世界和平愿世界和平</p>
-                    <div class="fs-7">
-                        <img src="~/img/myphoto.jpg" class="rounded-circle" style="width:26px" />
-                        TZ1989
-                    </div>
-                    <i class="fs-7 text-secondary">2024-10-01 12:36</i>
-                </div>
-                <div class="card-footer text-end border-secondary">
-                    <button class="btn btn-sm btn-outline-primary">编辑</button>
-                    <button class="btn btn-sm btn-outline-danger">删除</button>
-                </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
+    }
 </div>
 <script>
     var pageMatrix = function () {        
         $("#btnCreate").remove();
+        var initDelete = function () {
+            var btndeleteList = $(".btndelete");
+            for (var i = 0; i < btndeleteList.length; i++) {
+                $(btndeleteList[i]).click(function () {
+                    if (confirm("是否忍心删除此留言？")) {
+                        var id = $(this).attr("data-id");
+                        apiClient.messages.delete(id, function (d) {
+                            alert(d);
+                            location.reload();
+                        }, function (err) {
+                            alert(err.message);
+                        });
+                    }
+                });
+            }
+        }
+        initDelete();
     };
     $(function () {
         new pageMatrix();

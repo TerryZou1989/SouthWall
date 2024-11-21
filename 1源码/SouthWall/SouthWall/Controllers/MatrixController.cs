@@ -2,19 +2,22 @@
 
 namespace SouthWall.Controllers
 {
-    public class MatrixController : Controller
+    public class MatrixController : PageControllerBase
     {
-        protected readonly IAuthService _AuthService;
-        protected readonly ITimesService _TimesService;
-        protected readonly IVideosService _VideosService;
         public MatrixController(
             IAuthService authService,
              ITimesService timesService,
-             IVideosService videosService)
+             IVideosService videosService,
+             IArticlesService articlesService,
+             IMessagesService messagesService,
+             IShiJusService shiJusService
+             ):base(authService,
+                 timesService,
+                 videosService,
+                 articlesService,
+                messagesService,
+                shiJusService)
         {
-            _AuthService = authService;
-            _TimesService = timesService;
-            _VideosService = videosService;
         }
         public IActionResult Login()
         {
@@ -26,8 +29,8 @@ namespace SouthWall.Controllers
         }
         public async Task<IActionResult> Times()
         {
-            var list =await this._TimesService.GetList(null);
-            this.ViewData["list"] = list.OrderByDescending(t=>t.F_CreateTime).ToList();
+            var list = await this._TimesService.GetList(null);
+            this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
             return View();
         }
         public async Task<IActionResult> Videos()
@@ -36,12 +39,22 @@ namespace SouthWall.Controllers
             this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
             return View();
         }
-        public IActionResult Articles()
+        public async Task<IActionResult> Articles()
         {
+            var list = await this._ArticlesService.GetList(null);
+            this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
             return View();
         }
-        public IActionResult Messages()
+        public async Task<IActionResult> Messages()
         {
+            var list = await this._MessagesService.GetList(null);
+            this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
+            return View();
+        }
+        public async Task<IActionResult> ShiJus()
+        {
+            var list = await this._ShiJusService.GetList(null);
+            this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
             return View();
         }
     }

@@ -3,19 +3,19 @@ using System.Linq.Expressions;
 
 namespace SouthWall
 {
-    public interface IVideosDBAccess
+    public interface IMessagesDBAccess
     {
-        Task<List<VideosEntity>> GetList(VideosEntity query);
-        Task<VideosEntity?> GetById(string id);
-        Task<int> Save(VideosEntity entity);
+        Task<List<MessagesEntity>> GetList(MessagesEntity query);
+        Task<MessagesEntity?> GetById(string id);
+        Task<int> Save(MessagesEntity entity);
         Task Delete(string id);
     }
-    public class VideosDBAccess : DBAccessBase<VideosEntity>, IVideosDBAccess
+    public class MessagesDBAccess : DBAccessBase<MessagesEntity>, IMessagesDBAccess
     {
-        public VideosDBAccess(SWDbContext context) : base(context) { }
-        private Expression<Func<VideosEntity, bool>> GetExpression(VideosEntity query)
+        public MessagesDBAccess(SWDbContext context) : base(context) { }
+        private Expression<Func<MessagesEntity, bool>> GetExpression(MessagesEntity query)
         {
-            Expression<Func<VideosEntity, bool>> exp = t => true;
+            Expression<Func<MessagesEntity, bool>> exp = t => true;
             if (query == null)
             {
                 return exp;
@@ -26,16 +26,16 @@ namespace SouthWall
             }
             return exp;
         }
-        public async Task<List<VideosEntity>> GetList(VideosEntity query)
+        public async Task<List<MessagesEntity>> GetList(MessagesEntity query)
         {
             var exp = GetExpression(query);
-            return await _context.Videos.Where(exp).ToListAsync();
+            return await _context.Messages.Where(exp).ToListAsync();
         }
-        public async Task<VideosEntity?> GetById(string id)
+        public async Task<MessagesEntity?> GetById(string id)
         {
-            return await _context.Videos.FirstOrDefaultAsync(t => t.F_Id == id);
+            return await _context.Messages.FirstOrDefaultAsync(t => t.F_Id == id);
         }
-        public async Task<int> Save(VideosEntity entity)
+        public async Task<int> Save(MessagesEntity entity)
         {
             if (string.IsNullOrEmpty(entity.F_Id))
             {
@@ -47,10 +47,8 @@ namespace SouthWall
                 var obj = await GetById(entity.F_Id);
                 if (obj != null)
                 {
-                    obj.F_CoverImg = entity.F_CoverImg;
-                    obj.F_Title = entity.F_Title;
-                    obj.F_VideoUrl = entity.F_VideoUrl;
-                    obj.F_VideoCode = entity.F_VideoCode;
+                    obj.F_Content=entity.F_Content;
+                    obj.F_UserName=entity.F_UserName;
                     obj.InitUpdate();
                     _context.Update(obj);
                 }

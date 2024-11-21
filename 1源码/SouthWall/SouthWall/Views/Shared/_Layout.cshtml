@@ -11,6 +11,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery-cookie/jquery.cookie.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/webapis.js" asp-append-version="true"></script>
 </head>
 <body class="bg-black">
     <header>
@@ -54,21 +55,23 @@
                         <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Owner">想深入了解我？</a>
                     </div>
                 </div>
-                <div class="card bg-dark text-light border-secondary mt-3">
-                    <h5 class="card-header">相对我说点啥？</h5>
-                    <div class="card-body py-2 pb-3">
-                        <input type="text" class="form-control-sm w-100 bg-dark border-secondary" placeholder="留言之前，报上名来！" />
-                        <textarea class="form-control-sm w-100 mt-1 bg-dark" rows="5" placeholder="遵纪守法，别说不该说的，分分钟后台Delete掉！好了，开始你的表演。。。"></textarea>                        
-                        <a href="#" class="btn btn-primary btn-sm">点一下，我就收到了</a>
-                    </div>
+                @* <div class="card bg-dark text-light border-secondary mt-3">
+                <h5 class="card-header">相对我说点啥？</h5>
+                <div class="card-body py-2 pb-3">
+                <input type="text" class="form-control-sm w-100 bg-dark border-secondary" placeholder="留言之前，报上名来！" />
+                <textarea class="form-control-sm w-100 mt-1 bg-dark" rows="5" placeholder="遵纪守法，别说不该说的，分分钟后台Delete掉！好了，开始你的表演。。。"></textarea>
+                <a href="#" class="btn btn-primary btn-sm">点一下，我就收到了</a>
                 </div>
+                </div> *@
+                @* @Html.PartialAsync("MessageBox"); *@
+                @await Component.InvokeAsync("MessageBox")
             </div>
             <div class="page-main float-end ps-3 h-100">
                 <h5 class="text-light px-2 fw-bold">@(ViewData["Title"])</h5>
                 <hr class="bg-secondary" />
                 <div style="height:calc(100% - 50px)" class="overflow-auto pe-2">
                     @RenderBody()
-                </div>                
+                </div>
             </div>
         </main>
     </div>

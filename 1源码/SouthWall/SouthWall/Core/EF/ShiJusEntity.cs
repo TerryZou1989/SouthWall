@@ -3,15 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SouthWall
 {
-    [Table("t_videos")]
-    public class VideosEntity : EntityBase
+    [Table("t_shijus")]
+    public class ShiJusEntity : EntityBase
     {
         [Key]
         public string F_Id { get; set; }
-        public string? F_Title { get; set; }
-        public string? F_CoverImg { get; set; }
-        public string? F_VideoUrl { get; set; }
-        public string? F_VideoCode {  get; set; }
+        public string? F_P { get; set; }
+        public string? F_N { get; set; }
 
         public override void InitCreate()
         {

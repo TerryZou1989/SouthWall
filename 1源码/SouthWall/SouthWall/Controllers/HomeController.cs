@@ -4,13 +4,22 @@ using System.Diagnostics;
 
 namespace SouthWall.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : PageControllerBase
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IAuthService authService,
+             ITimesService timesService,
+             IVideosService videosService,
+             IArticlesService articlesService,
+             IMessagesService messagesService,
+             IShiJusService shiJusService
+             ) : base(authService,
+                 timesService,
+                 videosService,
+                 articlesService,
+                messagesService,
+                shiJusService)
         {
-            _logger = logger;
+           
         }
 
         public IActionResult Index()
@@ -33,6 +42,11 @@ namespace SouthWall.Controllers
 
         public IActionResult Owner()
         {
+            return View();
+        }
+
+        public async Task<IActionResult> MessageBox() {
+
             return View();
         }
 

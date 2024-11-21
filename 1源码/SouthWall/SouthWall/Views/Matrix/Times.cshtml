@@ -31,7 +31,7 @@
                     }
                     @foreach (var img in item.E_ImgSrcList)
                     {
-                        <img src="@(img.imgSrc)" class="float-start rounded timeImg" data-index="@(imgIndex)" style="width:@(imgWidth)px;height:@(imgWidth)px;margin:0 0 10px 10px" />
+                        <img referrer="no-referrer|origin|unsafe-url" src="@(img.imgSrc)" class="float-start rounded timeImg" data-index="@(imgIndex)" style="width:@(imgWidth)px;height:@(imgWidth)px;margin:0 0 10px 10px" />
                         imgIndex++;
                     }
                 </div>

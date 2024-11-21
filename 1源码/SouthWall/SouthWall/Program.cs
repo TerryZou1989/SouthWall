@@ -12,9 +12,17 @@ builder.Services.AddDbContext<SWDbContext>(options =>
 );
 builder.Services.AddScoped<ITimesDBAccess, TimesDBAccess>();
 builder.Services.AddScoped<IVideosDBAccess, VideosDBAccess>();
+builder.Services.AddScoped<IArticlesDBAccess, ArticlesDBAccess>();
+builder.Services.AddScoped<IMessagesDBAccess, MessagesDBAccess>();
+builder.Services.AddScoped<IShiJusDBAccess, ShiJusDBAccess>();
+
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITimesService, TimesService>();
 builder.Services.AddScoped<IVideosService, VideosService>();
+builder.Services.AddScoped<IArticlesService, ArticlesService>();
+builder.Services.AddScoped<IMessagesService, MessagesService>();
+builder.Services.AddScoped<IShiJusService, ShiJusService>();
+
 var app = builder.Build();
 AppSettingsHelper.SetAppSettings(app.Configuration.GetSection("AppSettings"));
 

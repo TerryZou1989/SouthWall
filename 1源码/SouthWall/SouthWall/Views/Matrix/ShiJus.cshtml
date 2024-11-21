@@ -1,0 +1,108 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_MatrixLayout";
+    ViewData["Title"] = "诗句辞典";
+    var list = this.ViewData["list"] as List<ShiJusEntity>;
+}
+@foreach (var item in list)
+{
+    <div class="card bg-dark text-light border-0 m-0 mb-4">
+        <div class="card-body row m-0 px-2"> 
+            <div class="col-10 px-2">                
+                <p class="fs-6 text-light mb-1">@(item.F_P)，@(item.F_N)</p>                
+            </div>
+        </div>
+        <div class="card-footer text-end border-secondary">
+            <button class="btn btn-sm btn-outline-primary btnedit" data-id="@(item.F_Id)">编辑</button>
+            <button class="btn btn-sm btn-outline-danger btndelete" data-id="@(item.F_Id)">删除</button>
+        </div>
+    </div>
+}
+<div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h1 class="modal-title fs-5" id="modalFormLabel">编辑</h1>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="txtP" class="form-label">上句</label>
+                    <textarea class="form-control bg-dark text-light" id="txtP" rows="1" placeholder="上句"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtN" class="form-label">下句</label>
+                    <textarea class="form-control bg-dark text-light" id="txtN" rows="1" placeholder="下句"></textarea>
+                </div>               
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="btnSave">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var pageMatrix = function () {
+        const modalFormEl = document.getElementById('modalForm');
+        const modalForm = new bootstrap.Modal('#modalForm', { keyboard: false });
+        modalFormEl.addEventListener('shown.bs.modal', event => { });
+        modalFormEl.addEventListener('hidden.bs.modal', event => { });
+        $("#btnCreate").click(function () {
+            $("#modalFormLabel").html("新增");
+            modalForm.show();
+        });
+        var editId = "";
+        $("#btnSave").click(function () {
+            var p = $.trim($("#txtP").val());
+            var n = $.trim($("#txtN").val());
+            apiClient.shijus.save(editId, p, n,function (d) {
+                alert(d);
+                modalForm.hide();
+                location.reload();
+            }, function (err) {
+                alert(err.message);
+            });
+        });
+
+        var initDelete = function () {
+            var btndeleteList = $(".btndelete");
+            for (var i = 0; i < btndeleteList.length; i++) {
+                $(btndeleteList[i]).click(function () {
+                    if (confirm("是否忍心删除此诗句？")) {
+                        var id = $(this).attr("data-id");
+                        apiClient.shijus.delete(id, function (d) {
+                            alert(d);
+                            location.reload();
+                        }, function (err) {
+                            alert(err.message);
+                        });
+                    }
+                });
+            }
+        }
+        initDelete();
+
+        var initEdit = function () {
+            var btneditList = $(".btnedit");
+            for (var i = 0; i < btneditList.length; i++) {
+                $(btneditList[i]).click(function () {
+                    editId = $(this).attr("data-id");
+                    apiClient.shijus.get(editId, function (d) {
+                        $("#txtP").val(d.f_P);
+                        $("#txtN").val(d.f_N);
+                        modalForm.show();
+                    }, function (err) {
+                        alert(err.message);
+                    });
+                });
+            }
+        }
+        initEdit();
+    };
+    $(function () {
+        new pageMatrix();
+    });
+</script>

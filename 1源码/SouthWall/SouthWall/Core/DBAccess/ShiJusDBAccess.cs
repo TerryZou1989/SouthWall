@@ -3,19 +3,19 @@ using System.Linq.Expressions;
 
 namespace SouthWall
 {
-    public interface IVideosDBAccess
+    public interface IShiJusDBAccess
     {
-        Task<List<VideosEntity>> GetList(VideosEntity query);
-        Task<VideosEntity?> GetById(string id);
-        Task<int> Save(VideosEntity entity);
+        Task<List<ShiJusEntity>> GetList(ShiJusEntity query);
+        Task<ShiJusEntity?> GetById(string id);
+        Task<int> Save(ShiJusEntity entity);
         Task Delete(string id);
     }
-    public class VideosDBAccess : DBAccessBase<VideosEntity>, IVideosDBAccess
+    public class ShiJusDBAccess : DBAccessBase<ShiJusEntity>, IShiJusDBAccess
     {
-        public VideosDBAccess(SWDbContext context) : base(context) { }
-        private Expression<Func<VideosEntity, bool>> GetExpression(VideosEntity query)
+        public ShiJusDBAccess(SWDbContext context) : base(context) { }
+        private Expression<Func<ShiJusEntity, bool>> GetExpression(ShiJusEntity query)
         {
-            Expression<Func<VideosEntity, bool>> exp = t => true;
+            Expression<Func<ShiJusEntity, bool>> exp = t => true;
             if (query == null)
             {
                 return exp;
@@ -26,16 +26,16 @@ namespace SouthWall
             }
             return exp;
         }
-        public async Task<List<VideosEntity>> GetList(VideosEntity query)
+        public async Task<List<ShiJusEntity>> GetList(ShiJusEntity query)
         {
             var exp = GetExpression(query);
-            return await _context.Videos.Where(exp).ToListAsync();
+            return await _context.ShiJus.Where(exp).ToListAsync();
         }
-        public async Task<VideosEntity?> GetById(string id)
+        public async Task<ShiJusEntity?> GetById(string id)
         {
-            return await _context.Videos.FirstOrDefaultAsync(t => t.F_Id == id);
+            return await _context.ShiJus.FirstOrDefaultAsync(t => t.F_Id == id);
         }
-        public async Task<int> Save(VideosEntity entity)
+        public async Task<int> Save(ShiJusEntity entity)
         {
             if (string.IsNullOrEmpty(entity.F_Id))
             {
@@ -47,10 +47,8 @@ namespace SouthWall
                 var obj = await GetById(entity.F_Id);
                 if (obj != null)
                 {
-                    obj.F_CoverImg = entity.F_CoverImg;
-                    obj.F_Title = entity.F_Title;
-                    obj.F_VideoUrl = entity.F_VideoUrl;
-                    obj.F_VideoCode = entity.F_VideoCode;
+                    obj.F_P = entity.F_P;
+                    obj.F_N = entity.F_N;
                     obj.InitUpdate();
                     _context.Update(obj);
                 }
