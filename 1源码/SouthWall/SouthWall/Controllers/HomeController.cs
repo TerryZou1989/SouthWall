@@ -11,49 +11,26 @@ namespace SouthWall.Controllers
              IVideosService videosService,
              IArticlesService articlesService,
              IMessagesService messagesService,
-             IShiJusService shiJusService
+             IShiJusService shiJusService,
+             ITouXiangsService touXiangsService
              ) : base(authService,
                  timesService,
                  videosService,
                  articlesService,
                 messagesService,
-                shiJusService)
+                shiJusService,
+                touXiangsService)
         {
            
         }
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Times");
         }
-
-        public IActionResult Videos()
-        {
-            return View();
-        }
-        public IActionResult Articles()
-        {
-            return View();
-        }
-        public IActionResult Messages()
-        {
-            return View();
-        }
-
         public IActionResult Owner()
         {
             return View();
-        }
-
-        public async Task<IActionResult> MessageBox() {
-
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

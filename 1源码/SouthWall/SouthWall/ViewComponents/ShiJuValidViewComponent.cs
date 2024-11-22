@@ -2,9 +2,9 @@
 
 namespace SouthWall.ViewComponents
 {
-    public class MessageBoxViewComponent: ViewComponentBase
+    public class ShiJuValidViewComponent: ViewComponentBase
     {
-        public MessageBoxViewComponent(IAuthService authService,
+        public ShiJuValidViewComponent(IAuthService authService,
              ITimesService timesService,
              IVideosService videosService,
              IArticlesService articlesService,
@@ -22,6 +22,8 @@ namespace SouthWall.ViewComponents
 
         public override async Task<IViewComponentResult> InvokeAsync()
         {
+            var shiju = await this._ShiJusService.GetByRandom();
+            this.ViewData["shiju"] = shiju;
             return View();
         }
     }

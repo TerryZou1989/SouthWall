@@ -240,6 +240,48 @@ var apiClient = {
                 err: function (ex) { if (err) err(ex) }
             });
         },
+    },
+    touxiangs: {
+        save: function (F_Id, F_ImgSrc, succ, err) {
+            apiPostAction({
+                action: "touxiangs/save",
+                data: {
+                    F_Id, F_ImgSrc
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        delete: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "touxiangs/delete",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        get: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "touxiangs/get",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        list: function (succ, err) {
+            apiPostAction({
+                action: "touxiangs/list",
+                data: {
+
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
     }
 }
 var apiPostAction = function (opt) {

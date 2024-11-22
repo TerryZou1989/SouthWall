@@ -3,19 +3,84 @@
 *@
 @{
     ViewData["Title"] = "放映厅";
-    int count = 20;
+    var list = this.ViewData["list"] as List<VideosEntity>;
+    var videoIndex = 0;
 }
 <div class="row p-0 m-0">
-    @for (int i = 0; i < count; i++)
+    @foreach (var item in list)
     {
         <div class="col-3 p-2">
-            <div class="card bg-dark text-light border-1 border-secondary">
-                <img src="~/img/1.png" class="card-img-top rounded-3" alt="...">
+            <div class="card bg-dark text-light border-1 border-secondary" title="@(item.F_Title)">
+                <img referrer="no-referrer|origin|unsafe-url" src="@(item.F_CoverImg)" class="card-img-top rounded-3 videoimg" data-index="@(videoIndex)" data-id="@(item.F_Id)" alt="@(item.F_Title)">
                 <div class="card-body">
-                    <p class="card-text fs-6">【编程小课堂】第一节课，编程如此简单</p>
+                    <a href="@(item.F_VideoUrl)" target="_blank" class="card-text fs-6 text-ccc text-decoration-none multi-line-ellipsis">@(item.F_Title)</a>
                 </div>
             </div>
         </div>
+        videoIndex++;
     }
 </div>
-
+<div class="modal fade" id="modalVideoView" tabindex="-1" aria-labelledby="modalVideoViewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h1 class="modal-title fs-5" id="modalVideoViewLabel"></h1>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height:600px;">
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-primary" id="btnPrev">上一视频</button>
+                <button type="button" class="btn btn-primary" id="btnNext">下一视频</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var pageMatrix = function () {
+        const modalVideoViewEl = document.getElementById('modalVideoView');
+        const modalVideoView = new bootstrap.Modal('#modalVideoView', { keyboard: false });
+        modalVideoViewEl.addEventListener('shown.bs.modal', event => { });
+        modalVideoViewEl.addEventListener('hidden.bs.modal', event => { });
+        var videos = $(".videoimg");
+        var videoIndex = 0;
+        var initVideosViewer = function () {
+            for (var i = 0; i < videos.length; i++) {
+                $(videos[i]).click(function () {
+                    var video = $(this);
+                    videoIndex = parseInt(video.attr("data-index"));
+                    var videoId = video.attr("data-id");
+                    apiClient.videos.get(videoId, function (d) {
+                        $("#modalVideoViewLabel").html(d.f_Title);
+                        $("#modalVideoView .modal-body").html(d.f_VideoCode);
+                        modalVideoView.show();
+                    }, function (err) {
+                        alert(err.message);
+                    });
+                });
+            }
+        }
+        initVideosViewer();
+        $("#btnPrev").click(function () {
+            if (videoIndex == 0) {
+                videoIndex = videos.length - 1;
+            }
+            else {
+                videoIndex--;
+            }
+            $(videos[videoIndex]).click();
+        });
+        $("#btnNext").click(function () {
+            if (videoIndex == videos.length - 1) {
+                videoIndex = 0;
+            }
+            else {
+                videoIndex++;
+            }
+            $(videos[videoIndex]).click();
+        });
+    };
+    $(function () {
+        new pageMatrix();
+    });
+</script>

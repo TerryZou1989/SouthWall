@@ -10,13 +10,15 @@ namespace SouthWall.Controllers
              IVideosService videosService,
              IArticlesService articlesService,
              IMessagesService messagesService,
-             IShiJusService shiJusService
+             IShiJusService shiJusService,
+             ITouXiangsService touXiangsService
              ):base(authService,
                  timesService,
                  videosService,
                  articlesService,
                 messagesService,
-                shiJusService)
+                shiJusService,
+                touXiangsService)
         {
         }
         public IActionResult Login()
@@ -27,33 +29,15 @@ namespace SouthWall.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> Times()
-        {
-            var list = await this._TimesService.GetList(null);
-            this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
-            return View();
-        }
-        public async Task<IActionResult> Videos()
-        {
-            var list = await this._VideosService.GetList(null);
-            this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
-            return View();
-        }
-        public async Task<IActionResult> Articles()
-        {
-            var list = await this._ArticlesService.GetList(null);
-            this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
-            return View();
-        }
-        public async Task<IActionResult> Messages()
-        {
-            var list = await this._MessagesService.GetList(null);
-            this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
-            return View();
-        }
         public async Task<IActionResult> ShiJus()
         {
             var list = await this._ShiJusService.GetList(null);
+            this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
+            return View();
+        }
+        public async Task<IActionResult> TouXiangs()
+        {
+            var list = await this._TouXiangsService.GetList(null);
             this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
             return View();
         }

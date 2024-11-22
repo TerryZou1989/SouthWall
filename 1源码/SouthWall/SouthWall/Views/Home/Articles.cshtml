@@ -3,21 +3,87 @@
 *@
 @{
     ViewData["Title"] = "文书阁";
-    int count = 20;
+    var list = this.ViewData["list"] as List<ArticlesEntity>;
+    var articleIndex = 0;
 }
-@for (int i = 0; i < count; i++)
+@foreach (var item in list)
 {
-    <div class="card bg-dark text-light border-0 m-0 mb-4">
+    <div class="card bg-dark text-light border-0 m-0 mb-3">
         <div class="card-body row m-0 px-2">
             <div class="col-2 px-2">
-                <img src="~/img/1.png" class="rounded-3 w-100" alt="...">
+                <img referrer="no-referrer|origin|unsafe-url" src="@(item.F_CoverImg)" class="rounded-3 w-100 articleimg" data-index="@(articleIndex)" data-id="@(item.F_Id)" alt="...">
             </div>
             <div class="col-10 px-2">
-                <h5 class="fs-6">暂停更新视频说明：最近备战北京马拉松。。。</h5>
-                <p class="fs-7 text-aaa mb-1">大家可能注意到了，我将近一个月没有更新视频了，因为十月份我参加了2024天津马拉松，一直在锻炼，然后得知北京马拉松也中签了，两个马拉松相隔也就两周，所以又在备战2024北京马拉松，上班的疲累和下班的锻炼，外加上精力优先，只能暂停更新视频，11月3日周日，北京马拉松结束后，会继续更新视频。。。</p>
-                <i class="fs-7 text-secondary">2024-10-01 12:36</i>
-            </div>            
+                <h3><a href="@(item.F_ArticleUrl)" target="_blank" class="fs-6 text-ddd text-decoration-none">@(item.F_Title)</a></h3>
+                <p class="fs-7 text-aaa mb-1">@(item.F_Content)</p>
+                <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
+            </div>
         </div>
     </div>
+    articleIndex++;
 }
+<div class="modal fade" id="modalArticleView" tabindex="-1" aria-labelledby="modalArticleViewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h1 class="modal-title fs-5" id="modalArticleViewLabel"></h1>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height:600px;">
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-primary" id="btnPrev">上一文章</button>
+                <button type="button" class="btn btn-primary" id="btnNext">下一文章</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var pageMatrix = function () {
+        const modalArticleViewEl = document.getElementById('modalArticleView');
+        const modalArticleView = new bootstrap.Modal('#modalArticleView', { keyboard: false });
+        modalArticleViewEl.addEventListener('shown.bs.modal', event => { });
+        modalArticleViewEl.addEventListener('hidden.bs.modal', event => { });
+        var articles = $(".articleimg");
+        var articleIndex = 0;
+        var initArticleViewer = function () {
+            for (var i = 0; i < articles.length; i++) {
+                $(articles[i]).click(function () {
+                    var article = $(this);
+                    articleIndex = parseInt(article.attr("data-index"));
+                    var articleId = article.attr("data-id");
+                    apiClient.articles.get(articleId, function (d) {
+                        $("#modalArticleViewLabel").html(d.f_Title);
+                        $("#modalArticleView .modal-body").html("<iframe src='" + d.f_ArticleUrl + "' scrolling='yes' border='0' frameborder='no' framespacing='0' allowfullscreen='true' class='w-100 h-100'></iframe>");
+                        modalArticleView.show();
+                    }, function (err) {
+                        alert(err.message);
+                    });
+                });
+            }
+        }
+        initArticleViewer();
+        $("#btnPrev").click(function () {
+            if (articleIndex == 0) {
+                articleIndex = articles.length - 1;
+            }
+            else {
+                articleIndex--;
+            }
+            $(articles[articleIndex]).click();
+        });
+        $("#btnNext").click(function () {
+            if (articleIndex == articles.length - 1) {
+                articleIndex = 0;
+            }
+            else {
+                articleIndex++;
+            }
+            $(articles[articleIndex]).click();
+        });
+    };
+    $(function () {
+        new pageMatrix();
+    });
+</script>
 

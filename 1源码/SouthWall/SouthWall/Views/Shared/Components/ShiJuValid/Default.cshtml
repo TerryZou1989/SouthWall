@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+    ShiJusEntity shiju = this.ViewData["shiju"] as ShiJusEntity;
+}
+<div class="modal fade" id="modalValid" tabindex="-1" aria-labelledby="modalValidLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h1 class="modal-title fs-5" id="modalValidLabel">对上我的诗，证明你不是机器人。</h1>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="txtP" class="form-label">我的上句</label>
+                    <textarea class="form-control bg-dark text-light" id="txtP" rows="1" placeholder="上句" disabled>@(shiju.F_P)</textarea>
+                    <input type="hidden" id="hid_id" value="@(shiju.F_Id)" />
+                </div>
+                <div class="mb-3">
+                    <label for="txtN" class="form-label">说出你的下句</label>
+                    <textarea class="form-control bg-dark text-light" id="txtN" rows="1" placeholder="下句"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="btnValid">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var pageMatrix_ShiJuValid = function () {
+        var scope = this;
+        const modalValidEl = document.getElementById('modalValid');
+        const modalValid = new bootstrap.Modal('#modalValid', { keyboard: false });
+        modalValidEl.addEventListener('shown.bs.modal', event => { });
+        modalValidEl.addEventListener('hidden.bs.modal', event => { });
+
+        scope.showModal = function (f) {
+            modalValid.show();
+            if (f) {
+                $("#btnValid").unbind("click");
+                $("#btnValid").click(function () {
+                    var shijuId = $("#hid_id").val();
+                    var shijuN = $.trim($("#txtN").val());
+                    var shiju = { shijuId, shijuN };
+                    f(shiju);
+                });
+            }
+        };
+        return scope;
+    };
+
+    var ShiJuValid = new pageMatrix_ShiJuValid();
+
+</script>

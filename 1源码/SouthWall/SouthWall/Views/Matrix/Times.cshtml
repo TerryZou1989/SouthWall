@@ -8,7 +8,7 @@
 {
     <div class="card bg-dark border-secondary text-light mb-3">
         <div class="card-body">
-            <p class="card-text fs-6 mb-1">@(item.F_Content)</p>
+            <p class="card-text lh-lg fs-6 mb-1 text-ccc" style="letter-spacing:0.15rem;">@(item.F_Content)</p>
             @if (item.E_ImgSrcList.Count > 0)
             {
                 int boxWidth = 340;
@@ -78,7 +78,7 @@
                 <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="#" id="imgViewer" class="img-fluid rounded mx-auto d-block" />
+                <img referrer="no-referrer|origin|unsafe-url" src="#" id="imgViewer" class="img-fluid rounded mx-auto d-block" />
             </div>
             <div class="modal-footer border-secondary">
                 <button type="button" class="btn btn-primary" id="btnPrev">上一张</button>

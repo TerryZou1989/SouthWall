@@ -3,18 +3,17 @@
 *@
 @{
     Layout = "_MatrixLayout";
-    ViewData["Title"] = "放映厅";
-    var list = this.ViewData["list"] as List<VideosEntity>;
-    var videoIndex = 0;
+    ViewData["Title"] = "头像相册";
+    var list = this.ViewData["list"] as List<TouXiangsEntity>;
+    int imgIndex = 0;
 }
-<div class="row p-0 m-0">
+<div class="row m-0 p-0">
     @foreach (var item in list)
     {
-        <div class="col-3 p-2">
-            <div class="card bg-dark text-light border-1 border-secondary" title="@(item.F_Title)">
-                <img referrer="no-referrer|origin|unsafe-url" src="@(item.F_CoverImg)" class="card-img-top rounded-3 videoimg" data-index="@(videoIndex)" data-id="@(item.F_Id)" alt="@(item.F_Title)">
-                <div class="card-body">
-                    <a href="@(item.F_VideoUrl)" target="_blank" class="card-text fs-6 text-ccc text-decoration-none multi-line-ellipsis">@(item.F_Title)</a>
+        <div class="col-2 m-0 mb-3">
+            <div class="card bg-dark text-light border-0 ">
+                <div class="card-body row m-0 px-2">
+                    <img referrer="no-referrer|origin|unsafe-url" src="@(item.F_ImgSrc)" class="card-img-top rounded-3 tximg" data-index="@(imgIndex)" data-id="@(item.F_Id)">
                 </div>
                 <div class="card-footer text-end border-secondary">
                     <button class="btn btn-sm btn-outline-primary btnedit" data-id="@(item.F_Id)">编辑</button>
@@ -22,7 +21,7 @@
                 </div>
             </div>
         </div>
-        videoIndex++;
+        imgIndex++;
     }
 </div>
 <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
@@ -33,18 +32,6 @@
                 <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="mb-3">
-                    <label for="txtTitle" class="form-label">标题</label>
-                    <textarea class="form-control bg-dark text-light" id="txtTitle" rows="3" placeholder="视频的标题，不要太长，容易影响样式哦"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="txtVideoUrl" class="form-label">视频地址</label>
-                    <textarea class="form-control bg-dark text-light" id="txtVideoUrl" rows="3" placeholder="视频地址"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="txtVideoCode" class="form-label">嵌入代码</label>
-                    <textarea class="form-control bg-dark text-light" id="txtVideoCode" rows="3" placeholder="嵌入代码，主要是哔哩哔哩视频哦"></textarea>
-                </div>
                 <div class="input-group mb-3">
                     <input id="txtImgSrc" type="text" class="form-control bg-dark text-light" placeholder="写上封面地址，咱就不存图片了哈" aria-describedby="btnAddImg">
                     <button class="btn btn-outline-secondary border-light text-light" type="button" id="btnAddImg">设置封面</button>
@@ -59,19 +46,19 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="modalVideoView" tabindex="-1" aria-labelledby="modalVideoViewLabel" aria-hidden="true">
+<div class="modal fade" id="modalImgView" tabindex="-1" aria-labelledby="modalImgViewLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
         <div class="modal-content bg-dark text-light">
             <div class="modal-header border-secondary">
-                <h1 class="modal-title fs-5" id="modalVideoViewLabel"></h1>
+                <h1 class="modal-title fs-5" id="modalImgViewLabel">看原图更清楚</h1>
                 <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" style="height:600px;">
-                
+            <div class="modal-body">
+                <img referrer="no-referrer|origin|unsafe-url" src="#" id="imgViewer" class="img-fluid rounded mx-auto d-block" />
             </div>
             <div class="modal-footer border-secondary">
-                <button type="button" class="btn btn-primary" id="btnPrev">上一视频</button>
-                <button type="button" class="btn btn-primary" id="btnNext">下一视频</button>
+                <button type="button" class="btn btn-primary" id="btnPrev">上一张</button>
+                <button type="button" class="btn btn-primary" id="btnNext">下一张</button>
             </div>
         </div>
     </div>
@@ -87,23 +74,20 @@
             modalForm.show();
         });
         var editId = "";
-        var coverImgSrc = "";
+        var imgSrc = "";
         $("#btnAddImg").click(function () {
-            coverImgSrc = $.trim($("#txtImgSrc").val());
-            if (coverImgSrc == "") {
+            imgSrc = $.trim($("#txtImgSrc").val());
+            if (imgSrc == "") {
                 alert("图片地址不能为空");
                 return;
             }
-            var img = $("<div class='float-start p-1'><img referrer='no-referrer|origin|unsafe-url' src='" + coverImgSrc + "' class='img-thumbnail' loading='lazy' style='width:200px;' /></div>");
+            var img = $("<div class='float-start p-1'><img referrer='no-referrer|origin|unsafe-url' src='" + imgSrc + "' class='img-thumbnail' style='width:200px;' /></div>");
             $("#imgbox").html(img);
             $("#txtImgSrc").val("");
         });
 
         $("#btnSave").click(function () {
-            var title = $.trim($("#txtTitle").val());
-            var videoUrl = $.trim($("#txtVideoUrl").val());
-            var videoCode = $.trim($("#txtVideoCode").val());
-            apiClient.videos.save(editId, title, videoUrl, videoCode, coverImgSrc, function (d) {
+            apiClient.touxiangs.save(editId, imgSrc, function (d) {
                 alert(d);
                 modalForm.hide();
                 location.reload();
@@ -116,9 +100,9 @@
             var btndeleteList = $(".btndelete");
             for (var i = 0; i < btndeleteList.length; i++) {
                 $(btndeleteList[i]).click(function () {
-                    if (confirm("是否忍心删除此视频？")) {
+                    if (confirm("是否忍心删除此头像？")) {
                         var id = $(this).attr("data-id");
-                        apiClient.videos.delete(id, function (d) {
+                        apiClient.touxiangs.delete(id, function (d) {
                             alert(d);
                             location.reload();
                         }, function (err) {
@@ -135,11 +119,8 @@
             for (var i = 0; i < btneditList.length; i++) {
                 $(btneditList[i]).click(function () {
                     editId = $(this).attr("data-id");
-                    apiClient.videos.get(editId, function (d) {
-                        $("#txtTitle").val(d.f_Title);
-                        $("#txtVideoUrl").val(d.f_VideoUrl);
-                        $("#txtVideoCode").val(d.f_VideoCode);
-                        $("#txtImgSrc").val(d.f_CoverImg);
+                    apiClient.touxiangs.get(editId, function (d) {
+                        $("#txtImgSrc").val(d.f_ImgSrc);
                         $("#btnAddImg").click();
                         modalForm.show();
                     }, function (err) {
@@ -150,46 +131,41 @@
         }
         initEdit();
 
-        const modalVideoViewEl = document.getElementById('modalVideoView');
-        const modalVideoView = new bootstrap.Modal('#modalVideoView', { keyboard: false });
-        modalVideoViewEl.addEventListener('shown.bs.modal', event => { });
-        modalVideoViewEl.addEventListener('hidden.bs.modal', event => { });
-        var videos = $(".videoimg");
-        var videoIndex = 0;
-        var initVideosViewer = function () {
-            for (var i = 0; i < videos.length; i++) {
-                $(videos[i]).click(function () {
-                    var video = $(this);
-                    videoIndex = parseInt(video.attr("data-index"));
-                    var videoId = video.attr("data-id");
-                    apiClient.videos.get(videoId, function (d) {
-                        $("#modalVideoViewLabel").html(d.f_Title);
-                        $("#modalVideoView .modal-body").html(d.f_VideoCode);
-                        modalVideoView.show();
-                    }, function (err) {
-                        alert(err.message);
-                    });
+        const modalImgViewEl = document.getElementById('modalImgView');
+        const modalImgView = new bootstrap.Modal('#modalImgView', { keyboard: false });
+        modalImgViewEl.addEventListener('shown.bs.modal', event => { });
+        modalImgViewEl.addEventListener('hidden.bs.modal', event => { });
+        var imgs = $(".tximg");
+        var imgIndex = 0;
+        var initImgViewer = function () {
+            for (var i = 0; i < imgs.length; i++) {
+                $(imgs[i]).click(function () {
+                    var img = $(this);
+                    imgIndex = parseInt(img.attr("data-index"));
+                    var imgsrc = img.attr("src");
+                    $("#imgViewer").attr("src", imgsrc);
+                    modalImgView.show();
                 });
             }
         }
-        initVideosViewer();
+        initImgViewer();
         $("#btnPrev").click(function () {
-            if (videoIndex == 0) {
-                videoIndex = videos.length - 1;
+            if (imgIndex == 0) {
+                imgIndex = imgs.length - 1;
             }
             else {
-                videoIndex--;
+                imgIndex--;
             }
-            $(videos[videoIndex]).click();
+            $(imgs[imgIndex]).click();
         });
         $("#btnNext").click(function () {
-            if (videoIndex == videos.length - 1) {
-                videoIndex = 0;
+            if (imgIndex == imgs.length - 1) {
+                imgIndex = 0;
             }
             else {
-                videoIndex++;
+                imgIndex++;
             }
-            $(videos[videoIndex]).click();
+            $(imgs[imgIndex]).click();
         });
     };
     $(function () {

@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "时光录";
+    var list = this.ViewData["list"] as List<TimesEntity>;
+    int imgIndex = 0;
+}
+@foreach (var item in list)
+{
+    <div class="card bg-dark border-secondary text-light mb-3">
+        <div class="card-body">
+            <p class="card-text lh-lg fs-6 mb-1 text-ccc" style="letter-spacing:0.15rem;">@(item.F_Content)</p>
+            @if (item.E_ImgSrcList.Count > 0)
+            {
+                int boxWidth = 340;
+                if (item.E_ImgSrcList.Count == 8)
+                {
+                    boxWidth = 450;
+                }
+
+                <div class="clearfix mt-2" style="width:@(boxWidth)px">
+                    @{
+                        int imgWidth = 100;
+                        if (item.E_ImgSrcList.Count == 4 || item.E_ImgSrcList.Count == 2)
+                        {
+                            imgWidth = 155;
+                        }
+                        if (item.E_ImgSrcList.Count == 1)
+                        {
+                            imgWidth = 320;
+                        }
+                    }
+                    @foreach (var img in item.E_ImgSrcList)
+                    {
+                        <img referrer="no-referrer|origin|unsafe-url" src="@(img.imgSrc)" class="float-start rounded timeImg" data-index="@(imgIndex)" style="width:@(imgWidth)px;height:@(imgWidth)px;margin:0 0 10px 10px" />
+                        imgIndex++;
+                    }
+                </div>
+            }
+            <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
+        </div>
+    </div>
+}
+<div class="modal fade" id="modalImgView" tabindex="-1" aria-labelledby="modalImgViewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h1 class="modal-title fs-5" id="modalImgViewLabel">看原图更清楚</h1>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img referrer="no-referrer|origin|unsafe-url" src="#" id="imgViewer" class="img-fluid rounded mx-auto d-block" />
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-primary" id="btnPrev">上一张</button>
+                <button type="button" class="btn btn-primary" id="btnNext">下一张</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var pageMatrix = function () {      
+        const modalImgViewEl = document.getElementById('modalImgView');
+        const modalImgView = new bootstrap.Modal('#modalImgView', { keyboard: false });
+        modalImgViewEl.addEventListener('shown.bs.modal', event => { });
+        modalImgViewEl.addEventListener('hidden.bs.modal', event => { });
+        var imgs = $(".timeImg");
+        var imgIndex = 0;
+        var initImgViewer = function () {
+            for (var i = 0; i < imgs.length; i++) {
+                $(imgs[i]).click(function () {
+                    var img = $(this);
+                    imgIndex = parseInt(img.attr("data-index"));
+                    var imgsrc = img.attr("src");
+                    $("#imgViewer").attr("src", imgsrc);
+                    modalImgView.show();
+                });
+            }
+        }
+        initImgViewer();
+        $("#btnPrev").click(function () {
+            if (imgIndex == 0) {
+                imgIndex = imgs.length - 1;
+            }
+            else {
+                imgIndex--;
+            }
+            $(imgs[imgIndex]).click();
+        });
+        $("#btnNext").click(function () {
+            if (imgIndex == imgs.length - 1) {
+                imgIndex = 0;
+            }
+            else {
+                imgIndex++;
+            }
+            $(imgs[imgIndex]).click();
+        });
+    };
+    $(function () {
+        new pageMatrix();
+    });
+</script>

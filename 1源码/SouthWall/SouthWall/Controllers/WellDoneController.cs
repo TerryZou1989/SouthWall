@@ -14,14 +14,16 @@ namespace SouthWall.Controllers
              IVideosService videosService,
              IArticlesService articlesService,
              IMessagesService messagesService,
-             IShiJusService shiJusService
+             IShiJusService shiJusService,
+             ITouXiangsService touXiangsService
             ) :
             base(authService,
                 timesService,
                 videosService,
                 articlesService,
                 messagesService,
-                shiJusService)
+                shiJusService,
+                touXiangsService)
         {
         }
         #region Auth   
@@ -417,7 +419,7 @@ namespace SouthWall.Controllers
         #endregion Messages_Get
         #endregion
 
-        #region ShiJuss
+        #region ShiJus
         #region ShiJus_List
         [HttpPost("shijus/list")]
         public Task<TZResponse> ShiJus_List([FromBody] ShiJus_List_Args args)
@@ -496,6 +498,83 @@ namespace SouthWall.Controllers
             public string? F_Id { get; set; }
         }
         #endregion ShiJus_Get
+        #endregion
+
+        #region TouXiangs
+        #region TouXiangs_List
+        [HttpPost("touxiangs/list")]
+        public Task<TZResponse> TouXiangs_List([FromBody] TouXiangs_List_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var list = await _TouXiangsService.GetList(null);
+                return Success("获取成功", list.Select(t => new
+                {
+                    t.F_Id,
+                    t.F_ImgSrc,
+                    t.F_CreateTime
+                }).ToList());
+            });
+        }
+        public class TouXiangs_List_Args
+        {
+        }
+        #endregion TouXiangs_List
+        #region TouXiangs_Save
+        [HttpPost("touxiangs/save")]
+        public Task<TZResponse> TouXiangs_Save([FromBody] TouXiangs_Save_Args args)
+        {
+            return RunAction(CheckAuthType.None, async () =>
+            {
+                await _TouXiangsService.Save(new TouXiangsEntity
+                {
+                    F_Id = args.F_Id,
+                    F_ImgSrc = args.F_ImgSrc,
+                });
+                return Success("保存成功");
+            });
+        }
+        public class TouXiangs_Save_Args
+        {
+            public string? F_Id { get; set; }
+            public string? F_ImgSrc { get; set; }
+        }
+        #endregion TouXiangs_Save
+        #region TouXiangs_Delete
+        [HttpPost("touxiangs/delete")]
+        public Task<TZResponse> TouXiangs_Delete([FromBody] TouXiangs_Delete_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _TouXiangsService.Delete(args.F_Id);
+                return Success("删除成功");
+            });
+        }
+        public class TouXiangs_Delete_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion TouXiangs_Delete
+        #region TouXiangs_Get
+        [HttpPost("touxiangs/get")]
+        public Task<TZResponse> TouXiangs_Get([FromBody] TouXiangs_Get_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var entity = await _TouXiangsService.GetById(args.F_Id);
+                return Success("获取成功", new
+                {
+                    entity.F_Id,
+                    entity.F_ImgSrc
+                });
+
+            });
+        }
+        public class TouXiangs_Get_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion TouXiangs_Get
         #endregion
 
         public class List_Page_Args_Base : List_Args_Base

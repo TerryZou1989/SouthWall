@@ -9,13 +9,15 @@ namespace SouthWall
         protected readonly IArticlesService _ArticlesService;
         protected readonly IMessagesService _MessagesService;
         protected readonly IShiJusService _ShiJusService;
+        protected readonly ITouXiangsService _TouXiangsService;
         public TZControllerBase(
             IAuthService authService,
             ITimesService timesService,
             IVideosService videosService,
             IArticlesService articlesService,
             IMessagesService messagesService,
-            IShiJusService shiJusService
+            IShiJusService shiJusService,
+            ITouXiangsService touXiangsService
             )
         {
             _AuthService = authService;
@@ -24,6 +26,7 @@ namespace SouthWall
             _ArticlesService = articlesService;
             _MessagesService = messagesService;
             _ShiJusService = shiJusService;
+            _TouXiangsService = touXiangsService;
         }
 
         protected Task<TZResponse> RunAction(CheckAuthType checkAuthType, WellDoneHandler action)

@@ -3,76 +3,32 @@
   "WorkspaceRootPath": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\components\\messagebox\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\components\\messagebox\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\viewcomponents\\messageboxviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\viewcomponents\\messageboxviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\viewcomponents\\viewcomponentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\viewcomponents\\viewcomponentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\messagebox.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\messagebox.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\touxiangs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\touxiangs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\pagecontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\pagecontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\shijus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\shijus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\wwwroot\\js\\webapis.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\wwwroot\\js\\webapis.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\welldonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\welldonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\service\\shijusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\service\\shijusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\com.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\com.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\matrixcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\matrixcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\times.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\times.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\times.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\times.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\_matrixlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -83,20 +39,124 @@
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\wwwroot\\js\\apis.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\welldonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\welldonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\shijus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\shijus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\matrixcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\matrixcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\tzcontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\tzcontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\service\\touxiangsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\service\\touxiangsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\service\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\service\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\dbaccess\\shijusdbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\dbaccess\\shijusdbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\dbaccess\\touxiangsdbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\dbaccess\\touxiangsdbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\ef\\swdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\ef\\swdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\ef\\touxiangsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\ef\\touxiangsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\components\\shijuvalid\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\components\\shijuvalid\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\components\\messagebox\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\components\\messagebox\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\viewcomponents\\shijuvalidviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\viewcomponents\\shijuvalidviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\viewcomponents\\viewcomponentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\viewcomponents\\viewcomponentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\viewcomponents\\messageboxviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\viewcomponents\\messageboxviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\wwwroot\\js\\webapis.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\wwwroot\\js\\webapis.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\service\\shijusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\service\\shijusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\com.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\com.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\dbaccess\\shijusdbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\dbaccess\\shijusdbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\ef\\shijusentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -220,26 +280,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -249,7 +289,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -257,119 +297,145 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Components\\MessageBox\\Default.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\Components\\MessageBox\\Default.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Components\\MessageBox\\Default.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Shared\\Components\\MessageBox\\Default.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Times.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Times.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Times.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Times.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Home\\Times.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADEAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T09:37:57.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MessageBoxViewComponent.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\ViewComponents\\MessageBoxViewComponent.cs",
-              "RelativeDocumentMoniker": "SouthWall\\ViewComponents\\MessageBoxViewComponent.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\ViewComponents\\MessageBoxViewComponent.cs",
-              "RelativeToolTip": "SouthWall\\ViewComponents\\MessageBoxViewComponent.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvxYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T09:34:04.652Z",
+              "WhenOpened": "2024-11-22T02:12:42.991Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MessageBox.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\MessageBox.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\MessageBox.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\MessageBox.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Home\\MessageBox.cshtml",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAuwFMAAAAAAAAAAAAAAA==",
+              "Title": "Times.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Times.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Times.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Times.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Times.cshtml",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAFAAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T07:12:38.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "SouthWall\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAuwDAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T01:38:40.439Z",
+              "WhenOpened": "2024-11-19T03:26:20.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAwEIAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T01:32:29.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ViewComponentBase.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\ViewComponents\\ViewComponentBase.cs",
-              "RelativeDocumentMoniker": "SouthWall\\ViewComponents\\ViewComponentBase.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\ViewComponents\\ViewComponentBase.cs",
-              "RelativeToolTip": "SouthWall\\ViewComponents\\ViewComponentBase.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAADwvxoAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T09:35:50.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "PageControllerBase.cs",
               "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\PageControllerBase.cs",
               "RelativeDocumentMoniker": "SouthWall\\Controllers\\PageControllerBase.cs",
               "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\PageControllerBase.cs",
               "RelativeToolTip": "SouthWall\\Controllers\\PageControllerBase.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAiwBoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAuwDYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T09:00:25.516Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Articles.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Articles.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Articles.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Articles.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Articles.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAFQAAABGAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Messages.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Messages.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Messages.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Messages.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Messages.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAADIAAAB9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T02:51:31.286Z",
+              "WhenOpened": "2024-11-19T02:51:38.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Messages.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Messages.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Messages.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Messages.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Home\\Messages.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADEAAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T02:54:27.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TouXiangs.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\TouXiangs.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\TouXiangs.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\TouXiangs.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Matrix\\TouXiangs.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T03:55:38.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ShiJus.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\ShiJus.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\ShiJus.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\ShiJus.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Matrix\\ShiJus.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAuwGsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T08:22:37.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Videos.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Videos.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Videos.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Videos.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Videos.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAADHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T02:51:23.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_MatrixLayout.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADEAAAB6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T01:40:21.03Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "webapis.js",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\webapis.js",
-              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\js\\webapis.js",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\webapis.js",
-              "RelativeToolTip": "SouthWall\\wwwroot\\js\\webapis.js",
-              "ViewState": "AgIAACAAAAAAAAAAAAA1wCsAAAA+AAAAAAAAAA==",
+              "Title": "apis.js",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\apis.js",
+              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\js\\apis.js",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\apis.js",
+              "RelativeToolTip": "SouthWall\\wwwroot\\js\\apis.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-21T07:08:37.417Z",
+              "WhenOpened": "2024-11-19T07:52:03.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Articles.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Articles.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Articles.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Articles.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Articles.cshtml",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAuwI8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T02:51:31.286Z",
               "EditorCaption": ""
             },
             {
@@ -380,59 +446,20 @@
               "RelativeDocumentMoniker": "SouthWall\\Controllers\\WellDoneController.cs",
               "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\WellDoneController.cs",
               "RelativeToolTip": "SouthWall\\Controllers\\WellDoneController.cs",
-              "ViewState": "AgIAAG0BAAAAAAAAAAAuwHsBAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAA0CAAAAAAAAAAAuwBsCAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T07:30:53.91Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ShiJus.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\ShiJus.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\ShiJus.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\ShiJus.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Matrix\\ShiJus.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T08:22:37.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ShiJusService.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ShiJusService.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\ShiJusService.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ShiJusService.cs",
-              "RelativeToolTip": "SouthWall\\Core\\Service\\ShiJusService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAIwCIAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T07:54:20.352Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Com.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Com.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\Com.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Com.cs",
-              "RelativeToolTip": "SouthWall\\Core\\Com.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T07:02:42.785Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "MatrixController.cs",
               "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\MatrixController.cs",
               "RelativeDocumentMoniker": "SouthWall\\Controllers\\MatrixController.cs",
               "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\MatrixController.cs",
               "RelativeToolTip": "SouthWall\\Controllers\\MatrixController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAwwAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAIwCUAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T01:38:36.559Z",
               "EditorCaption": ""
@@ -440,576 +467,175 @@
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Videos.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Videos.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Videos.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Videos.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Videos.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T02:51:23.199Z",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SouthWall\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAywBUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T01:38:40.439Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Times.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Times.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Times.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Times.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Times.cshtml",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAnwIMAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T03:26:20.472Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Messages.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Messages.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Messages.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Messages.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Messages.cshtml",
-              "ViewState": "AgIAADsAAAAAAAAAAAAcwEUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T02:51:38.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Program.cs",
               "RelativeDocumentMoniker": "SouthWall\\Program.cs",
               "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Program.cs",
               "RelativeToolTip": "SouthWall\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAADwvxcAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvxkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T07:01:42.796Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 15,
               "Title": "TZControllerBase.cs",
               "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\TZControllerBase.cs",
               "RelativeDocumentMoniker": "SouthWall\\Controllers\\TZControllerBase.cs",
               "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\TZControllerBase.cs",
               "RelativeToolTip": "SouthWall\\Controllers\\TZControllerBase.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAiwBcAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAIAzwBsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T07:17:36.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TouXiangsService.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\TouXiangsService.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\TouXiangsService.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\TouXiangsService.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Service\\TouXiangsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T03:51:02.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "_MatrixLayout.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADEAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T01:40:21.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ShiJusDBAccess.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\ShiJusDBAccess.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\ShiJusDBAccess.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\ShiJusDBAccess.cs",
-              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\ShiJusDBAccess.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA6AAAAAAAAAA==",
+              "Title": "TouXiangsDBAccess.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\TouXiangsDBAccess.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\TouXiangsDBAccess.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\TouXiangsDBAccess.cs",
+              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\TouXiangsDBAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T07:52:00.936Z",
+              "WhenOpened": "2024-11-22T03:48:54.311Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "apis.js",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\apis.js",
-              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\js\\apis.js",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\apis.js",
-              "RelativeToolTip": "SouthWall\\wwwroot\\js\\apis.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-19T07:52:03.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ShiJusEntity.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\ShiJusEntity.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\ShiJusEntity.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\ShiJusEntity.cs",
-              "RelativeToolTip": "SouthWall\\Core\\EF\\ShiJusEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "TouXiangsEntity.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\TouXiangsEntity.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\TouXiangsEntity.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\TouXiangsEntity.cs",
+              "RelativeToolTip": "SouthWall\\Core\\EF\\TouXiangsEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T07:51:02.105Z",
+              "WhenOpened": "2024-11-22T03:48:13.456Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "MessagesService.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\MessagesService.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\MessagesService.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\MessagesService.cs",
-              "RelativeToolTip": "SouthWall\\Core\\Service\\MessagesService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAApwBcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T06:47:35.91Z",
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Components\\ShiJuValid\\Default.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\Components\\ShiJuValid\\Default.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Components\\ShiJuValid\\Default.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Shared\\Components\\ShiJuValid\\Default.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T01:49:07.84Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\AuthService.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\AuthService.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\AuthService.cs",
-              "RelativeToolTip": "SouthWall\\Core\\Service\\AuthService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAawBUAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T07:18:21.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ServiceBase.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ServiceBase.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\ServiceBase.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ServiceBase.cs",
-              "RelativeToolTip": "SouthWall\\Core\\Service\\ServiceBase.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAADwvykAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T07:19:35.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Config.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Config.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\Config.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Config.cs",
-              "RelativeToolTip": "SouthWall\\Core\\Config.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAwwA0AAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T07:07:31.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 19,
               "Title": "SWDbContext.cs",
               "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\SWDbContext.cs",
               "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\SWDbContext.cs",
               "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\SWDbContext.cs",
               "RelativeToolTip": "SouthWall\\Core\\EF\\SWDbContext.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAywB0AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAA7wB8AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T05:23:51.27Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "MyExtension.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\MyExtension.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\MyExtension.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\MyExtension.cs",
-              "RelativeToolTip": "SouthWall\\Core\\MyExtension.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA2wBMAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "ServiceBase.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ServiceBase.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\ServiceBase.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ServiceBase.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Service\\ServiceBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T07:08:03.945Z",
+              "WhenOpened": "2024-11-19T07:19:35.598Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "TimesService.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\TimesService.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\TimesService.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\TimesService.cs",
-              "RelativeToolTip": "SouthWall\\Core\\Service\\TimesService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAMwAsAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T05:48:13.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "VideosService.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\VideosService.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\VideosService.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\VideosService.cs",
-              "RelativeToolTip": "SouthWall\\Core\\Service\\VideosService.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAEBCwA4AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T01:35:21.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "MessagesDBAccess.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\MessagesDBAccess.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\MessagesDBAccess.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\MessagesDBAccess.cs",
-              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\MessagesDBAccess.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T06:44:37.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "MessagesEntity.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\MessagesEntity.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\MessagesEntity.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\MessagesEntity.cs",
-              "RelativeToolTip": "SouthWall\\Core\\EF\\MessagesEntity.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvw0AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T06:43:51.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "ArticlesEntity.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\ArticlesEntity.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\ArticlesEntity.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\ArticlesEntity.cs",
-              "RelativeToolTip": "SouthWall\\Core\\EF\\ArticlesEntity.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAcwA0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T06:00:07.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ArticlesDBAccess.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\ArticlesDBAccess.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\ArticlesDBAccess.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\ArticlesDBAccess.cs",
-              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\ArticlesDBAccess.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAMwDMAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T06:01:15.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "ArticlesService.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ArticlesService.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\ArticlesService.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ArticlesService.cs",
-              "RelativeToolTip": "SouthWall\\Core\\Service\\ArticlesService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T06:05:14.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "VideosEntity.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\VideosEntity.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\VideosEntity.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\VideosEntity.cs",
-              "RelativeToolTip": "SouthWall\\Core\\EF\\VideosEntity.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAADwvxYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T01:26:28.194Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "TimesEntity.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\TimesEntity.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\TimesEntity.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\TimesEntity.cs",
-              "RelativeToolTip": "SouthWall\\Core\\EF\\TimesEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T05:24:50.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "VideosDBAccess.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\VideosDBAccess.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\VideosDBAccess.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\VideosDBAccess.cs",
-              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\VideosDBAccess.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAMwDMAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T01:35:53.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "EntityBase.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\EntityBase.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\EntityBase.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\EntityBase.cs",
-              "RelativeToolTip": "SouthWall\\Core\\EF\\EntityBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T05:24:08.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "TimesDBAccess.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\TimesDBAccess.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\TimesDBAccess.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\TimesDBAccess.cs",
-              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\TimesDBAccess.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAkwDgAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T05:34:17.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "SouthWall\\appsettings.Development.json",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.Development.json",
-              "RelativeToolTip": "SouthWall\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwIAAABwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-19T07:59:44.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.json",
-              "RelativeDocumentMoniker": "SouthWall\\appsettings.json",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.json",
-              "RelativeToolTip": "SouthWall\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-19T07:06:06.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "ExecutionContext.cs",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\AppData\\Local\\Temp\\.vsdbgsrc\\035d89ddf43b87ac88c3d0682d9bfc99e60c7385941aaa1ca0ead6d2570ab924\\ExecutionContext.cs",
-              "ToolTip": "C:\\Users\\TZ1989\\AppData\\Local\\Temp\\.vsdbgsrc\\035d89ddf43b87ac88c3d0682d9bfc99e60c7385941aaa1ca0ead6d2570ab924\\ExecutionContext.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAswJgAAAACAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T08:11:57.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "DBAccessBase.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\DBAccessBase.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\DBAccessBase.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\DBAccessBase.cs",
-              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\DBAccessBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T05:35:09.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "CheckAuthType.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\CheckAuthType.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\CheckAuthType.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\CheckAuthType.cs",
-              "RelativeToolTip": "SouthWall\\Core\\CheckAuthType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T07:29:43.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "site.js",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\js\\site.js",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "SouthWall\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAwEsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-19T07:56:24.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Login.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Login.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Login.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Login.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAABiwE8AAAApAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T01:39:12.149Z",
+              "WhenOpened": "2024-11-22T03:31:03.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "LoginToken.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\LoginToken.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\LoginToken.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\LoginToken.cs",
-              "RelativeToolTip": "SouthWall\\Core\\LoginToken.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T07:09:56.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Index.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Index.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Index.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T01:56:28.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "TZResponse.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\TZResponse.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\TZResponse.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\TZResponse.cs",
-              "RelativeToolTip": "SouthWall\\Core\\TZResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T07:29:58.749Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "AppSettingsHelper.cs",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\AppSettingsHelper.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\AppSettingsHelper.cs",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\AppSettingsHelper.cs",
-              "RelativeToolTip": "SouthWall\\Core\\AppSettingsHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T07:01:02.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "Videos.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Videos.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Videos.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Videos.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Home\\Videos.cshtml",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T02:54:13.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "bootstrap.css",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-              "RelativeToolTip": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-              "ViewState": "AgIAAAQVAAAAAAAAAAAAwBMVAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-19T03:38:35.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "bootstrap.css.map",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-              "RelativeToolTip": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+              "DocumentIndex": 23,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Shared\\Error.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVDhPY2SAgm/fvv2HMrGBD0DsyMXFdQHChYL///\u002BjGODj4wPloQIXFxeGgoICrIYwQWm8YM\u002BePQwTJkwQADL3Ay0ygIhCAFYXrFu7HkzDQFBwIJjG5hKcLgBpgmmEAWSXQESIdAEMwAzcsmULA9AFYL0EXYDNJcgApwEgVyBjXGDUBTiikRAgKhqJBSgugDKJAjAXUAgYGAACRGV6yheEQwAAAABJRU5ErkJggg==",
-              "WhenOpened": "2024-11-19T03:44:56.57Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T03:31:08.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "bootstrap.min.css",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-              "RelativeToolTip": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+              "DocumentIndex": 21,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T01:32:29.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-19T03:44:58.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "Messages.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Messages.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Messages.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Messages.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Home\\Messages.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T02:54:27.266Z",
+              "WhenOpened": "2024-11-22T03:31:15.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "Articles.cshtml",
-              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Articles.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Articles.cshtml",
-              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Articles.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Home\\Articles.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T02:00:19.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 25,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\_ViewStart.cshtml",
@@ -1022,16 +648,517 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 28,
+              "Title": "Videos.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Videos.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Videos.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Videos.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Home\\Videos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAACJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T02:54:13.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Articles.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Articles.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Articles.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Articles.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Home\\Articles.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T02:00:19.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "SouthWall\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAABoAAAAAAAAAAAAkwCYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-22T02:23:24.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Components\\MessageBox\\Default.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\Components\\MessageBox\\Default.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Components\\MessageBox\\Default.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Shared\\Components\\MessageBox\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T09:37:57.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "MessageBoxViewComponent.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\ViewComponents\\MessageBoxViewComponent.cs",
+              "RelativeDocumentMoniker": "SouthWall\\ViewComponents\\MessageBoxViewComponent.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\ViewComponents\\MessageBoxViewComponent.cs",
+              "RelativeToolTip": "SouthWall\\ViewComponents\\MessageBoxViewComponent.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAywBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T09:34:04.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "SouthWall\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADsAAAAAAAAAAABrwE8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T02:07:38.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T02:07:38.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ViewComponentBase.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\ViewComponents\\ViewComponentBase.cs",
+              "RelativeDocumentMoniker": "SouthWall\\ViewComponents\\ViewComponentBase.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\ViewComponents\\ViewComponentBase.cs",
+              "RelativeToolTip": "SouthWall\\ViewComponents\\ViewComponentBase.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAADwvxoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T09:35:50.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ShiJuValidViewComponent.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\ViewComponents\\ShiJuValidViewComponent.cs",
+              "RelativeDocumentMoniker": "SouthWall\\ViewComponents\\ShiJuValidViewComponent.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\ViewComponents\\ShiJuValidViewComponent.cs",
+              "RelativeToolTip": "SouthWall\\ViewComponents\\ShiJuValidViewComponent.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAywBoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T01:48:10.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "webapis.js",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\webapis.js",
+              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\js\\webapis.js",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\webapis.js",
+              "RelativeToolTip": "SouthWall\\wwwroot\\js\\webapis.js",
+              "ViewState": "AgIAACAAAAAAAAAAAAA1wCsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-21T07:08:37.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ShiJusService.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ShiJusService.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\ShiJusService.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ShiJusService.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Service\\ShiJusService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwCIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T07:54:20.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Com.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Com.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Com.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Com.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Com.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T07:02:42.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ShiJusDBAccess.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\ShiJusDBAccess.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\ShiJusDBAccess.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\ShiJusDBAccess.cs",
+              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\ShiJusDBAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T07:52:00.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ShiJusEntity.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\ShiJusEntity.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\ShiJusEntity.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\ShiJusEntity.cs",
+              "RelativeToolTip": "SouthWall\\Core\\EF\\ShiJusEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T07:51:02.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "MessagesService.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\MessagesService.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\MessagesService.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\MessagesService.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Service\\MessagesService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAApwBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T06:47:35.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\AuthService.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\AuthService.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\AuthService.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Service\\AuthService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAawBUAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T07:18:21.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Config.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Config.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Config.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Config.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Config.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwA0AAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T07:07:31.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "MyExtension.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\MyExtension.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\MyExtension.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\MyExtension.cs",
+              "RelativeToolTip": "SouthWall\\Core\\MyExtension.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA2wBMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T07:08:03.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "TimesService.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\TimesService.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\TimesService.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\TimesService.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Service\\TimesService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAMwAsAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T05:48:13.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "VideosService.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\VideosService.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\VideosService.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\VideosService.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Service\\VideosService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAEBCwA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T01:35:21.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "MessagesDBAccess.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\MessagesDBAccess.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\MessagesDBAccess.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\MessagesDBAccess.cs",
+              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\MessagesDBAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T06:44:37.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "MessagesEntity.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\MessagesEntity.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\MessagesEntity.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\MessagesEntity.cs",
+              "RelativeToolTip": "SouthWall\\Core\\EF\\MessagesEntity.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvw0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T06:43:51.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ArticlesEntity.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\ArticlesEntity.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\ArticlesEntity.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\ArticlesEntity.cs",
+              "RelativeToolTip": "SouthWall\\Core\\EF\\ArticlesEntity.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T06:00:07.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ArticlesDBAccess.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\ArticlesDBAccess.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\ArticlesDBAccess.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\ArticlesDBAccess.cs",
+              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\ArticlesDBAccess.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAMwDMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T06:01:15.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ArticlesService.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ArticlesService.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\ArticlesService.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ArticlesService.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Service\\ArticlesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T06:05:14.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "VideosEntity.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\VideosEntity.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\VideosEntity.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\VideosEntity.cs",
+              "RelativeToolTip": "SouthWall\\Core\\EF\\VideosEntity.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvxYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T01:26:28.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "TimesEntity.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\TimesEntity.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\TimesEntity.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\TimesEntity.cs",
+              "RelativeToolTip": "SouthWall\\Core\\EF\\TimesEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T05:24:50.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "VideosDBAccess.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\VideosDBAccess.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\VideosDBAccess.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\VideosDBAccess.cs",
+              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\VideosDBAccess.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAMwDMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T01:35:53.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "EntityBase.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\EntityBase.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\EntityBase.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\EntityBase.cs",
+              "RelativeToolTip": "SouthWall\\Core\\EF\\EntityBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T05:24:08.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "TimesDBAccess.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\TimesDBAccess.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\TimesDBAccess.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\TimesDBAccess.cs",
+              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\TimesDBAccess.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAkwDgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T05:34:17.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "SouthWall\\appsettings.Development.json",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.Development.json",
+              "RelativeToolTip": "SouthWall\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwIAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-19T07:59:44.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.json",
+              "RelativeDocumentMoniker": "SouthWall\\appsettings.json",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.json",
+              "RelativeToolTip": "SouthWall\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-19T07:06:06.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ExecutionContext.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\AppData\\Local\\Temp\\.vsdbgsrc\\035d89ddf43b87ac88c3d0682d9bfc99e60c7385941aaa1ca0ead6d2570ab924\\ExecutionContext.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\AppData\\Local\\Temp\\.vsdbgsrc\\035d89ddf43b87ac88c3d0682d9bfc99e60c7385941aaa1ca0ead6d2570ab924\\ExecutionContext.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAswJgAAAACAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T08:11:57.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "DBAccessBase.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\DBAccessBase.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\DBAccessBase.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\DBAccessBase.cs",
+              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\DBAccessBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T05:35:09.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "CheckAuthType.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\CheckAuthType.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\CheckAuthType.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\CheckAuthType.cs",
+              "RelativeToolTip": "SouthWall\\Core\\CheckAuthType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T07:29:43.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "SouthWall\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAwEsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-19T07:56:24.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Login.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Login.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Login.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Login.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAABiwE8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T01:39:12.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "LoginToken.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\LoginToken.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\LoginToken.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\LoginToken.cs",
+              "RelativeToolTip": "SouthWall\\Core\\LoginToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T07:09:56.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Index.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Index.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Index.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T01:56:28.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "TZResponse.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\TZResponse.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\TZResponse.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\TZResponse.cs",
+              "RelativeToolTip": "SouthWall\\Core\\TZResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T07:29:58.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "AppSettingsHelper.cs",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\AppSettingsHelper.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\AppSettingsHelper.cs",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\AppSettingsHelper.cs",
+              "RelativeToolTip": "SouthWall\\Core\\AppSettingsHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T07:01:02.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "bootstrap.css",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeToolTip": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ViewState": "AgIAAAQVAAAAAAAAAAAAwBMVAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-19T03:38:35.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "bootstrap.css.map",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+              "RelativeToolTip": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVDhPY2SAgm/fvv2HMrGBD0DsyMXFdQHChYL///\u002BjGODj4wPloQIXFxeGgoICrIYwQWm8YM\u002BePQwTJkwQADL3Ay0ygIhCAFYXrFu7HkzDQFBwIJjG5hKcLgBpgmmEAWSXQESIdAEMwAzcsmULA9AFYL0EXYDNJcgApwEgVyBjXGDUBTiikRAgKhqJBSgugDKJAjAXUAgYGAACRGV6yheEQwAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-11-19T03:44:56.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "bootstrap.min.css",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+              "RelativeToolTip": "SouthWall\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-19T03:44:58.491Z"
             }
           ]
         }
