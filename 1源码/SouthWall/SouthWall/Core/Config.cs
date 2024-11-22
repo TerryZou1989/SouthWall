@@ -2,6 +2,7 @@
 {
     public class Config
     {
+        public static readonly string SiteName = AppSettingsHelper.AppSetting("SiteName");
         public static readonly string DBConnectionString = AppSettingsHelper.AppSetting("DBConnectionString");
         public static readonly string JWTKey = AppSettingsHelper.AppSetting("JWTKey");
         public static readonly int JWTExpired = AppSettingsHelper.AppSetting("JWTExpired").ToInt32();

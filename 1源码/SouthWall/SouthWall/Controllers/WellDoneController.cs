@@ -134,7 +134,7 @@ namespace SouthWall.Controllers
         [HttpPost("times/get")]
         public Task<TZResponse> Times_Get([FromBody] Times_Get_Args args)
         {
-            return RunAction(CheckAuthType.User, async () =>
+            return RunAction(CheckAuthType.None, async () =>
             {
                 var entity = await _TimesService.GetById(args.F_Id);
                 return Success("获取成功", new
@@ -220,7 +220,7 @@ namespace SouthWall.Controllers
         [HttpPost("videos/get")]
         public Task<TZResponse> Videos_Get([FromBody] Videos_Get_Args args)
         {
-            return RunAction(CheckAuthType.User, async () =>
+            return RunAction(CheckAuthType.None, async () =>
             {
                 var entity = await _VideosService.GetById(args.F_Id);
                 return Success("获取成功", new
@@ -308,7 +308,7 @@ namespace SouthWall.Controllers
         [HttpPost("articles/get")]
         public Task<TZResponse> Articles_Get([FromBody] Articles_Get_Args args)
         {
-            return RunAction(CheckAuthType.User, async () =>
+            return RunAction(CheckAuthType.None, async () =>
             {
                 var entity = await _ArticlesService.GetById(args.F_Id);
                 return Success("获取成功", new
@@ -401,7 +401,7 @@ namespace SouthWall.Controllers
         [HttpPost("messages/get")]
         public Task<TZResponse> Messages_Get([FromBody] Messages_Get_Args args)
         {
-            return RunAction(CheckAuthType.User, async () =>
+            return RunAction(CheckAuthType.None, async () =>
             {
                 var entity = await _MessagesService.GetById(args.F_Id);
                 return Success("获取成功", new
@@ -444,7 +444,7 @@ namespace SouthWall.Controllers
         [HttpPost("shijus/save")]
         public Task<TZResponse> ShiJus_Save([FromBody] ShiJus_Save_Args args)
         {
-            return RunAction(CheckAuthType.None, async () =>
+            return RunAction(CheckAuthType.User, async () =>
             {
                 await _ShiJusService.Save(new ShiJusEntity
                 {
@@ -524,7 +524,7 @@ namespace SouthWall.Controllers
         [HttpPost("touxiangs/save")]
         public Task<TZResponse> TouXiangs_Save([FromBody] TouXiangs_Save_Args args)
         {
-            return RunAction(CheckAuthType.None, async () =>
+            return RunAction(CheckAuthType.User, async () =>
             {
                 await _TouXiangsService.Save(new TouXiangsEntity
                 {
