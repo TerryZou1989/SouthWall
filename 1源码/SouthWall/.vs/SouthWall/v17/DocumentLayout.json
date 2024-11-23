@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\appsettings.development - \u526F\u672C.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\appsettings.development - \u526F\u672C.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|d:\\gitee\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\_matrixlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\_matrixlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -27,25 +43,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.json",
+              "RelativeDocumentMoniker": "SouthWall\\appsettings.json",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.json",
+              "RelativeToolTip": "SouthWall\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-23T14:15:03.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development - \u526F\u672C.json",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.Development - \u526F\u672C.json",
+              "RelativeDocumentMoniker": "SouthWall\\appsettings.Development - \u526F\u672C.json",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.Development - \u526F\u672C.json",
+              "RelativeToolTip": "SouthWall\\appsettings.Development - \u526F\u672C.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAzwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-23T14:11:39.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "SouthWall\\appsettings.Development.json",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.Development.json",
+              "RelativeToolTip": "SouthWall\\appsettings.Development.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAzwA8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-23T14:10:29.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Footer.cshtml",
+              "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Footer.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\Footer.cshtml",
+              "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Footer.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Shared\\Footer.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T14:08:55.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "_MatrixLayout.cshtml",
               "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
               "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
               "RelativeToolTip": "SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAADwvxsAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAADwv0QAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-22T09:22:44.32Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Gitee\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "SouthWall\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAADwv08AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-22T09:22:33.586Z",
               "EditorCaption": ""

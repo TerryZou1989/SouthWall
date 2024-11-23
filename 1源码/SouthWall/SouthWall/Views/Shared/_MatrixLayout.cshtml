@@ -66,11 +66,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted border-secondary">
-        <div class="container">
-            &copy; 2024 - 编城的南墙
-        </div>
-    </footer>
+    @await Html.PartialAsync("Footer");
     <script>
         $("#pagebody").height($(window).height() - 117);
     </script>
