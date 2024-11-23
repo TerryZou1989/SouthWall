@@ -28,7 +28,6 @@ namespace SouthWall
             _ShiJusService = shiJusService;
             _TouXiangsService = touXiangsService;
         }
-
         public async Task<IActionResult> Times()
         {
             var list = await this._TimesService.GetList(null);

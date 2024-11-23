@@ -23,10 +23,10 @@ namespace SouthWall.Controllers
         {
            
         }
-
-        public IActionResult Index()
+        [HttpGet]
+        public Task<IActionResult> Index()
         {
-            return RedirectToAction("Times");
+            return Times();
         }
         public IActionResult Owner()
         {

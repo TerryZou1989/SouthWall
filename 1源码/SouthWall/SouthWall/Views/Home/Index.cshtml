@@ -1,4 +1,4 @@
 ﻿@{
-
+    ViewData["Title"] = "时光录";
 }
-
+@await Html.PartialAsync("Times", this.ViewData["list"]);
