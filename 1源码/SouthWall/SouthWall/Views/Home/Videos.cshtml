@@ -41,7 +41,9 @@
         const modalVideoViewEl = document.getElementById('modalVideoView');
         const modalVideoView = new bootstrap.Modal('#modalVideoView', { keyboard: false });
         modalVideoViewEl.addEventListener('shown.bs.modal', event => { });
-        modalVideoViewEl.addEventListener('hidden.bs.modal', event => { });
+        modalVideoViewEl.addEventListener('hidden.bs.modal', event => {
+            $("#modalVideoView .modal-body").html("");
+        });
         var videos = $(".videoimg");
         var videoIndex = 0;
         var initVideosViewer = function () {

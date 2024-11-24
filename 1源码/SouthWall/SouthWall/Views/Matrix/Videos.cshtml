@@ -81,7 +81,9 @@
         const modalFormEl = document.getElementById('modalForm');
         const modalForm = new bootstrap.Modal('#modalForm', { keyboard: false });
         modalFormEl.addEventListener('shown.bs.modal', event => { });
-        modalFormEl.addEventListener('hidden.bs.modal', event => { });
+        modalFormEl.addEventListener('hidden.bs.modal', event => {
+            $("#modalVideoView .modal-body").html("");
+        });
         $("#btnCreate").click(function () {
             $("#modalFormLabel").html("新增");
             modalForm.show();
