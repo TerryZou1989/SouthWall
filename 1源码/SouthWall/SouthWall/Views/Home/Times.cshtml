@@ -19,18 +19,21 @@
                 <div class="clearfix mt-2" style="width:@(boxWidth)px">
                     @{
                         int imgWidth = 100;
+                        int imgHeight = 100;
                         if (item.E_ImgSrcList.Count == 4 || item.E_ImgSrcList.Count == 2)
                         {
                             imgWidth = 155;
                         }
+                        imgHeight = imgWidth;
                         if (item.E_ImgSrcList.Count == 1)
                         {
+                            imgHeight = 0;
                             imgWidth = 320;
                         }
                     }
                     @foreach (var img in item.E_ImgSrcList)
                     {
-                        <img referrer="no-referrer|origin|unsafe-url" src="@(img.imgSrc)" class="float-start rounded timeImg" data-index="@(imgIndex)" style="width:@(imgWidth)px;height:@(imgWidth)px;margin:0 0 10px 10px" />
+                        <img referrer="no-referrer|origin|unsafe-url" src="@(img.imgSrc)" class="float-start rounded timeImg" data-index="@(imgIndex)" style="width:@(imgWidth)px;height:@(imgHeight>0?imgHeight+"px":"auto");margin:0 0 10px 10px" />
                         imgIndex++;
                     }
                 </div>
