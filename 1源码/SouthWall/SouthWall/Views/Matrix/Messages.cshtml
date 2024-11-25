@@ -49,7 +49,7 @@
                         <p class="fs-6 mb-2">@(item.F_Content)</p>
                         <div class="fs-7">
                             <img referrer="no-referrer|origin|unsafe-url" src="@(txlist[Com.RandomInt(txlist.Count)].F_ImgSrc)" class="rounded-circle" style="width:26px" />
-                            @(item.F_UserName)
+                            @(item.F_UserName)&lt;@(item.F_UserEmail)&gt;
                         </div>
                         <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
                     </div>

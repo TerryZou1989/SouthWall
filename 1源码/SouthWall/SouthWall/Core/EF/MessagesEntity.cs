@@ -10,6 +10,7 @@ namespace SouthWall
         public string F_Id { get; set; }
         public string? F_Content { get; set; } 
         public string? F_UserName {  get; set; }
+        public string? F_UserEmail {  get; set; }
 
         public override void InitCreate()
         {

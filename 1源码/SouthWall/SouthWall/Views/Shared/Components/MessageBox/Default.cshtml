@@ -35,7 +35,11 @@
                 return;
             }
             ShiJuValid.showModal(function (v) {
-                apiClient.messages.save(userName, content, v.shijuId, v.shijuN, function (d) {
+                if (v.uEmail.length > 50) {
+                    alert("你的邮箱太长了吧，我记不住啊！换个短的吧！");
+                    return;
+                }
+                apiClient.messages.save(userName, content, v.uEmail, v.shijuId, v.shijuN, function (d) {
                     alert("你的消息我已收到，我会认真阅读你的消息，如果有悄悄话可以给我发邮件哦！");
                     location.reload();
                 }, function (err) {

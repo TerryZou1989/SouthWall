@@ -49,6 +49,7 @@ namespace SouthWall
                 {
                     obj.F_Content=entity.F_Content;
                     obj.F_UserName=entity.F_UserName;
+                    obj.F_UserEmail=entity.F_UserEmail;
                     obj.InitUpdate();
                     _context.Update(obj);
                 }

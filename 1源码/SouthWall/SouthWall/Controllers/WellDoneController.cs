@@ -340,7 +340,7 @@ namespace SouthWall.Controllers
                 {
                     t.F_Id,
                     t.F_Content,
-                    t.F_UserName,
+                    t.F_UserName,                    
                     t.F_CreateTime
                 }).ToList());
             });
@@ -362,7 +362,8 @@ namespace SouthWall.Controllers
                     {
                         F_Id = args.F_Id,
                         F_Content = args.F_Content,
-                        F_UserName = args.F_UserName
+                        F_UserName = args.F_UserName,
+                        F_UserEmail=args.F_UserEmail
                     });
                     return Success("保存成功");
                 }
@@ -377,6 +378,7 @@ namespace SouthWall.Controllers
         {
             public string? F_Id { get; set; }
             public string? F_UserName { get; set; }
+            public string? F_UserEmail {  get; set; }
             public string? F_Content { get; set; }
             public string? F_ShiJuId { get; set; }
             public string? F_ShiJuN { get; set; }

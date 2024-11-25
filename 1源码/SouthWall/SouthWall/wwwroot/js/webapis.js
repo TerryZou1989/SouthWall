@@ -37,11 +37,11 @@ var apiClient = {
         }
     },
     messages: {
-        save: function (F_UserName, F_Content, F_ShiJuId,F_ShiJuN,succ, err) {
+        save: function (F_UserName, F_Content, F_UserEmail, F_ShiJuId,F_ShiJuN,succ, err) {
             apiPostAction({
                 action: "messages/save",
                 data: {
-                    F_Content, F_UserName, F_ShiJuId, F_ShiJuN
+                    F_Content, F_UserName, F_UserEmail, F_ShiJuId, F_ShiJuN
                 },
                 succ: function (d) { if (succ) succ(d) },
                 err: function (ex) { if (err) err(ex) }
