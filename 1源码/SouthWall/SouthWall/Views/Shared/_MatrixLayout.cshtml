@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var controller = this.Context.Request.RouteValues["controller"].ToString().ToLower();
+    var action = this.Context.Request.RouteValues["action"].ToString().ToLower();
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -33,22 +37,19 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Matrix" asp-action="Times">时光录</a>
+                            <a class="nav-link @(action=="times"?"text-light":"text-tz-gray")" asp-area="" asp-controller="Home" asp-action="Times">时光录</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Matrix" asp-action="Videos">放映厅</a>
+                            <a class="nav-link @(action=="videos"?"text-light":"text-tz-gray")" asp-area="" asp-controller="Home" asp-action="Videos">放映厅</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Matrix" asp-action="Articles">文书阁</a>
+                            <a class="nav-link @(action=="articles"?"text-light":"text-tz-gray")" asp-area="" asp-controller="Home" asp-action="Articles">文书阁</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Matrix" asp-action="Messages">留言吧</a>
+                            <a class="nav-link @(action=="messages"?"text-light":"text-tz-gray")" asp-area="" asp-controller="Home" asp-action="Messages">留言吧</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Matrix" asp-action="ShiJus">诗句辞典</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Matrix" asp-action="TouXiangs">头像相册</a>
+                            <a class="nav-link @(action=="owner"?"text-light":"text-tz-gray")" asp-area="" asp-controller="Home" asp-action="Owner">城主传</a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +58,7 @@
     </header>
     <div id="pagebody" class="container">
         <main role="main" class="py-3 clearfix h-100 position-relative">
-            <h5 class="text-light px-2 fw-bold">@(ViewData["Title"])</h5>
+            <h5 class="text-light px-2 pb-2 fw-bold border-bottom border-1 border-secondary mb-3">@(ViewData["Title"])</h5>
             <button id="btnCreate" class="btn btn-primary position-absolute end-0" style="top:0.5rem">增加</button>
             <hr class="bg-secondary" />
             <div style="height:calc(100% - 50px)" class=" overflow-auto pe-2">
@@ -66,7 +67,7 @@
         </main>
     </div>
 
-    @await Html.PartialAsync("Footer");
+    @await Html.PartialAsync("Footer")
     <script>
         $("#pagebody").height($(window).height() - 117);
     </script>

@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var controller = this.Context.Request.RouteValues["controller"].ToString().ToLower();
+    var action = this.Context.Request.RouteValues["action"].ToString().ToLower();
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -30,19 +34,19 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Times">时光录</a>
+                            <a class="nav-link @(action=="times"||action=="index"?"text-light":"text-tz-gray")" asp-area="" asp-controller="Home" asp-action="Times">时光录</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Videos">放映厅</a>
+                            <a class="nav-link @(action=="videos"?"text-light":"text-tz-gray")" asp-area="" asp-controller="Home" asp-action="Videos">放映厅</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Articles">文书阁</a>
+                            <a class="nav-link @(action=="articles"?"text-light":"text-tz-gray")" asp-area="" asp-controller="Home" asp-action="Articles">文书阁</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Messages">留言吧</a>
+                            <a class="nav-link @(action=="messages"?"text-light":"text-tz-gray")" asp-area="" asp-controller="Home" asp-action="Messages">留言吧</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Owner">城主传</a>
+                            <a class="nav-link @(action=="owner"?"text-light":"text-tz-gray")" asp-area="" asp-controller="Home" asp-action="Owner">城主传</a>
                         </li>
                     </ul>
                 </div>
@@ -51,36 +55,19 @@
     </header>
     <div id="pagebody" class="container">
         <main role="main" class="py-3 clearfix h-100">
-            <div class="page-left float-start position-fixed">
-                <div class="card bg-dark text-light border-secondary p-3">
-                    <img src="~/img/myphoto.jpg" style="width:140px;" class="card-img-top rounded-circle mx-auto my-3" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">邹学良</h5>
-                        <p class="card-text">生命中所有的不期而遇都是最好的安排！</p>
-                        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Owner">想深入了解我？</a>
-                    </div>
-                </div>
-                @* <div class="card bg-dark text-light border-secondary mt-3">
-                <h5 class="card-header">相对我说点啥？</h5>
-                <div class="card-body py-2 pb-3">
-                <input type="text" class="form-control-sm w-100 bg-dark border-secondary" placeholder="留言之前，报上名来！" />
-                <textarea class="form-control-sm w-100 mt-1 bg-dark" rows="5" placeholder="遵纪守法，别说不该说的，分分钟后台Delete掉！好了，开始你的表演。。。"></textarea>
-                <a href="#" class="btn btn-primary btn-sm">点一下，我就收到了</a>
-                </div>
-                </div> *@
-                @* @Html.PartialAsync("MessageBox"); *@
+            <div class="page-left float-start pb-5">
+                @await Html.PartialAsync("PersionCard")
                 @await Component.InvokeAsync("MessageBox")
             </div>
             <div class="page-main float-end ps-3 h-100">
-                <h5 class="text-light px-2 fw-bold">@(ViewData["Title"])</h5>
-                <hr class="bg-secondary" />
+                <h5 class="text-light px-2 pb-2 fw-bold border-bottom border-1 border-secondary mb-3">@(ViewData["Title"])</h5>                
                 <div style="height:calc(100% - 50px)" class="overflow-auto pe-2">
                     @RenderBody()
                 </div>
             </div>
         </main>
     </div>
-    @await Html.PartialAsync("Footer");
+    @await Html.PartialAsync("Footer")
     @await Component.InvokeAsync("ShiJuValid")
     <script>
         $(window).resize(function () { 

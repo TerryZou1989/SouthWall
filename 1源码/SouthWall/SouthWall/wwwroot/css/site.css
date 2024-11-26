@@ -21,6 +21,11 @@ body {
   margin-bottom: 0px;
 }
 
+textarea {
+    resize: none;
+}
+
+
 .fs-7{
     font-size:0.75rem !important;
 }
@@ -33,6 +38,14 @@ body {
 .text-ccc {
     color: #ccc !important;
 }
+
+.text-tz-gray {
+    color: #727c8e !important;
+}
+    .text-tz-gray:hover {
+        color: #acacac !important;
+    }
+
 .multi-line-ellipsis {
     display: -webkit-box; /* 使用 Flexbox 布局 */
     -webkit-box-orient: vertical; /* 垂直方向 */

@@ -27,4 +27,11 @@
     <PackageReference Include="TZ1989.JWT" Version="1.0.0.809" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Shared\PersionCard.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
