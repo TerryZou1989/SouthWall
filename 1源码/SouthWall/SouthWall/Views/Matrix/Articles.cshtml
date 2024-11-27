@@ -11,10 +11,10 @@
 {
     <div class="card bg-dark text-light border-0 m-0 mb-3">
         <div class="card-body row m-0 px-2">
-            <div class="col-2 px-2">
+            <div class="col-lg-2 col-md-3 col-sm-4 px-2">
                 <img referrer="no-referrer|origin|unsafe-url" src="@(item.F_CoverImg)" class="rounded-3 w-100 articleimg" data-index="@(articleIndex)" data-id="@(item.F_Id)" alt="...">
             </div>
-            <div class="col-10 px-2">
+            <div class="col-lg-10 col-md-9 col-sm-8 px-2">
                 <h3><a href="@(item.F_ArticleUrl)" target="_blank" class="fs-6 text-ddd text-decoration-none">@(item.F_Title)</a></h3>
                 <p class="fs-7 text-aaa mb-1">@(item.F_Content)</p>
                 <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
