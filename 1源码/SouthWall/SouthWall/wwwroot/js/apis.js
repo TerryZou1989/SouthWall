@@ -198,6 +198,16 @@ var apiClient = {
                 err: function (ex) { if (err) err(ex) }
             });
         },
+        reply: function (F_Id,F_Content, succ, err) {
+            apiPostAction({
+                action: "messages/reply",
+                data: {
+                    F_Id, F_Content
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
     },
     shijus: {
         save: function (F_Id,F_P, F_N, succ, err) {

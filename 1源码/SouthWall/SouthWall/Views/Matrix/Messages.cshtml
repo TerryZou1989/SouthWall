@@ -12,7 +12,7 @@
     List<MessagesEntity> list2 = new List<MessagesEntity>();
     List<MessagesEntity> list3 = new List<MessagesEntity>();
     int i = 0;
-    foreach(var item in list)
+    foreach (var item in list)
     {
         switch (i)
         {
@@ -54,6 +54,7 @@
                         <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
                     </div>
                     <div class="card-footer text-end border-secondary">
+                        <button class="btn btn-sm btn-outline-primary btnreply" data-id="@(item.F_Id)">回复</button>
                         <button class="btn btn-sm btn-outline-danger btndelete" data-id="@(item.F_Id)">删除</button>
                     </div>
                 </div>
@@ -61,8 +62,40 @@
         </div>
     }
 </div>
+<div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h1 class="modal-title fs-5" id="modalFormLabel">回复</h1>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="txtTo" class="form-label">To:</label>
+                    <textarea class="form-control bg-dark text-light" id="txtTo" rows="1" disabled></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtFromContent" class="form-label">他（她）说:</label>
+                    <textarea class="form-control bg-dark text-light" id="txtFromContent" rows="5" disabled></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtToContent" class="form-label">对他（她）说</label>
+                    <textarea class="form-control bg-dark text-light" id="txtToContent" rows="5" placeholder="内容"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="btnReply">回复</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
-    var pageMatrix = function () {        
+    var pageMatrix = function () {
+        const modalFormEl = document.getElementById('modalForm');
+        const modalForm = new bootstrap.Modal('#modalForm', { keyboard: false });
+        modalFormEl.addEventListener('shown.bs.modal', event => { });
+        modalFormEl.addEventListener('hidden.bs.modal', event => { });
         $("#btnCreate").remove();
         var initDelete = function () {
             var btndeleteList = $(".btndelete");
@@ -81,6 +114,32 @@
             }
         }
         initDelete();
+        var editId="";
+        var initReply = function () {
+            var btnreplyList = $(".btnreply");
+            for (var i = 0; i < btnreplyList.length; i++) {
+                $(btnreplyList[i]).click(function () {
+                    editId = $(this).attr("data-id");
+                    apiClient.messages.get(editId, function (d) {
+                        $("#txtTo").val(d.f_UserName+"<"+d.f_UserEmail+">");
+                        $("#txtFromContent").val(d.f_Content);
+                        modalForm.show();
+                    }, function (err) {
+                        alert(err.message);
+                    });
+                });
+            }
+        }
+        initReply();
+        $("#btnReply").click(function(){
+           var content=$.trim($("#txtToContent").val());
+           apiClient.messages.reply(editId,content, function (d) {
+                        alert("回复成功");
+                        modalForm.hide();
+                    }, function (err) {
+                        alert(err.message);
+                    });
+        });
     };
     $(function () {
         new pageMatrix();

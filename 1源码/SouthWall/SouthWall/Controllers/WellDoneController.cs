@@ -403,13 +403,14 @@ namespace SouthWall.Controllers
         [HttpPost("messages/get")]
         public Task<TZResponse> Messages_Get([FromBody] Messages_Get_Args args)
         {
-            return RunAction(CheckAuthType.None, async () =>
+            return RunAction(CheckAuthType.User, async () =>
             {
                 var entity = await _MessagesService.GetById(args.F_Id);
                 return Success("获取成功", new
                 {
                     entity.F_Id,
                     entity.F_UserName,
+                    entity.F_UserEmail,
                     entity.F_Content,
                 });
             });
@@ -417,6 +418,22 @@ namespace SouthWall.Controllers
         public class Messages_Get_Args
         {
             public string? F_Id { get; set; }
+        }
+        #endregion Messages_Get
+        #region Messages_Reply
+        [HttpPost("messages/reply")]
+        public Task<TZResponse> Messages_Reply([FromBody] Messages_Reply_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _MessagesService.Reply(args.F_Id,args.F_Content);
+                return Success("回复成功");
+            });
+        }
+        public class Messages_Reply_Args
+        {
+            public string? F_Id { get; set; }
+            public string? F_Content { get; set; }
         }
         #endregion Messages_Get
         #endregion
