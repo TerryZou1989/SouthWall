@@ -3,11 +3,22 @@
     var list = this.ViewData["list"] as List<TimesEntity>;
     int imgIndex = 0;
 }
+
 @foreach (var item in list)
 {
     <div class="card bg-dark border-secondary text-light mb-3">
         <div class="card-body">
             <p class="card-text lh-lg fs-6 mb-1 text-ccc" style="letter-spacing:0.15rem;">@(item.F_Content)</p>
+            <div class="row">
+                <div class="col">
+                    @if (!string.IsNullOrEmpty(item.F_Video))
+                    {
+                        <video loop="loop" controls>
+                            <source src="@(item.F_Video)" type="video/mp4">
+                        </video>
+                    }
+                </div>
+            </div>
             @if (item.E_ImgSrcList.Count > 0)
             {
                 int boxWidth = 340;

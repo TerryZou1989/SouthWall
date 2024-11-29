@@ -32,11 +32,11 @@ var apiClient = {
         }
     },
     times: {
-        save: function (F_Id, F_Content, F_Imgs, succ, err) {
+        save: function (F_Id, F_Content, F_Imgs, F_Video, succ, err) {
             apiPostAction({
                 action: "times/save",
                 data: {
-                    F_Id, F_Content, F_Imgs
+                    F_Id, F_Content, F_Imgs, F_Video
                 },
                 succ: function (d) { if (succ) succ(d) },
                 err: function (ex) { if (err) err(ex) }

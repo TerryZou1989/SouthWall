@@ -85,7 +85,8 @@ namespace SouthWall.Controllers
                 {
                     t.F_Id,
                     t.F_Content,
-                    t.F_Imgs
+                    t.F_Imgs,
+                    t.F_Video
                 }).ToList());
             });
         }
@@ -103,7 +104,8 @@ namespace SouthWall.Controllers
                 {
                     F_Id = args.F_Id,
                     F_Content = args.F_Content,
-                    F_Imgs = args.F_Imgs
+                    F_Imgs = args.F_Imgs,
+                    F_Video=args.F_Video
                 });
                 return Success("保存成功");
             });
@@ -113,6 +115,7 @@ namespace SouthWall.Controllers
             public string? F_Id { get; set; }
             public string? F_Content { get; set; }
             public string? F_Imgs { get; set; }
+            public string? F_Video { get; set; }
         }
         #endregion Times_Save
         #region Times_Delete

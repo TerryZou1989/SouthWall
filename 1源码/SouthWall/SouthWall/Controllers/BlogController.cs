@@ -4,9 +4,9 @@ using System.Diagnostics;
 
 namespace SouthWall.Controllers
 {
-    public class HomeController : PageControllerBase
+    public class BlogController : PageControllerBase
     {
-        public HomeController(IAuthService authService,
+        public BlogController(IAuthService authService,
              ITimesService timesService,
              IVideosService videosService,
              IArticlesService articlesService,

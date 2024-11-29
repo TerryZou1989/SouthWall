@@ -49,6 +49,7 @@ namespace SouthWall
                 {
                     obj.F_Content = entity.F_Content;
                     obj.F_Imgs = entity.F_Imgs;
+                    obj.F_Video = entity.F_Video;
                     obj.InitUpdate();
                     _context.Update(obj);
                 }
