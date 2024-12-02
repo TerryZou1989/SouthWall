@@ -12,7 +12,7 @@
     <meta name="baidu-site-verification" content="codeva-x6YA4P7Pl7" />
     <title>@ViewData["Title"] - @(Config.SiteName)</title>
     <meta name="keywords" content="@(Config.SiteKeyWords)" />
-    <meta name="description" content="@(Config.SiteDescription)" />
+    <meta name="description" content="@(ViewData["Description"]!=null?ViewData["Description"]:Config.SiteDescription)" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SouthWall.styles.css" asp-append-version="true" />
@@ -61,7 +61,7 @@
             </div>
             <div class="col-lg-9 col-md-10 col-sm-12 col-12 ps-3 h-100">
                 <h5 class="text-light px-2 pb-2 fw-bold border-bottom border-1 border-secondary mb-3">@(ViewData["Title"])</h5>                
-                <div style="height:calc(100% - 50px)" class="overflow-auto pe-2">
+                <div style="height:calc(100% - 50px)" class="overflow-auto p-1">
                     @RenderBody()
                 </div>
             </div>

@@ -46,6 +46,16 @@ namespace SouthWall
             this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
             return View();
         }
+        public async Task<IActionResult> Article(string id)
+        {
+            var entity = await this._ArticlesService.GetById(id);
+            if(entity == null)
+            {
+                return RedirectToAction("Articles");
+            }
+            this.ViewData["entity"] = entity;
+            return View();
+        }
         public async Task<IActionResult> Messages()
         {
             var list = await this._MessagesService.GetList(null);
