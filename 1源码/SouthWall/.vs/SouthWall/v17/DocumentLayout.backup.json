@@ -3,32 +3,84 @@
   "WorkspaceRootPath": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\blog\\websites.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\blog\\websites.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\blog\\article.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\blog\\article.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\blog\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\blog\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\blog\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\blog\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\_matrixlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\_matrixlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\websites.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\websites.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\blog\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\blog\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\pagecontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\pagecontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\matrixcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\matrixcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\tzcontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\tzcontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\welldonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\welldonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\service\\websitesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\service\\websitesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\wwwroot\\js\\apis.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\wwwroot\\js\\apis.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\service\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\service\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\dbaccess\\websitesdbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\dbaccess\\websitesdbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\ef\\swdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\ef\\swdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\ef\\websitesentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\ef\\websitesentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\blog\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\blog\\videos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\blog\\times.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -37,14 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\times.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\times.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\welldonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\welldonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\wwwroot\\js\\apis.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\wwwroot\\js\\apis.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\ef\\timesentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,10 +123,6 @@
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\controllers\\matrixcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\controllers\\matrixcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\core\\ef\\messagesentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\core\\ef\\messagesentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -95,10 +135,6 @@
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\matrix\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\matrix\\articles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\blog\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\blog\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -109,10 +145,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\shared\\_matrixlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|solutionrelative:southwall\\views\\shared\\_matrixlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C30A96DB-CC38-4987-B541-BA24F5314BE8}|SouthWall\\SouthWall.csproj|c:\\users\\tz1989\\documents\\git\\southwall\\1\u6E90\u7801\\southwall\\southwall\\views\\blog\\owner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -143,68 +175,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WebSites.cshtml",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\WebSites.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Blog\\WebSites.cshtml",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\WebSites.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Blog\\WebSites.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-03T08:35:58.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PageControllerBase.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\PageControllerBase.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Controllers\\PageControllerBase.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\PageControllerBase.cs",
+              "RelativeToolTip": "SouthWall\\Controllers\\PageControllerBase.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwEkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T05:16:46.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MatrixController.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\MatrixController.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Controllers\\MatrixController.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\MatrixController.cs",
+              "RelativeToolTip": "SouthWall\\Controllers\\MatrixController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAzwCAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:57:27.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Article.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\Article.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Blog\\Article.cshtml",
               "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\Article.cshtml",
               "RelativeToolTip": "SouthWall\\Views\\Blog\\Article.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAACxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-02T05:18:35.538Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TimesEntity.cs",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\TimesEntity.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\TimesEntity.cs",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\TimesEntity.cs",
-              "RelativeToolTip": "SouthWall\\Core\\EF\\TimesEntity.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwvwsAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T03:07:17.424Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Times.cshtml",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\Times.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Blog\\Times.cshtml",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\Times.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Blog\\Times.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-29T02:59:19.1Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "MessagesService.cs",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\MessagesService.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\MessagesService.cs",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\MessagesService.cs",
-              "RelativeToolTip": "SouthWall\\Core\\Service\\MessagesService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAhwBsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T02:31:58.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Com.cs",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Com.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Core\\Com.cs",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Com.cs",
-              "RelativeToolTip": "SouthWall\\Core\\Com.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T02:27:42.964Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Articles.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\Articles.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Blog\\Articles.cshtml",
@@ -217,33 +239,237 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Program.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Program.cs",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Program.cs",
-              "RelativeToolTip": "SouthWall\\Program.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAADwvywAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T02:57:06.432Z",
+              "DocumentIndex": 5,
+              "Title": "Articles.cshtml",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Articles.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Articles.cshtml",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Articles.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Articles.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-27T08:41:07.239Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "_MatrixLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAywDQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T07:32:24.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "SouthWall\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADUAAAAAAAAAAIA2wD8AAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAIA2wDMAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-26T07:06:38.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
+              "Title": "TZControllerBase.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\TZControllerBase.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Controllers\\TZControllerBase.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\TZControllerBase.cs",
+              "RelativeToolTip": "SouthWall\\Controllers\\TZControllerBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T08:07:46.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WebSites.cshtml",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\WebSites.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\WebSites.cshtml",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\WebSites.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Matrix\\WebSites.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-03T08:17:49.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WellDoneController.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\WellDoneController.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Controllers\\WellDoneController.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\WellDoneController.cs",
+              "RelativeToolTip": "SouthWall\\Controllers\\WellDoneController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T02:26:09.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WebSitesService.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\WebSitesService.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\WebSitesService.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\WebSitesService.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Service\\WebSitesService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAIBAwAwAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T08:05:45.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Program.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Program.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Program.cs",
+              "RelativeToolTip": "SouthWall\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvxYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T02:57:06.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "apis.js",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\apis.js",
+              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\js\\apis.js",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\apis.js",
+              "RelativeToolTip": "SouthWall\\wwwroot\\js\\apis.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-03T08:12:14.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BlogController.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\BlogController.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Controllers\\BlogController.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\BlogController.cs",
+              "RelativeToolTip": "SouthWall\\Controllers\\BlogController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T05:16:33.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ServiceBase.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ServiceBase.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\ServiceBase.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\ServiceBase.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Service\\ServiceBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T08:05:56.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WebSitesDBAccess.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\WebSitesDBAccess.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\WebSitesDBAccess.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\WebSitesDBAccess.cs",
+              "RelativeToolTip": "SouthWall\\Core\\DBAccess\\WebSitesDBAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T08:03:56.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SWDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\SWDbContext.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\SWDbContext.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\SWDbContext.cs",
+              "RelativeToolTip": "SouthWall\\Core\\EF\\SWDbContext.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAqwCEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T08:04:29.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "WebSitesEntity.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\WebSitesEntity.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\WebSitesEntity.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\WebSitesEntity.cs",
+              "RelativeToolTip": "SouthWall\\Core\\EF\\WebSitesEntity.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvw4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T08:02:10.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MessagesService.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\MessagesService.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Service\\MessagesService.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Service\\MessagesService.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Service\\MessagesService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAhwBsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T02:31:58.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Times.cshtml",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\Times.cshtml",
+              "RelativeDocumentMoniker": "SouthWall\\Views\\Blog\\Times.cshtml",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\Times.cshtml",
+              "RelativeToolTip": "SouthWall\\Views\\Blog\\Times.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T02:59:19.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TimesEntity.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\TimesEntity.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\TimesEntity.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\TimesEntity.cs",
+              "RelativeToolTip": "SouthWall\\Core\\EF\\TimesEntity.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvwsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T03:07:17.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Com.cs",
+              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Com.cs",
+              "RelativeDocumentMoniker": "SouthWall\\Core\\Com.cs",
+              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\Com.cs",
+              "RelativeToolTip": "SouthWall\\Core\\Com.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T02:27:42.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Videos.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\Videos.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Blog\\Videos.cshtml",
@@ -251,38 +477,11 @@
               "RelativeToolTip": "SouthWall\\Views\\Blog\\Videos.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAADwvwsAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T08:19:00.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T08:19:00.443Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BlogController.cs",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\BlogController.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Controllers\\BlogController.cs",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\BlogController.cs",
-              "RelativeToolTip": "SouthWall\\Controllers\\BlogController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T05:16:33.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PageControllerBase.cs",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\PageControllerBase.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Controllers\\PageControllerBase.cs",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\PageControllerBase.cs",
-              "RelativeToolTip": "SouthWall\\Controllers\\PageControllerBase.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAqwDAAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T05:16:46.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 23,
               "Title": "TimesDBAccess.cs",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\DBAccess\\TimesDBAccess.cs",
               "RelativeDocumentMoniker": "SouthWall\\Core\\DBAccess\\TimesDBAccess.cs",
@@ -294,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
               "Title": "Times.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Times.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Times.cshtml",
@@ -306,31 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WellDoneController.cs",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\WellDoneController.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Controllers\\WellDoneController.cs",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\WellDoneController.cs",
-              "RelativeToolTip": "SouthWall\\Controllers\\WellDoneController.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAA0wHUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T02:26:09.731Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "apis.js",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\apis.js",
-              "RelativeDocumentMoniker": "SouthWall\\wwwroot\\js\\apis.js",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\apis.js",
-              "RelativeToolTip": "SouthWall\\wwwroot\\js\\apis.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-28T02:21:33.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 31,
               "Title": "ShiJus.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\ShiJus.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\ShiJus.cshtml",
@@ -342,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 34,
               "Title": "Videos.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Videos.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Videos.cshtml",
@@ -354,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 28,
               "Title": "Messages.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Messages.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Messages.cshtml",
@@ -366,7 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 24,
               "Title": "PersionCard.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\PersionCard.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\PersionCard.cshtml",
@@ -378,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 29,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "SouthWall\\wwwroot\\js\\site.js",
@@ -390,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 26,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Components\\ShiJuValid\\Default.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\Components\\ShiJuValid\\Default.cshtml",
@@ -402,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 33,
               "Title": "Messages.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\Messages.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Blog\\Messages.cshtml",
@@ -414,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 35,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "SouthWall\\wwwroot\\css\\site.css",
@@ -426,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 39,
               "Title": "Footer.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Footer.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\Footer.cshtml",
@@ -438,19 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "MatrixController.cs",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\MatrixController.cs",
-              "RelativeDocumentMoniker": "SouthWall\\Controllers\\MatrixController.cs",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Controllers\\MatrixController.cs",
-              "RelativeToolTip": "SouthWall\\Controllers\\MatrixController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAqwCYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T08:57:27.45Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 30,
               "Title": "MessagesEntity.cs",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Core\\EF\\MessagesEntity.cs",
               "RelativeDocumentMoniker": "SouthWall\\Core\\EF\\MessagesEntity.cs",
@@ -462,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 38,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\Index.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Blog\\Index.cshtml",
@@ -474,7 +637,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 32,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\appsettings.Development.json",
               "RelativeDocumentMoniker": "SouthWall\\appsettings.Development.json",
@@ -486,31 +649,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Articles.cshtml",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Articles.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Matrix\\Articles.cshtml",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Matrix\\Articles.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Matrix\\Articles.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwvxAAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T08:41:07.239Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "_MatrixLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
-              "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
-              "ToolTip": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
-              "RelativeToolTip": "SouthWall\\Views\\Shared\\_MatrixLayout.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAywDMAAACbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T07:32:24.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 36,
               "Title": "Owner.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Blog\\Owner.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Blog\\Owner.cshtml",
@@ -522,7 +661,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 37,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\TZ1989\\Documents\\Git\\SouthWall\\1\u6E90\u7801\\SouthWall\\SouthWall\\Views\\Shared\\Components\\MessageBox\\Default.cshtml",
               "RelativeDocumentMoniker": "SouthWall\\Views\\Shared\\Components\\MessageBox\\Default.cshtml",

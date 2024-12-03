@@ -31,6 +31,7 @@ namespace SouthWall
         public DbSet<VideosEntity> Videos { get; set; }
         public DbSet<ArticlesEntity> Articles { get; set; }
         public DbSet<MessagesEntity> Messages { get; set; }
+        public DbSet<WebSitesEntity> WebSites { get; set; }
         public DbSet<ShiJusEntity> ShiJus { get; set; }
         public DbSet<TouXiangsEntity> TouXiangs { get; set; }
     }

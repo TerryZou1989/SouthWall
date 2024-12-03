@@ -209,6 +209,48 @@ var apiClient = {
             });
         },
     },
+    websites: {
+        save: function (F_Id, F_Title, F_Description, F_Url, F_CoverImg, succ, err) {
+            apiPostAction({
+                action: "websites/save",
+                data: {
+                    F_Id, F_Title, F_Description, F_Url, F_CoverImg
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        delete: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "websites/delete",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        get: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "websites/get",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        list: function (succ, err) {
+            apiPostAction({
+                action: "websites/list",
+                data: {
+
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+    },
     shijus: {
         save: function (F_Id,F_P, F_N, succ, err) {
             apiPostAction({

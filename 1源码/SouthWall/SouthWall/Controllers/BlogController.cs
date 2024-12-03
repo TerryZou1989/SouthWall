@@ -11,17 +11,19 @@ namespace SouthWall.Controllers
              IVideosService videosService,
              IArticlesService articlesService,
              IMessagesService messagesService,
+             IWebSitesService webSitesService,
              IShiJusService shiJusService,
              ITouXiangsService touXiangsService
              ) : base(authService,
                  timesService,
                  videosService,
                  articlesService,
-                messagesService,
-                shiJusService,
-                touXiangsService)
+                 messagesService,
+                 webSitesService,
+                 shiJusService,
+                 touXiangsService)
         {
-           
+
         }
         [HttpGet]
         public Task<IActionResult> Index()

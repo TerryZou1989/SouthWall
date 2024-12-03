@@ -8,6 +8,7 @@ namespace SouthWall
         protected readonly IVideosService _VideosService;
         protected readonly IArticlesService _ArticlesService;
         protected readonly IMessagesService _MessagesService;
+        protected readonly IWebSitesService _WebSitesService;
         protected readonly IShiJusService _ShiJusService;
         protected readonly ITouXiangsService _TouXiangsService;
         public TZControllerBase(
@@ -16,6 +17,7 @@ namespace SouthWall
             IVideosService videosService,
             IArticlesService articlesService,
             IMessagesService messagesService,
+            IWebSitesService webSitesService,
             IShiJusService shiJusService,
             ITouXiangsService touXiangsService
             )
@@ -25,6 +27,7 @@ namespace SouthWall
             _VideosService = videosService;
             _ArticlesService = articlesService;
             _MessagesService = messagesService;
+            _WebSitesService = webSitesService;
             _ShiJusService = shiJusService;
             _TouXiangsService = touXiangsService;
         }

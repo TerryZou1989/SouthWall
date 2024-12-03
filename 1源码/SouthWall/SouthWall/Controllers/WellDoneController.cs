@@ -14,6 +14,7 @@ namespace SouthWall.Controllers
              IVideosService videosService,
              IArticlesService articlesService,
              IMessagesService messagesService,
+             IWebSitesService webSitesService,
              IShiJusService shiJusService,
              ITouXiangsService touXiangsService
             ) :
@@ -22,6 +23,7 @@ namespace SouthWall.Controllers
                 videosService,
                 articlesService,
                 messagesService,
+                webSitesService,
                 shiJusService,
                 touXiangsService)
         {
@@ -439,6 +441,94 @@ namespace SouthWall.Controllers
             public string? F_Content { get; set; }
         }
         #endregion Messages_Get
+        #endregion
+
+        #region WebSites
+        #region WebSites_List
+        [HttpPost("websites/list")]
+        public Task<TZResponse> WebSites_List([FromBody] WebSites_List_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var list = await _WebSitesService.GetList(null);
+                return Success("获取成功", list.Select(t => new
+                {
+                    t.F_Id,
+                    t.F_Title,
+                    t.F_CoverImg,
+                    t.F_Description,
+                    t.F_Url,
+                    t.F_CreateTime
+                }).ToList());
+            });
+        }
+        public class WebSites_List_Args
+        {
+        }
+        #endregion WebSites_List
+        #region WebSites_Save
+        [HttpPost("websites/save")]
+        public Task<TZResponse> WebSites_Save([FromBody] WebSites_Save_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _WebSitesService.Save(new WebSitesEntity
+                {
+                    F_Id = args.F_Id,
+                    F_CoverImg = args.F_CoverImg,
+                    F_Title = args.F_Title,
+                    F_Description = args.F_Description,
+                    F_Url = args.F_Url
+                });
+                return Success("保存成功");
+            });
+        }
+        public class WebSites_Save_Args
+        {
+            public string? F_Id { get; set; }
+            public string? F_CoverImg { get; set; }
+            public string? F_Title { get; set; }
+            public string? F_Description { get; set; }
+            public string? F_Url { get; set; }
+        }
+        #endregion WebSites_Save
+        #region WebSites_Delete
+        [HttpPost("websites/delete")]
+        public Task<TZResponse> WebSites_Delete([FromBody] WebSites_Delete_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _WebSitesService.Delete(args.F_Id);
+                return Success("删除成功");
+            });
+        }
+        public class WebSites_Delete_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion WebSites_Delete
+        #region WebSites_Get
+        [HttpPost("websites/get")]
+        public Task<TZResponse> WebSites_Get([FromBody] WebSites_Get_Args args)
+        {
+            return RunAction(CheckAuthType.None, async () =>
+            {
+                var entity = await _WebSitesService.GetById(args.F_Id);
+                return Success("获取成功", new
+                {
+                    entity.F_Id,
+                    entity.F_CoverImg,
+                    entity.F_Title,
+                    entity.F_Description,
+                    entity.F_Url
+                });
+            });
+        }
+        public class WebSites_Get_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion WebSites_Get
         #endregion
 
         #region ShiJus

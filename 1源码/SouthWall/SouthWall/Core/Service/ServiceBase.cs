@@ -6,6 +6,7 @@
         protected readonly IVideosDBAccess _VideosDBAccess;
         protected readonly IArticlesDBAccess _ArticlesDBAccess;
         protected readonly IMessagesDBAccess _MessagesDBAccess;
+        protected readonly IWebSitesDBAccess _WebSitesDBAccess;
         protected readonly IShiJusDBAccess _ShiJusDBAccess;
         protected readonly ITouXiangsDBAccess _TouXiangsDBAccess;
         public ServiceBase() { }
@@ -25,6 +26,10 @@
         {
             _MessagesDBAccess = messagesDBAccess;
         }
+        public ServiceBase(IWebSitesDBAccess webSitesDBAccess)
+        {
+            _WebSitesDBAccess = webSitesDBAccess;
+        }
         public ServiceBase(IShiJusDBAccess shiJusDBAccess)
         {
             _ShiJusDBAccess = shiJusDBAccess;
@@ -38,6 +43,7 @@
             IVideosDBAccess videosDBAccess,
             IArticlesDBAccess articlesDBAccess,
             IMessagesDBAccess messagesDBAccess,
+            IWebSitesDBAccess webSitesDBAccess,
             IShiJusDBAccess shiJusDBAccess,
             ITouXiangsDBAccess touXiangsDBAccess)
         {
@@ -47,6 +53,7 @@
             _MessagesDBAccess = messagesDBAccess;
             _ShiJusDBAccess = shiJusDBAccess;
             _TouXiangsDBAccess = touXiangsDBAccess;
+            _WebSitesDBAccess = webSitesDBAccess;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace SouthWall.Controllers
              IVideosService videosService,
              IArticlesService articlesService,
              IMessagesService messagesService,
+             IWebSitesService webSitesService,
              IShiJusService shiJusService,
              ITouXiangsService touXiangsService
              ):base(authService,
@@ -17,6 +18,7 @@ namespace SouthWall.Controllers
                  videosService,
                  articlesService,
                 messagesService,
+                webSitesService,
                 shiJusService,
                 touXiangsService)
         {

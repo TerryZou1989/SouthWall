@@ -15,6 +15,7 @@ builder.Services.AddScoped<ITimesDBAccess, TimesDBAccess>();
 builder.Services.AddScoped<IVideosDBAccess, VideosDBAccess>();
 builder.Services.AddScoped<IArticlesDBAccess, ArticlesDBAccess>();
 builder.Services.AddScoped<IMessagesDBAccess, MessagesDBAccess>();
+builder.Services.AddScoped<IWebSitesDBAccess, WebSitesDBAccess>();
 builder.Services.AddScoped<IShiJusDBAccess, ShiJusDBAccess>();
 builder.Services.AddScoped<ITouXiangsDBAccess, TouXiangsDBAccess>();
 
@@ -23,6 +24,7 @@ builder.Services.AddScoped<ITimesService, TimesService>();
 builder.Services.AddScoped<IVideosService, VideosService>();
 builder.Services.AddScoped<IArticlesService, ArticlesService>();
 builder.Services.AddScoped<IMessagesService, MessagesService>();
+builder.Services.AddScoped<IWebSitesService, WebSitesService>();
 builder.Services.AddScoped<IShiJusService, ShiJusService>();
 builder.Services.AddScoped<ITouXiangsService, TouXiangsService>();
 
