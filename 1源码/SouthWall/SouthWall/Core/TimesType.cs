@@ -4,6 +4,7 @@
     {
         Article,
         Video,
+        Audio,
         WebSite
     }
 }

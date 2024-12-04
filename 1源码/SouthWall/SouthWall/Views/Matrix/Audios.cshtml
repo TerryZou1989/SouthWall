@@ -1,0 +1,219 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_MatrixLayout";
+    ViewData["Title"] = "天籁阁‌";
+    var list = this.ViewData["list"] as List<AudiosEntity>;
+    var audioIndex = 0;
+}
+@foreach (var item in list)
+{
+    <div class="card bg-dark text-light border-0 m-0 mb-3">
+        <div class="card-body row m-0 px-2">
+            <div class="col-lg-2 col-md-3 col-sm-4 px-2">
+                <img referrer="no-referrer|origin|unsafe-url" src="@(item.F_CoverImg)" class="rounded-3 w-100 audioimg" data-index="@(audioIndex)" data-id="@(item.F_Id)" alt="...">
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-8 px-2">
+                <h3><a href="@(item.F_AudioUrl)" target="_blank" class="fs-6 text-ddd text-decoration-none">@(item.F_Title)</a></h3>
+                <p class="fs-7 text-aaa mb-1">@(item.F_Description)</p>
+                <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
+            </div>
+        </div>
+        <div class="card-footer text-end border-secondary">
+            <button class="btn btn-sm btn-outline-primary btnedit" data-id="@(item.F_Id)">编辑</button>
+            <button class="btn btn-sm btn-outline-danger btndelete" data-id="@(item.F_Id)">删除</button>
+        </div>
+    </div>
+    audioIndex++;
+}
+<div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl ">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h1 class="modal-title fs-5" id="modalFormLabel">编辑</h1>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="txtTitle" class="form-label">标题</label>
+                    <textarea class="form-control bg-dark text-light" id="txtTitle" rows="1" placeholder="音乐的标题，不要太长，容易影响样式哦"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtDescription" class="form-label">摘要</label>
+                    <textarea class="form-control bg-dark text-light" id="txtDescription" rows="3" placeholder="音乐的摘要，不要太长，容易影响样式哦"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtAudioUrl" class="form-label">音乐地址</label>
+                    <textarea class="form-control bg-dark text-light" id="txtAudioUrl" rows="3" placeholder="音乐地址，文章我也不存了，我会在别的地方发表，到时候可以跳转哈"></textarea>
+                </div>
+                <div class="input-group mb-3">
+                    <input id="txtImgSrc" type="text" class="form-control bg-dark text-light" placeholder="写上封面地址，咱就不存图片了哈" aria-describedby="btnAddImg">
+                    <button class="btn btn-outline-secondary border-light text-light" type="button" id="btnAddImg">设置封面</button>
+                </div>
+                <div id="imgbox">
+                </div>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="btnSave">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalAudioView" tabindex="-1" aria-labelledby="modalAudioViewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h1 class="modal-title fs-5" id="modalAudioViewLabel"></h1>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-5 px-2">
+                        <img referrer="no-referrer|origin|unsafe-url" src="/1.jpg" class="rounded-3 w-100 audioimg" alt="...">
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-sm-7 px-2">
+                        <p class="fs-6 text-tz-gray mb-1 audioDescription mb-3"></p>
+                        <div class="audio-box">
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-primary" id="btnPrev">上一音乐</button>
+                <button type="button" class="btn btn-primary" id="btnNext">下一音乐</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var pageMatrix = function () {
+        const modalFormEl = document.getElementById('modalForm');
+        const modalForm = new bootstrap.Modal('#modalForm', { keyboard: false });
+        modalFormEl.addEventListener('shown.bs.modal', event => { });
+        modalFormEl.addEventListener('hidden.bs.modal', event => {           
+            editId="";
+        });
+        $("#btnCreate").click(function () {
+            $("#modalFormLabel").html("新增");
+            modalForm.show();
+        });
+        var editId = "";
+        var coverImgSrc = "";
+        $("#btnAddImg").click(function () {
+            coverImgSrc = $.trim($("#txtImgSrc").val());
+            if (coverImgSrc == "") {
+                alert("图片地址不能为空");
+                return;
+            }
+            var img = $("<div class='float-start p-1'><img referrer='no-referrer|origin|unsafe-url' src='" + coverImgSrc + "' class='img-thumbnail' style='width:200px;' /></div>");
+            $("#imgbox").html(img);
+            $("#txtImgSrc").val("");
+        });
+
+        $("#btnSave").click(function () {
+            var title = $.trim($("#txtTitle").val());
+            var description = $.trim($("#txtDescription").val());
+            var audioUrl = $.trim($("#txtAudioUrl").val());
+            apiClient.audios.save(editId, title, description, audioUrl, coverImgSrc, function (d) {
+                alert(d);
+                modalForm.hide();
+                location.reload();
+            }, function (err) {
+                alert(err.message);
+            });
+        });
+
+        var initDelete = function () {
+            var btndeleteList = $(".btndelete");
+            for (var i = 0; i < btndeleteList.length; i++) {
+                $(btndeleteList[i]).click(function () {
+                    if (confirm("是否忍心删除此音乐？")) {
+                        var id = $(this).attr("data-id");
+                        apiClient.audios.delete(id, function (d) {
+                            alert(d);
+                            location.reload();
+                        }, function (err) {
+                            alert(err.message);
+                        });
+                    }
+                });
+            }
+        }
+        initDelete();
+
+        var initEdit = function () {
+            var btneditList = $(".btnedit");
+            for (var i = 0; i < btneditList.length; i++) {
+                $(btneditList[i]).click(function () {
+                    editId = $(this).attr("data-id");
+                    apiClient.audios.get(editId, function (d) {
+                        $("#txtTitle").val(d.f_Title);
+                        $("#txtDescription").val(d.f_Description);
+                        $("#txtAudioUrl").val(d.f_AudioUrl);
+                        $("#txtImgSrc").val(d.f_CoverImg);
+                        $("#btnAddImg").click();
+                        modalForm.show();
+                    }, function (err) {
+                        alert(err.message);
+                    });
+                });
+            }
+        }
+        initEdit();
+
+
+        const modalAudioViewEl = document.getElementById('modalAudioView');
+        const modalAudioView = new bootstrap.Modal('#modalAudioView', { keyboard: false });
+        modalAudioViewEl.addEventListener('shown.bs.modal', event => { });
+        modalAudioViewEl.addEventListener('hidden.bs.modal', event => { 
+         $("#modalAudioView .modal-body .audio-box").html("");
+        });
+        var audios = $(".audioimg");
+        var audioIndex = 0;
+        var initAudioViewer = function () {
+            for (var i = 0; i < audios.length; i++) {
+                $(audios[i]).click(function () {
+                    var audio = $(this);
+                    audioIndex = parseInt(audio.attr("data-index"));
+                    var audioId = audio.attr("data-id");
+                    apiClient.audios.get(audioId, function (d) {
+                        $("#modalAudioViewLabel").html(d.f_Title);
+                        $("#modalAudioView .modal-body img").attr("src",d.f_CoverImg);
+                        $("#modalAudioView .modal-body .audioDescription").html(d.f_Description);
+                        $("#modalAudioView .modal-body .audio-box").html("<audio controls preload='none'><source src='"+d.f_AudioUrl+"' type='audio/mpeg'></audio>");
+                        modalAudioView.show();
+                    }, function (err) {
+                        alert(err.message);
+                    });
+                });
+            }
+        }
+        initAudioViewer();
+        $("#btnPrev").click(function () {
+            if (audioIndex == 0) {
+                audioIndex = audios.length - 1;
+            }
+            else {
+                audioIndex--;
+            }
+            $(audios[audioIndex]).click();
+        });
+        $("#btnNext").click(function () {
+            if (audioIndex == audios.length - 1) {
+                audioIndex = 0;
+            }
+            else {
+                audioIndex++;
+            }
+            $(audios[audioIndex]).click();
+        });
+    };
+    $(function () {
+        new pageMatrix();
+    });
+</script>
+

@@ -115,6 +115,48 @@ var apiClient = {
             });
         },
     },
+    audios: {
+        save: function (F_Id, F_Title, F_Description, F_AudioUrl, F_CoverImg, succ, err) {
+            apiPostAction({
+                action: "audios/save",
+                data: {
+                    F_Id, F_Title, F_Description, F_AudioUrl, F_CoverImg
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        delete: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "audios/delete",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        get: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "audios/get",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        list: function (succ, err) {
+            apiPostAction({
+                action: "audios/list",
+                data: {
+
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+    },
     articles: {
         save: function (F_Id, F_Title, F_Content, F_ArticleUrl, F_CoverImg, succ, err) {
             apiPostAction({

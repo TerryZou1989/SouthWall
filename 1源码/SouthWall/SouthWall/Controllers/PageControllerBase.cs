@@ -6,6 +6,7 @@ namespace SouthWall
         protected readonly IAuthService _AuthService;
         protected readonly ITimesService _TimesService;
         protected readonly IVideosService _VideosService;
+        protected readonly IAudiosService _AudiosService;
         protected readonly IArticlesService _ArticlesService;
         protected readonly IMessagesService _MessagesService;
         protected readonly IWebSitesService _WebSitesService;
@@ -15,6 +16,7 @@ namespace SouthWall
             IAuthService authService,
             ITimesService timesService,
             IVideosService videosService,
+            IAudiosService audiosService,
             IArticlesService articlesService,
             IMessagesService messagesService,
             IWebSitesService webSitesService,
@@ -25,6 +27,7 @@ namespace SouthWall
             _AuthService = authService;
             _TimesService = timesService;
             _VideosService = videosService;
+            _AudiosService = audiosService;
             _ArticlesService = articlesService;
             _MessagesService = messagesService;
             _WebSitesService = webSitesService;
@@ -40,6 +43,12 @@ namespace SouthWall
         public async Task<IActionResult> Videos()
         {
             var list = await this._VideosService.GetList(null);
+            this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
+            return View();
+        }
+        public async Task<IActionResult> Audios()
+        {
+            var list = await this._AudiosService.GetList(null);
             this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
             return View();
         }

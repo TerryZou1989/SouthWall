@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,6 +13,7 @@ namespace SouthWall.Controllers
              IAuthService authService,
              ITimesService timesService,
              IVideosService videosService,
+             IAudiosService audioService,
              IArticlesService articlesService,
              IMessagesService messagesService,
              IWebSitesService webSitesService,
@@ -21,6 +23,7 @@ namespace SouthWall.Controllers
             base(authService,
                 timesService,
                 videosService,
+                audioService,
                 articlesService,
                 messagesService,
                 webSitesService,
@@ -261,6 +264,103 @@ namespace SouthWall.Controllers
             public string? F_Id { get; set; }
         }
         #endregion Videos_Get
+        #endregion
+
+        #region Audios
+        #region Audios_List
+        [HttpPost("audios/list")]
+        public Task<TZResponse> Audios_List([FromBody] Audios_List_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var list = await _AudiosService.GetList(null);
+                return Success("获取成功", list.Select(t => new
+                {
+                    t.F_Id,
+                    t.F_Title,
+                    t.F_CoverImg,
+                    t.F_AudioUrl,
+                    t.F_Description,
+                    t.F_CreateTime
+                }).ToList());
+            });
+        }
+        public class Audios_List_Args
+        {
+        }
+        #endregion Audios_List
+        #region Audios_Save
+        [HttpPost("audios/save")]
+        public Task<TZResponse> Audios_Save([FromBody] Audios_Save_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _AudiosService.Save(new AudiosEntity
+                {
+                    F_Id = args.F_Id,
+                    F_CoverImg = args.F_CoverImg,
+                    F_Title = args.F_Title,
+                    F_AudioUrl = args.F_AudioUrl,
+                    F_Description = args.F_Description
+                });
+                if (string.IsNullOrEmpty(args.F_Id))
+                {
+                    await this.SaveTimes(TimesType.Audio, new TimesEntity
+                    {
+                        F_Title = args.F_Title,
+                        F_Imgs = args.F_CoverImg,
+                        F_Url = args.F_AudioUrl
+                    });
+                }
+                return Success("保存成功");
+            });
+        }
+        public class Audios_Save_Args
+        {
+            public string? F_Id { get; set; }
+            public string? F_CoverImg { get; set; }
+            public string? F_Title { get; set; }
+            public string? F_AudioUrl { get; set; }
+            public string? F_Description { get; set; }
+        }
+        #endregion Audios_Save
+        #region Audios_Delete
+        [HttpPost("audios/delete")]
+        public Task<TZResponse> Audios_Delete([FromBody] Audios_Delete_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _AudiosService.Delete(args.F_Id);
+                return Success("删除成功");
+            });
+        }
+        public class Audios_Delete_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Audios_Delete
+        #region Audios_Get
+        [HttpPost("audios/get")]
+        public Task<TZResponse> Audios_Get([FromBody] Audios_Get_Args args)
+        {
+            return RunAction(CheckAuthType.None, async () =>
+            {
+                var entity = await _AudiosService.GetById(args.F_Id);
+                return Success("获取成功", new
+                {
+                    entity.F_Id,
+                    entity.F_CoverImg,
+                    entity.F_Title,
+                    entity.F_Description,
+                    entity.F_AudioUrl
+                });
+            });
+        }
+        public class Audios_Get_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Audios_Get
         #endregion
 
         #region Articles

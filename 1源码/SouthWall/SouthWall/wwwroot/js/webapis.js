@@ -24,6 +24,18 @@ var apiClient = {
             });
         },
     },
+    audios: {
+        get: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "audios/get",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+    },
     articles: {
         get: function (F_Id, succ, err) {
             apiPostAction({

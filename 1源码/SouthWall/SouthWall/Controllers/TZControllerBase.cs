@@ -6,6 +6,7 @@ namespace SouthWall
         protected readonly IAuthService _AuthService;
         protected readonly ITimesService _TimesService;
         protected readonly IVideosService _VideosService;
+        protected readonly IAudiosService _AudiosService;
         protected readonly IArticlesService _ArticlesService;
         protected readonly IMessagesService _MessagesService;
         protected readonly IWebSitesService _WebSitesService;
@@ -15,6 +16,7 @@ namespace SouthWall
             IAuthService authService,
             ITimesService timesService,
             IVideosService videosService,
+            IAudiosService audiosService,
             IArticlesService articlesService,
             IMessagesService messagesService,
             IWebSitesService webSitesService,
@@ -25,6 +27,7 @@ namespace SouthWall
             _AuthService = authService;
             _TimesService = timesService;
             _VideosService = videosService;
+            _AudiosService = audiosService;
             _ArticlesService = articlesService;
             _MessagesService = messagesService;
             _WebSitesService = webSitesService;
@@ -39,11 +42,14 @@ namespace SouthWall
         {
             if (!string.IsNullOrEmpty(entity.F_Imgs))
             {
-                string[] imgs=entity.F_Imgs.Split(",");
+                string[] imgs=entity.F_Imgs.Split(";");
                 List<object> imglist = new List<object>();
                 foreach (string s in imgs) 
-                { 
-                    imglist.Add(new { imgId = Guid.NewGuid().ToString(), imgSrc=s });
+                {
+                    if (!string.IsNullOrEmpty(s))
+                    {
+                        imglist.Add(new { imgId = Guid.NewGuid().ToString(), imgSrc = s });
+                    }
                 }
                 entity.F_Imgs = imglist.ToJson();
             }
@@ -57,6 +63,9 @@ namespace SouthWall
                     break;
                 case TimesType.WebSite:
                     entity.F_Title = $"梦链阁新收录一个网站《{entity.F_Title}》";
+                    break;
+                case TimesType.Audio:
+                    entity.F_Title = $"天籁阁新收录一首音乐《{entity.F_Title}》";
                     break;
             }
             return this._TimesService.Save(entity);

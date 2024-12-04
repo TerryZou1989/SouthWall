@@ -1,0 +1,105 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "天籁阁‌";
+    var list = this.ViewData["list"] as List<AudiosEntity>;
+    var audioIndex = 0;
+}
+@foreach (var item in list)
+{
+    <div class="card bg-dark text-light border-0 m-0 mb-3">
+        <div class="card-body row m-0 px-2">
+            <div class="col-lg-2 col-md-3 col-sm-4 px-2">
+                <img referrer="no-referrer|origin|unsafe-url" src="@(item.F_CoverImg)" class="rounded-3 w-100 audioimg" data-index="@(audioIndex)" data-id="@(item.F_Id)" alt="...">
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-8 px-2">
+                <h3><a href="@(item.F_AudioUrl)" target="_blank" class="fs-6 text-ddd text-decoration-none">@(item.F_Title)</a></h3>
+                <p class="fs-7 text-aaa mb-1">@(item.F_Description)</p>
+                <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
+            </div>
+        </div>
+    </div>
+    audioIndex++;
+}
+<div class="modal fade" id="modalAudioView" tabindex="-1" aria-labelledby="modalAudioViewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h1 class="modal-title fs-5" id="modalAudioViewLabel"></h1>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-5 px-2">
+                        <img referrer="no-referrer|origin|unsafe-url" src="/1.jpg" class="rounded-3 w-100 audioimg" alt="...">
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-sm-7 px-2">
+                        <p class="fs-6 text-tz-gray mb-1 audioDescription mb-3"></p>
+                        <div class="audio-box">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-primary" id="btnPrev">上一音乐</button>
+                <button type="button" class="btn btn-primary" id="btnNext">下一音乐</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var pageMatrix = function () {
+        
+        const modalAudioViewEl = document.getElementById('modalAudioView');
+        const modalAudioView = new bootstrap.Modal('#modalAudioView', { keyboard: false });
+        modalAudioViewEl.addEventListener('shown.bs.modal', event => { });
+        modalAudioViewEl.addEventListener('hidden.bs.modal', event => {
+         $("#modalAudioView .modal-body .audio-box").html("");
+        });
+        var audios = $(".audioimg");
+        var audioIndex = 0;
+        var initAudioViewer = function () {
+            for (var i = 0; i < audios.length; i++) {
+                $(audios[i]).click(function () {
+                    var audio = $(this);
+                    audioIndex = parseInt(audio.attr("data-index"));
+                    var audioId = audio.attr("data-id");
+                    apiClient.audios.get(audioId, function (d) {
+                        $("#modalAudioViewLabel").html(d.f_Title);
+                        $("#modalAudioView .modal-body img").attr("src",d.f_CoverImg);
+                        $("#modalAudioView .modal-body .audioDescription").html(d.f_Description);
+                        $("#modalAudioView .modal-body .audio-box").html("<audio controls preload='none'><source src='"+d.f_AudioUrl+"' type='audio/mpeg'></audio>");
+                        modalAudioView.show();
+                    }, function (err) {
+                        alert(err.message);
+                    });
+                });
+            }
+        }
+        initAudioViewer();
+        $("#btnPrev").click(function () {
+            if (audioIndex == 0) {
+                audioIndex = audios.length - 1;
+            }
+            else {
+                audioIndex--;
+            }
+            $(audios[audioIndex]).click();
+        });
+        $("#btnNext").click(function () {
+            if (audioIndex == audios.length - 1) {
+                audioIndex = 0;
+            }
+            else {
+                audioIndex++;
+            }
+            $(audios[audioIndex]).click();
+        });
+    };
+    $(function () {
+        new pageMatrix();
+    });
+</script>
+
