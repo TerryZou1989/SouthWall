@@ -47,7 +47,9 @@ namespace SouthWall
                 var obj = await GetById(entity.F_Id);
                 if (obj != null)
                 {
+                    obj.F_Title=entity.F_Title;
                     obj.F_Content = entity.F_Content;
+                    obj.F_Url=entity.F_Url;
                     obj.F_Imgs = entity.F_Imgs;
                     obj.F_Video = entity.F_Video;
                     obj.InitUpdate();

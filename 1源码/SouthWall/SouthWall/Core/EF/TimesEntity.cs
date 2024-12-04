@@ -8,6 +8,8 @@ namespace SouthWall
     {
         [Key]
         public string F_Id { get; set; }
+        public string? F_Title { get; set; }
+        public string? F_Url { get; set; }
         public string? F_Content { get; set; }
         public string? F_Imgs { get; set; }
         public string? F_Video { get; set; }

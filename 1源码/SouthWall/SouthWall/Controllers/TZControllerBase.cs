@@ -31,6 +31,36 @@ namespace SouthWall
             _ShiJusService = shiJusService;
             _TouXiangsService = touXiangsService;
         }
+        /// <summary>
+        /// imgs 逗号隔开即可
+        /// </summary>
+        /// <param name="entity"></param>
+        protected Task<int> SaveTimes(TimesType type, TimesEntity entity)
+        {
+            if (!string.IsNullOrEmpty(entity.F_Imgs))
+            {
+                string[] imgs=entity.F_Imgs.Split(",");
+                List<object> imglist = new List<object>();
+                foreach (string s in imgs) 
+                { 
+                    imglist.Add(new { imgId = Guid.NewGuid().ToString(), imgSrc=s });
+                }
+                entity.F_Imgs = imglist.ToJson();
+            }
+            switch (type)
+            {
+                case TimesType.Article:
+                    entity.F_Title = $"文韵阁‌新收录一篇文章《{entity.F_Title}》";
+                    break;
+                case TimesType.Video:
+                    entity.F_Title = $"光影阁新收录一段视频《{entity.F_Title}》";
+                    break;
+                case TimesType.WebSite:
+                    entity.F_Title = $"梦链阁新收录一个网站《{entity.F_Title}》";
+                    break;
+            }
+            return this._TimesService.Save(entity);
+        }
 
         protected Task<TZResponse> RunAction(CheckAuthType checkAuthType, WellDoneHandler action)
         {

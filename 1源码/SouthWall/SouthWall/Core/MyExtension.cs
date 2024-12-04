@@ -21,6 +21,14 @@ namespace SouthWall
             }
             return JsonConvert.DeserializeObject<T>(s);
         }
+        public static string ToJson(this object obj)
+        {
+            if (obj==null)
+            {
+                return null;
+            }
+            return JsonConvert.SerializeObject(obj);
+        }
 
         public static Expression<Func<T, bool>> And<T>(this Expression<Func<T, bool>> expr1, Expression<Func<T, bool>> expr2) {
             var parameter = Expression.Parameter(typeof(T), typeof(T).Name);

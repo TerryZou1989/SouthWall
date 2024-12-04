@@ -1,6 +1,6 @@
 ﻿@{
     Layout = "_MatrixLayout";
-    ViewData["Title"] = "时光录";
+    ViewData["Title"] = "逸趣阁‌";
     var list = this.ViewData["list"] as List<TimesEntity>;
     int imgIndex = 0;
 }
@@ -8,18 +8,33 @@
 {
     <div class="card bg-dark border-secondary text-light mb-3">
         <div class="card-body">
-            <p class="card-text lh-lg fs-6 mb-1 text-ccc" style="letter-spacing:0.15rem;">@(item.F_Content)</p>
-            <div class="row">
-                <div class="col">
-                    @if (!string.IsNullOrEmpty(item.F_Video))
-                    {
+            @if (!string.IsNullOrEmpty(item.F_Title))
+            {
+                if (!string.IsNullOrEmpty(item.F_Url))
+                {
+                    <h6><a href="@(item.F_Url)" class="text-decoration-none text-light" target="_blank">@(item.F_Title)</a></h6>
+                }
+                else
+                {
+                    <h6>@(item.F_Title)</h6>
+                }
+            }
+            @if (!string.IsNullOrEmpty(item.F_Content))
+            {
+                <p class="card-text lh-lg fs-6 mb-1 text-tz-gray">@(item.F_Content)</p>
+            }
+            @if (!string.IsNullOrEmpty(item.F_Video))
+            {
+                <div class="row">
+                    <div class="col">
+
                         <video loop="loop" controls>
                             <source src="@(item.F_Video)" type="video/mp4">
                         </video>
-                    }
+
+                    </div>
                 </div>
-            </div>
-            
+            }
             @if (item.E_ImgSrcList.Count > 0)
             {
                 int boxWidth = 340;
@@ -67,18 +82,26 @@
             </div>
             <div class="modal-body">
                 <div class="mb-3">
+                    <label for="txtTitle" class="form-label">标题</label>
+                    <textarea class="form-control bg-dark text-light" id="txtTitle" rows="1" placeholder="可以不写标题，其他模块有更新，也会创建说说，并自动带着标题和链接哦"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtUrl" class="form-label">链接</label>
+                    <textarea class="form-control bg-dark text-light" id="txtUrl" rows="2" placeholder="可以不写链接，其他模块有更新，也会创建说说，并自动带着标题和链接哦"></textarea>
+                </div>
+                <div class="mb-3">
                     <label for="txtContent" class="form-label">内容</label>
-                    <textarea class="form-control bg-dark text-light" id="txtContent" rows="5" placeholder="随便说说此刻的想法，500字以上就去写blog吧！"></textarea>
+                    <textarea class="form-control bg-dark text-light" id="txtContent" rows="4" placeholder="随便说说此刻的想法，500字以上就去写blog吧！"></textarea>
+                </div>             
+                <div class="mb-3">
+                    <label for="txtVideo" class="form-label">视频</label>
+                    <textarea class="form-control bg-dark text-light" id="txtVideo" rows="2" placeholder="视频地址，目前支持MP4格式"></textarea>
                 </div>
                 <div class="input-group mb-3">
                     <input id="txtImgSrc" type="text" class="form-control bg-dark text-light" placeholder="写上图片地址，咱就不存图片了哈" aria-describedby="btnAddImg">
                     <button class="btn btn-outline-secondary border-light text-light" type="button" id="btnAddImg">增加图片</button>
                 </div>
                 <div id="imgbox">
-                </div>
-                <div class="mb-3">
-                    <label for="txtVideo" class="form-label">视频</label>
-                    <textarea class="form-control bg-dark text-light" id="txtVideo" rows="3" placeholder="视频地址，目前支持MP4格式"></textarea>
                 </div>
             </div>
             <div class="modal-footer border-secondary">
@@ -148,10 +171,12 @@
             });
         });
         $("#btnSave").click(function () {
+            var title = $.trim($("#txtTitle").val());
+            var url = $.trim($("#txtUrl").val());
             var content = $.trim($("#txtContent").val());
             var imgs = JSON.stringify(imgSrcList);
             var video=$.trim($("#txtVideo").val());
-            apiClient.times.save(editId, content, imgs, video,function (d) {
+            apiClient.times.save(editId,title, content,url, imgs, video,function (d) {
                 alert(d);
                 modalForm.hide();
                 location.reload();
@@ -163,7 +188,7 @@
             var btndeleteList = $(".btndelete");
             for (var i = 0; i < btndeleteList.length; i++) {
                 $(btndeleteList[i]).click(function () {
-                    if (confirm("是否忍心删除此时光录？")) {
+                    if (confirm("是否忍心删除此逸趣阁‌？")) {
                         var id = $(this).attr("data-id");
                         apiClient.times.delete(id, function (d) {
                             alert(d);
@@ -184,6 +209,8 @@
                     imgSrcList = new Array();
                     editId = $(this).attr("data-id");
                     apiClient.times.get(editId, function (d) {
+                        $("#txtTitle").val(d.f_Title);
+                        $("#txtUrl").val(d.f_Url);
                         $("#txtContent").val(d.f_Content);
                         $("#txtVideo").val(d.f_Video);
                         if (d.f_ImgSrcList && d.f_ImgSrcList.length > 0) {

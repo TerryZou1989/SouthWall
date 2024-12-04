@@ -86,7 +86,9 @@ namespace SouthWall.Controllers
                 return Success("获取成功", list.Select(t => new
                 {
                     t.F_Id,
+                    t.F_Title,
                     t.F_Content,
+                    t.F_Url,
                     t.F_Imgs,
                     t.F_Video
                 }).ToList());
@@ -105,9 +107,11 @@ namespace SouthWall.Controllers
                 await _TimesService.Save(new TimesEntity
                 {
                     F_Id = args.F_Id,
+                    F_Title = args.F_Title,
                     F_Content = args.F_Content,
+                    F_Url = args.F_Url,
                     F_Imgs = args.F_Imgs,
-                    F_Video=args.F_Video
+                    F_Video = args.F_Video
                 });
                 return Success("保存成功");
             });
@@ -115,7 +119,9 @@ namespace SouthWall.Controllers
         public class Times_Save_Args
         {
             public string? F_Id { get; set; }
+            public string? F_Title { get; set; }
             public string? F_Content { get; set; }
+            public string? F_Url { get; set; }
             public string? F_Imgs { get; set; }
             public string? F_Video { get; set; }
         }
@@ -145,7 +151,10 @@ namespace SouthWall.Controllers
                 return Success("获取成功", new
                 {
                     entity.F_Id,
+                    entity.F_Title,
                     entity.F_Content,
+                    entity.F_Url,
+                    entity.F_Video,
                     F_ImgSrcList = entity.E_ImgSrcList
                 });
             });
@@ -194,6 +203,15 @@ namespace SouthWall.Controllers
                     F_VideoUrl = args.F_VideoUrl,
                     F_VideoCode = args.F_VideoCode
                 });
+                if (string.IsNullOrEmpty(args.F_Id))
+                {
+                    await this.SaveTimes(TimesType.Video, new TimesEntity
+                    {
+                        F_Title = args.F_Title,
+                        F_Imgs = args.F_CoverImg,
+                        F_Url = args.F_VideoUrl
+                    });
+                }
                 return Success("保存成功");
             });
         }
@@ -282,6 +300,16 @@ namespace SouthWall.Controllers
                     F_Content = args.F_Content,
                     F_ArticleUrl = args.F_ArticleUrl
                 });
+                if (string.IsNullOrEmpty(args.F_Id))
+                {
+                    await this.SaveTimes(TimesType.Article, new TimesEntity
+                    {
+                        F_Title = args.F_Title,
+                        F_Imgs = args.F_CoverImg,
+                        F_Content = args.F_Content,
+                        F_Url = args.F_ArticleUrl
+                    });
+                }
                 return Success("保存成功");
             });
         }
@@ -345,7 +373,7 @@ namespace SouthWall.Controllers
                 {
                     t.F_Id,
                     t.F_Content,
-                    t.F_UserName,                    
+                    t.F_UserName,
                     t.F_CreateTime
                 }).ToList());
             });
@@ -368,7 +396,7 @@ namespace SouthWall.Controllers
                         F_Id = args.F_Id,
                         F_Content = args.F_Content,
                         F_UserName = args.F_UserName,
-                        F_UserEmail=args.F_UserEmail
+                        F_UserEmail = args.F_UserEmail
                     });
                     return Success("保存成功");
                 }
@@ -376,14 +404,14 @@ namespace SouthWall.Controllers
                 {
                     return Error500("诗句的下句不对哦，你可以百度一下。");
                 }
-                
+
             });
         }
         public class Messages_Save_Args
         {
             public string? F_Id { get; set; }
             public string? F_UserName { get; set; }
-            public string? F_UserEmail {  get; set; }
+            public string? F_UserEmail { get; set; }
             public string? F_Content { get; set; }
             public string? F_ShiJuId { get; set; }
             public string? F_ShiJuN { get; set; }
@@ -431,7 +459,7 @@ namespace SouthWall.Controllers
         {
             return RunAction(CheckAuthType.User, async () =>
             {
-                await _MessagesService.Reply(args.F_Id,args.F_Content);
+                await _MessagesService.Reply(args.F_Id, args.F_Content);
                 return Success("回复成功");
             });
         }
@@ -480,6 +508,16 @@ namespace SouthWall.Controllers
                     F_Description = args.F_Description,
                     F_Url = args.F_Url
                 });
+                if (string.IsNullOrEmpty(args.F_Id))
+                {
+                    await this.SaveTimes(TimesType.WebSite, new TimesEntity
+                    {
+                        F_Title = args.F_Title,
+                        F_Imgs = args.F_CoverImg,
+                        F_Content = args.F_Description,
+                        F_Url = args.F_Url
+                    });
+                }
                 return Success("保存成功");
             });
         }
