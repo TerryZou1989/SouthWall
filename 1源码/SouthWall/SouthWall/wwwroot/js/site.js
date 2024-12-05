@@ -152,6 +152,60 @@ var util = {
         }
         return diff;
     },
+    DiffTimeFromNow: function (inputDate) {
+        const now = new Date();
+        const start = new Date(inputDate);
+        // 检查输入的时间是否小于当前时间
+        if (start >= now) {
+            throw new Error("输入的时间必须小于当前时间");
+        }
+        // 计算时间差（以毫秒为单位）
+        let diff = now - start;
+        // 计算年、月、日、小时、分钟、秒
+        const years = now.getFullYear() - start.getFullYear();
+        const months = now.getMonth() - start.getMonth();
+        const days = now.getDate() - start.getDate();
+        const hours = now.getHours() - start.getHours();
+        const minutes = now.getMinutes() - start.getMinutes();
+        const seconds = now.getSeconds() - start.getSeconds();
+        // 处理月份和日期的负数情况
+        let adjustedYears = years;
+        let adjustedMonths = months;
+        let adjustedDays = days;
+        if (adjustedDays < 0) {
+            adjustedDays += new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+            adjustedMonths--;
+        }
+        if (adjustedMonths < 0) {
+            adjustedMonths += 12;
+            adjustedYears--;
+        }
+        // 处理小时、分钟和秒的负数情况
+        let adjustedHours = hours;
+        let adjustedMinutes = minutes;
+        let adjustedSeconds = seconds;
+        if (adjustedSeconds < 0) {
+            adjustedSeconds += 60;
+            adjustedMinutes--;
+        }
+        if (adjustedMinutes < 0) {
+            adjustedMinutes += 60;
+            adjustedHours--;
+        }
+        if (adjustedHours < 0) {
+            adjustedHours += 24;
+            adjustedDays--;
+        }
+        // 返回结果
+        return {
+            years: adjustedYears,
+            months: adjustedMonths,
+            days: adjustedDays,
+            hours: adjustedHours,
+            minutes: adjustedMinutes,
+            seconds: adjustedSeconds
+        };
+    },
     ConverToDate: function (dateStr) {
         var str = dateStr.replace('T', " ").replace(/-/g, "/");
         return new Date(str);

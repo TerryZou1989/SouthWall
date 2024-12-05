@@ -5,6 +5,7 @@
     ViewData["Title"] = "‌絮语阁‌";
     var txlist = this.ViewData["txlist"] as List<TouXiangsEntity>;
     var list = this.ViewData["list"] as List<MessagesEntity>;
+    list = list.OrderByRandom();
     List<List<MessagesEntity>> colList = new List<List<MessagesEntity>>();
     List<MessagesEntity> list0 = new List<MessagesEntity>();
     List<MessagesEntity> list1 = new List<MessagesEntity>();

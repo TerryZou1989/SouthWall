@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "天籁阁‌";
     var list = this.ViewData["list"] as List<AudiosEntity>;
+    list = list.OrderByRandom();
     var audioIndex = 0;
 }
 @foreach (var item in list)

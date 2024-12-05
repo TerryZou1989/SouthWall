@@ -30,6 +30,14 @@ namespace SouthWall
             return JsonConvert.SerializeObject(obj);
         }
 
+        public static List<T> OrderByRandom<T>(this List<T> list)
+        {
+            if (list != null && list.Count > 0) { 
+                return list.OrderBy(t=>Guid.NewGuid()).ToList();
+            }
+            return null;
+        }
+
         public static Expression<Func<T, bool>> And<T>(this Expression<Func<T, bool>> expr1, Expression<Func<T, bool>> expr2) {
             var parameter = Expression.Parameter(typeof(T), typeof(T).Name);
             var body = Expression.AndAlso(

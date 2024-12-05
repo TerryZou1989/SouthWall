@@ -3,9 +3,26 @@
 *@
 @{
     Layout = null;
+    DateTime startTime = new DateTime(2024, 11, 22, 17, 21, 0);
 }
 <footer class="border-top footer text-muted border-secondary position-fixed bottom-0 w-100 bg-black">
     <div class="container py-3">
-        &copy; 2024 - 编城的南墙 / 工信部备案号： <a href="https://beian.miit.gov.cn/" target="_blank" class="text-decoration-none">京ICP备14009528号-4</a>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-lg-start text-md-start text-sm-center  text-center">
+                &copy; 2024 - 编城的南墙 / 工信部备案号： <a href="https://beian.miit.gov.cn/" target="_blank" class="text-decoration-none">京ICP备14009528号-4</a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-lg-end text-md-end text-sm-center  text-center runtime">
+                已运行：0 年 0 月 0 天 0 小时 0 分钟 0 秒
+            </div>
+        </div>        
     </div>
 </footer>
+<script>
+    $(function(){
+        var start=new Date("2024-11-22 17:21:00");
+        setInterval(function(){
+            var diff= util.DiffTimeFromNow(start);
+            $(".runtime").html("已运行："+diff.years+" 年 "+diff.months+" 月 "+diff.days+" 天 "+diff.hours+" 小时 "+diff.minutes+" 分钟 "+diff.seconds+" 秒");
+        },1000);
+    });
+</script>

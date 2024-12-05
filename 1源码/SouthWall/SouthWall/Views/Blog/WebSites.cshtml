@@ -5,6 +5,7 @@
     ViewData["Title"] = "梦链阁";
     ViewData["Description"] = "收录经典网站的《编城大典》";
     var list = this.ViewData["list"] as List<WebSitesEntity>;
+    list = list.OrderByRandom();
     var websiteIndex = 0;
 }
 @foreach (var item in list)
