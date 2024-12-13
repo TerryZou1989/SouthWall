@@ -32,7 +32,7 @@ namespace SouthWall
 
         public static List<T> OrderByRandom<T>(this List<T> list)
         {
-            if (list != null && list.Count > 0) { 
+            if (list != null) { 
                 return list.OrderBy(t=>Guid.NewGuid()).ToList();
             }
             return null;

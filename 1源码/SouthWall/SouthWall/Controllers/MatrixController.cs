@@ -5,7 +5,8 @@ namespace SouthWall.Controllers
     public class MatrixController : PageControllerBase
     {
         public MatrixController(
-            IAuthService authService,
+            IAuthService authService,             
+             IDatasService datasService, 
              ITimesService timesService,
              IVideosService videosService,
              IAudiosService audiosService,
@@ -15,6 +16,7 @@ namespace SouthWall.Controllers
              IShiJusService shiJusService,
              ITouXiangsService touXiangsService
              ):base(authService,
+                 datasService,
                  timesService,
                  videosService,
                  audiosService,
@@ -31,6 +33,11 @@ namespace SouthWall.Controllers
         }
         public IActionResult Index()
         {
+            return View();
+        }
+        public async Task<IActionResult> Datas() {
+            var list = await this._DatasService.GetList(null);
+            this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
             return View();
         }
         public async Task<IActionResult> ShiJus()

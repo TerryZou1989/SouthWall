@@ -1,5 +1,17 @@
 ﻿var api_url = `/api/welldone`;
 var apiClient = {
+    datas: {
+        get: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "datas/get",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        }
+    },
     times: {
         get: function (F_Id, succ, err) {
             apiPostAction({

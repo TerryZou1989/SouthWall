@@ -4,6 +4,7 @@ namespace SouthWall
     public class TZControllerBase : ControllerBase
     {
         protected readonly IAuthService _AuthService;
+        protected readonly IDatasService _DatasService;
         protected readonly ITimesService _TimesService;
         protected readonly IVideosService _VideosService;
         protected readonly IAudiosService _AudiosService;
@@ -14,6 +15,7 @@ namespace SouthWall
         protected readonly ITouXiangsService _TouXiangsService;
         public TZControllerBase(
             IAuthService authService,
+            IDatasService datasService,
             ITimesService timesService,
             IVideosService videosService,
             IAudiosService audiosService,
@@ -25,6 +27,7 @@ namespace SouthWall
             )
         {
             _AuthService = authService;
+            _DatasService = datasService;
             _TimesService = timesService;
             _VideosService = videosService;
             _AudiosService = audiosService;
@@ -38,8 +41,9 @@ namespace SouthWall
         /// imgs 逗号隔开即可
         /// </summary>
         /// <param name="entity"></param>
-        protected Task<int> SaveTimes(TimesType type, TimesEntity entity)
+        protected Task<int> SaveTimes(TimesType type, DatasEntity entity)
         {
+            entity.F_Type = 0;
             if (!string.IsNullOrEmpty(entity.F_Imgs))
             {
                 string[] imgs=entity.F_Imgs.Split(";");
@@ -68,7 +72,7 @@ namespace SouthWall
                     entity.F_Title = $"天籁阁新收录一首音乐《{entity.F_Title}》";
                     break;
             }
-            return this._TimesService.Save(entity);
+            return this._DatasService.Save(entity);
         }
 
         protected Task<TZResponse> RunAction(CheckAuthType checkAuthType, WellDoneHandler action)

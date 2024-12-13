@@ -3,7 +3,7 @@
 *@
 @{
     ViewData["Title"] = "文韵阁‌";
-    var list = this.ViewData["list"] as List<ArticlesEntity>;
+    var list = this.ViewData["list"] as List<DatasEntity>;
     var articleIndex = 0;
 }
 @foreach (var item in list)
@@ -15,7 +15,7 @@
             </div>
             <div class="col-lg-10 col-md-9 col-sm-8 px-2">
                 <h3 class="mb-3" style="line-height:0.75"><a href="/blog/article/@(item.F_Id)" target="_blank" class="fs-6 text-ddd text-decoration-none">@(item.F_Title)</a></h3>
-                <p class="fs-7 text-aaa mb-1">@(item.F_Content)</p>
+                <p class="fs-7 text-aaa mb-1">@(item.F_Description)</p>
                 <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
             </div>
         </div>
@@ -52,9 +52,9 @@
                     var article = $(this);
                     articleIndex = parseInt(article.attr("data-index"));
                     var articleId = article.attr("data-id");
-                    apiClient.articles.get(articleId, function (d) {
+                    apiClient.datas.get(articleId, function (d) {
                         $("#modalArticleViewLabel").html(d.f_Title);
-                        $("#modalArticleView .modal-body").html("<iframe src='" + d.f_ArticleUrl + "' scrolling='yes' border='0' frameborder='no' framespacing='0' allowfullscreen='true' class='w-100 h-100'></iframe>");
+                        $("#modalArticleView .modal-body").html("<iframe src='" + d.f_Url + "' scrolling='yes' border='0' frameborder='no' framespacing='0' allowfullscreen='true' class='w-100 h-100'></iframe>");
                         modalArticleView.show();
                     }, function (err) {
                         alert(err.message);

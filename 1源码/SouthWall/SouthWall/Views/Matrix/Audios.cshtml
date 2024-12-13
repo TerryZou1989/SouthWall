@@ -4,7 +4,7 @@
 @{
     Layout = "_MatrixLayout";
     ViewData["Title"] = "天籁阁‌";
-    var list = this.ViewData["list"] as List<AudiosEntity>;
+    var list = this.ViewData["list"] as List<DatasEntity>;
     var audioIndex = 0;
 }
 @foreach (var item in list)
@@ -118,7 +118,8 @@
             var title = $.trim($("#txtTitle").val());
             var description = $.trim($("#txtDescription").val());
             var audioUrl = $.trim($("#txtAudioUrl").val());
-            apiClient.audios.save(editId, title, description, audioUrl, coverImgSrc, function (d) {
+            //F_Id, F_Title, F_Description, F_Content, F_Type, F_CoverImg, F_Imgs, F_Url, F_VideoUrl, F_AudioUrl, F_IFrameCode
+            apiClient.datas.save(editId, title, description,null,3,coverImgSrc,null,null,null,  audioUrl,null, function (d) {
                 alert(d);
                 modalForm.hide();
                 location.reload();
@@ -133,7 +134,7 @@
                 $(btndeleteList[i]).click(function () {
                     if (confirm("是否忍心删除此音乐？")) {
                         var id = $(this).attr("data-id");
-                        apiClient.audios.delete(id, function (d) {
+                        apiClient.datas.delete(id, function (d) {
                             alert(d);
                             location.reload();
                         }, function (err) {
@@ -150,7 +151,7 @@
             for (var i = 0; i < btneditList.length; i++) {
                 $(btneditList[i]).click(function () {
                     editId = $(this).attr("data-id");
-                    apiClient.audios.get(editId, function (d) {
+                    apiClient.datas.get(editId, function (d) {
                         $("#txtTitle").val(d.f_Title);
                         $("#txtDescription").val(d.f_Description);
                         $("#txtAudioUrl").val(d.f_AudioUrl);
@@ -180,7 +181,7 @@
                     var audio = $(this);
                     audioIndex = parseInt(audio.attr("data-index"));
                     var audioId = audio.attr("data-id");
-                    apiClient.audios.get(audioId, function (d) {
+                    apiClient.datas.get(audioId, function (d) {
                         $("#modalAudioViewLabel").html(d.f_Title);
                         $("#modalAudioView .modal-body img").attr("src",d.f_CoverImg);
                         $("#modalAudioView .modal-body .audioDescription").html(d.f_Description);

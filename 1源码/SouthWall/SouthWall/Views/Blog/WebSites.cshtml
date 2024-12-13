@@ -4,7 +4,7 @@
 @{
     ViewData["Title"] = "梦链阁";
     ViewData["Description"] = "收录经典网站的《编城大典》";
-    var list = this.ViewData["list"] as List<WebSitesEntity>;
+    var list = this.ViewData["list"] as List<DatasEntity>;
     list = list.OrderByRandom();
     var websiteIndex = 0;
 }
@@ -54,7 +54,7 @@
                     var website = $(this);
                     websiteIndex = parseInt(website.attr("data-index"));
                     var websiteId = website.attr("data-id");
-                    apiClient.websites.get(websiteId, function (d) {
+                    apiClient.datas.get(websiteId, function (d) {
                         $("#modalWebSiteViewLabel").html(d.f_Title);
                         $("#modalWebSiteView .modal-body").html("<iframe src='" + d.f_Url + "' scrolling='yes' border='0' frameborder='no' framespacing='0' allowfullscreen='true' class='w-100 h-100'></iframe>");
                         modalWebSiteView.show();

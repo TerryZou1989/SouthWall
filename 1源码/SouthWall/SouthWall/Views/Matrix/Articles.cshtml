@@ -4,7 +4,7 @@
 @{
     Layout = "_MatrixLayout";
     ViewData["Title"] = "文韵阁‌";
-    var list = this.ViewData["list"] as List<ArticlesEntity>;
+    var list = this.ViewData["list"] as List<DatasEntity>;
     var articleIndex = 0;
 }
 @foreach (var item in list)
@@ -16,7 +16,7 @@
             </div>
             <div class="col-lg-10 col-md-9 col-sm-8 px-2">
                 <h3 class="mb-3" style="line-height:0.75"><a href="/blog/article/@(item.F_Id)" target="_blank" class="fs-6 text-ddd text-decoration-none">@(item.F_Title)</a></h3>
-                <p class="fs-7 text-aaa mb-1">@(item.F_Content)</p>
+                <p class="fs-7 text-aaa mb-1">@(item.F_Description)</p>
                 <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
             </div>
         </div>
@@ -104,7 +104,8 @@
             var title = $.trim($("#txtTitle").val());
             var content = $.trim($("#txtContent").val());
             var articleUrl = $.trim($("#txtArticleUrl").val());
-            apiClient.articles.save(editId, title, content, articleUrl, coverImgSrc, function (d) {
+            //F_Id, F_Title, F_Description, F_Content, F_Type, F_CoverImg, F_Imgs, F_Url, F_VideoUrl, F_AudioUrl, F_IFrameCode
+            apiClient.datas.save(editId, title, content,null,1,coverImgSrc,null, articleUrl,null,null,null,  function (d) {
                 alert(d);
                 modalForm.hide();
                 location.reload();
@@ -119,7 +120,7 @@
                 $(btndeleteList[i]).click(function () {
                     if (confirm("是否忍心删除此文章？")) {
                         var id = $(this).attr("data-id");
-                        apiClient.articles.delete(id, function (d) {
+                        apiClient.datas.delete(id, function (d) {
                             alert(d);
                             location.reload();
                         }, function (err) {
@@ -136,10 +137,10 @@
             for (var i = 0; i < btneditList.length; i++) {
                 $(btneditList[i]).click(function () {
                     editId = $(this).attr("data-id");
-                    apiClient.articles.get(editId, function (d) {
+                    apiClient.datas.get(editId, function (d) {
                         $("#txtTitle").val(d.f_Title);
-                        $("#txtContent").val(d.f_Content);
-                        $("#txtArticleUrl").val(d.f_ArticleUrl);
+                        $("#txtContent").val(d.f_Description);
+                        $("#txtArticleUrl").val(d.f_Url);
                         $("#txtImgSrc").val(d.f_CoverImg);
                         $("#btnAddImg").click();
                         modalForm.show();
@@ -164,9 +165,9 @@
                     var article = $(this);
                     articleIndex = parseInt(article.attr("data-index"));
                     var articleId = article.attr("data-id");
-                    apiClient.articles.get(articleId, function (d) {
+                    apiClient.datas.get(articleId, function (d) {
                         $("#modalArticleViewLabel").html(d.f_Title);
-                        $("#modalArticleView .modal-body").html("<iframe src='" + d.f_ArticleUrl + "' scrolling='yes' border='0' frameborder='no' framespacing='0' allowfullscreen='true' class='w-100 h-100'></iframe>");
+                        $("#modalArticleView .modal-body").html("<iframe src='" + d.f_Url + "' scrolling='yes' border='0' frameborder='no' framespacing='0' allowfullscreen='true' class='w-100 h-100'></iframe>");
                         modalArticleView.show();
                     }, function (err) {
                         alert(err.message);

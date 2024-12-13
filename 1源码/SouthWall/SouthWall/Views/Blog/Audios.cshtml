@@ -3,7 +3,7 @@
 *@
 @{
     ViewData["Title"] = "天籁阁‌";
-    var list = this.ViewData["list"] as List<AudiosEntity>;
+    var list = this.ViewData["list"] as List<DatasEntity>;
     list = list.OrderByRandom();
     var audioIndex = 0;
 }
@@ -67,7 +67,7 @@
                     var audio = $(this);
                     audioIndex = parseInt(audio.attr("data-index"));
                     var audioId = audio.attr("data-id");
-                    apiClient.audios.get(audioId, function (d) {
+                    apiClient.datas.get(audioId, function (d) {
                         $("#modalAudioViewLabel").html(d.f_Title);
                         $("#modalAudioView .modal-body img").attr("src",d.f_CoverImg);
                         $("#modalAudioView .modal-body .audioDescription").html(d.f_Description);

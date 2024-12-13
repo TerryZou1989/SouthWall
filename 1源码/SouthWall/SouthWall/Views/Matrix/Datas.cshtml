@@ -1,69 +1,101 @@
 ﻿@{
     Layout = "_MatrixLayout";
-    ViewData["Title"] = "逸趣阁‌";
+    ViewData["Title"] = "数据‌";
     var list = this.ViewData["list"] as List<DatasEntity>;
     int imgIndex = 0;
 }
 @foreach (var item in list)
 {
     <div class="card bg-dark border-secondary text-light mb-3">
-        <div class="card-body">
-            @if (!string.IsNullOrEmpty(item.F_Title))
-            {
-                if (!string.IsNullOrEmpty(item.F_Url))
+        @if (!string.IsNullOrEmpty(item.F_Title))
+        {
+            <div class="card-header border-light">
+                @if (!string.IsNullOrEmpty(item.F_Url))
                 {
-                    <h6><a href="@(item.F_Url)" class="text-decoration-none text-light" target="_blank">@(item.F_Title)</a></h6>
+                    <h6><a href="@(item.F_Url)" class="text-decoration-none text-light" target="_blank">【@(item.F_Type)】@(item.F_Title)</a></h6>
+                    <p class="mb-1"><a href="@(item.F_Url)" class="text-decoration-none text-tz-gray fs-7" target="_blank">@(item.F_Url)</a></p>
                 }
                 else
                 {
-                    <h6>@(item.F_Title)</h6>
+                    <h6>【@(item.F_Type)】@(item.F_Title)</h6>
                 }
-            }
-            @if (!string.IsNullOrEmpty(item.F_Content))
-            {
-                <p class="card-text lh-lg fs-6 mb-1 text-tz-gray">@(item.F_Content)</p>
-            }
-            @if (!string.IsNullOrEmpty(item.F_VideoUrl))
-            {
-                <div class="row">
-                    <div class="col">
-                        <video loop="loop" controls>
+                <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
+            </div>
+        }
+        <div class="card-body">
+            <div class="row">
+
+                <div class="col-12">
+                    @if (!string.IsNullOrEmpty(item.F_Description))
+                    {
+                        <p class="card-text lh-lg fs-6 mb-1 text-tz-gray">@(item.F_Description)</p>
+                    }
+                    @if (!string.IsNullOrEmpty(item.F_Content))
+                    {
+                        <p class="card-text lh-lg fs-6 mb-1 text-tz-gray">@(item.F_Content)</p>
+                    }
+                    @if (item.E_ImgSrcList.Count > 0)
+                    {
+                        int boxWidth = 340;
+                        if (item.E_ImgSrcList.Count == 8)
+                        {
+                            boxWidth = 450;
+                        }
+
+                        <div class="clearfix mt-2" style="width:@(boxWidth)px">
+                            @{
+                                int imgWidth = 100;
+                                int imgHeight = 100;
+                                if (item.E_ImgSrcList.Count == 4 || item.E_ImgSrcList.Count == 2)
+                                {
+                                    imgWidth = 155;
+                                }
+                                imgHeight = imgWidth;
+                                if (item.E_ImgSrcList.Count == 1)
+                                {
+                                    imgHeight = 0;
+                                    imgWidth = 320;
+                                }
+                            }
+                            @foreach (var img in item.E_ImgSrcList)
+                            {
+                                <img referrer="no-referrer|origin|unsafe-url" src="@(img.imgSrc)" class="float-start rounded dataImg" data-index="@(imgIndex++)" style="width:@(imgWidth)px;height:@(imgHeight>0?imgHeight+"px":"auto");margin:0 0 10px 10px" />
+                            }
+                        </div>
+                    }
+
+                    @if (!string.IsNullOrEmpty(item.F_AudioUrl))
+                    {
+                        <div class="row">
+                            <div class="col">
+                                <audio controls preload='none'><source src="@(item.F_AudioUrl)" type='audio/mpeg'></audio>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+                @if (!string.IsNullOrEmpty(item.F_CoverImg))
+                {
+                    <div class="col-4 p-2">
+                        <img referrer="no-referrer|origin|unsafe-url" src="@(item.F_CoverImg)" class="card-img-top rounded-3 dataImg" data-index="@(imgIndex++)" data-id="@(item.F_Id)" alt="@(item.F_Title)">
+                    </div>
+                }
+                <div class="col-4 p-2">
+                    @if (!string.IsNullOrEmpty(item.F_VideoUrl))
+                    {
+                        <video loop="loop" class="w-100" controls>
                             <source src="@(item.F_VideoUrl)" type="video/mp4">
                         </video>
-                    </div>
-                </div>
-            }
-            @if (item.E_ImgSrcList.Count > 0)
-            {
-                int boxWidth = 340;
-                if (item.E_ImgSrcList.Count == 8)
-                {
-                    boxWidth = 450;
-                }
-
-                <div class="clearfix mt-2" style="width:@(boxWidth)px">
-                    @{
-                        int imgWidth = 100;
-                        int imgHeight = 100;
-                        if (item.E_ImgSrcList.Count == 4 || item.E_ImgSrcList.Count == 2)
-                        {
-                            imgWidth = 155;
-                        }
-                        imgHeight = imgWidth;
-                        if (item.E_ImgSrcList.Count == 1)
-                        {
-                            imgHeight = 0;
-                            imgWidth = 320;
-                        }
                     }
-                    @foreach (var img in item.E_ImgSrcList)
+                </div>
+                <div class="col-4 p-2">
+                    @if (!string.IsNullOrEmpty(item.F_IFrameCode))
                     {
-                        <img referrer="no-referrer|origin|unsafe-url" src="@(img.imgSrc)" class="float-start rounded timeImg" data-index="@(imgIndex)" style="width:@(imgWidth)px;height:@(imgHeight>0?imgHeight+"px":"auto");margin:0 0 10px 10px" />
-                        imgIndex++;
+                        @Html.Raw(item.F_IFrameCode)
                     }
                 </div>
-            }
-            <i class="fs-7 text-secondary">@(item.F_CreateTime.Value.ToString("yyyy-MM-dd HH:mm"))</i>
+            </div>
         </div>
         <div class="card-footer text-end border-secondary">
             <button class="btn btn-sm btn-outline-primary btnedit" data-id="@(item.F_Id)">编辑</button>
@@ -80,20 +112,42 @@
             </div>
             <div class="modal-body">
                 <div class="mb-3">
+                    <label for="txtType" class="form-label">类型</label>
+                    <textarea class="form-control bg-dark text-light" id="txtType" rows="1" placeholder="0:moment;1:article;2:video;3:audio;4:website;"></textarea>
+                </div>
+                <div class="mb-3">
                     <label for="txtTitle" class="form-label">标题</label>
                     <textarea class="form-control bg-dark text-light" id="txtTitle" rows="1" placeholder="可以不写标题，其他模块有更新，也会创建说说，并自动带着标题和链接哦"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtDescription" class="form-label">简介</label>
+                    <textarea class="form-control bg-dark text-light" id="txtDescription" rows="4" placeholder="简介，写短点哈"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtContent" class="form-label">内容</label>
+                    <textarea class="form-control bg-dark text-light" id="txtContent" rows="4" placeholder="500字以上就去写blog吧！"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="txtUrl" class="form-label">链接</label>
                     <textarea class="form-control bg-dark text-light" id="txtUrl" rows="2" placeholder="可以不写链接，其他模块有更新，也会创建说说，并自动带着标题和链接哦"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="txtContent" class="form-label">内容</label>
-                    <textarea class="form-control bg-dark text-light" id="txtContent" rows="4" placeholder="随便说说此刻的想法，500字以上就去写blog吧！"></textarea>
-                </div>             
-                <div class="mb-3">
                     <label for="txtVideo" class="form-label">视频</label>
                     <textarea class="form-control bg-dark text-light" id="txtVideo" rows="2" placeholder="视频地址，目前支持MP4格式"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtAudio" class="form-label">音频</label>
+                    <textarea class="form-control bg-dark text-light" id="txtAudio" rows="2" placeholder="音频地址，目前支持MP3格式"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="txtIFrameCode" class="form-label">IFrameCode</label>
+                    <textarea class="form-control bg-dark text-light" id="txtIFrameCode" rows="2" placeholder="iframe 代码"></textarea>
+                </div>
+                <div class="input-group mb-3">
+                    <input id="txtCoverImg" type="text" class="form-control bg-dark text-light" placeholder="写上图片地址，咱就不存图片了哈" aria-describedby="btnAddtxtCoverImg">
+                    <button class="btn btn-outline-secondary border-light text-light" type="button" id="btnAddtxtCoverImg">增加封面</button>
+                </div>
+                <div id="coverimgbox">
                 </div>
                 <div class="input-group mb-3">
                     <input id="txtImgSrc" type="text" class="form-control bg-dark text-light" placeholder="写上图片地址，咱就不存图片了哈" aria-describedby="btnAddImg">
@@ -131,7 +185,10 @@
         const modalFormEl = document.getElementById('modalForm');
         const modalForm = new bootstrap.Modal('#modalForm', { keyboard: false });
         modalFormEl.addEventListener('shown.bs.modal', event => { });
-        modalFormEl.addEventListener('hidden.bs.modal', event => { });
+        modalFormEl.addEventListener('hidden.bs.modal', event => { 
+        imgSrcList = new Array();
+        $("#imgbox").html("");
+        });
         $("#btnCreate").click(function () {
             $("#modalFormLabel").html("新增");
             editId = "";
@@ -168,13 +225,28 @@
                 $("#btn" + imgId).parent().remove();
             });
         });
+        var coverImgSrc = "";
+        $("#btnAddtxtCoverImg").click(function () {
+            coverImgSrc = $.trim($("#txtCoverImg").val());
+            if (coverImgSrc == "") {
+                alert("封面地址不能为空");
+                return;
+            }
+            var img = $("<div class='float-start p-1'><img referrer='no-referrer|origin|unsafe-url' src='" + coverImgSrc + "' class='img-thumbnail' style='width:200px;' /></div>");
+            $("#coverimgbox").html(img);
+            $("#txtCoverImg").val("");
+        });
         $("#btnSave").click(function () {
+            var type = $.trim($("#txtType").val());
             var title = $.trim($("#txtTitle").val());
             var url = $.trim($("#txtUrl").val());
+            var description = $.trim($("#txtDescription").val());
             var content = $.trim($("#txtContent").val());
             var imgs = JSON.stringify(imgSrcList);
-            var video=$.trim($("#txtVideo").val());            
-            apiClient.datas.save(editId,title,null, content,0,null, imgs,null, video,null,null,function (d) {
+            var video=$.trim($("#txtVideo").val());
+            var audio=$.trim($("#txtAudio").val());
+            var iframcode=$.trim($("#txtIFrameCode").val());
+            apiClient.datas.save(editId,title,description, content,type,coverImgSrc,imgs,url, video,audio,iframcode,function (d) {
                 alert(d);
                 modalForm.hide();
                 location.reload();
@@ -207,10 +279,16 @@
                     imgSrcList = new Array();
                     editId = $(this).attr("data-id");
                     apiClient.datas.get(editId, function (d) {
+                        $("#txtType").val(d.f_Type);
                         $("#txtTitle").val(d.f_Title);
+                        $("#txtDescription").val(d.f_Description);
                         $("#txtUrl").val(d.f_Url);
                         $("#txtContent").val(d.f_Content);
                         $("#txtVideo").val(d.f_VideoUrl);
+                        $("#txtAudio").val(d.f_AudioUrl);
+                        $("#txtIFrameCode").val(d.f_IFrameCode);
+                        $("#txtCoverImg").val(d.f_CoverImg);
+                         $("#btnAddtxtCoverImg").click();
                         if (d.f_ImgSrcList && d.f_ImgSrcList.length > 0) {
                             for (var i = 0; i < d.f_ImgSrcList.length; i++) {
                                 $("#txtImgSrc").val(d.f_ImgSrcList[i].imgSrc);
@@ -231,7 +309,8 @@
         const modalImgView = new bootstrap.Modal('#modalImgView', { keyboard: false });
         modalImgViewEl.addEventListener('shown.bs.modal', event => { });
         modalImgViewEl.addEventListener('hidden.bs.modal', event => { });
-        var imgs = $(".timeImg");
+        var imgs = $(".dataImg");
+        console.log(imgs);
         var imgIndex = 0;
         var initImgViewer = function () {
             for (var i = 0; i < imgs.length; i++) {

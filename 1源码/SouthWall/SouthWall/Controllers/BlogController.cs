@@ -6,7 +6,9 @@ namespace SouthWall.Controllers
 {
     public class BlogController : PageControllerBase
     {
+        private readonly IToolService _toolService;
         public BlogController(IAuthService authService,
+             IDatasService datasService, 
              ITimesService timesService,
              IVideosService videosService,
              IAudiosService audiosService,
@@ -14,8 +16,10 @@ namespace SouthWall.Controllers
              IMessagesService messagesService,
              IWebSitesService webSitesService,
              IShiJusService shiJusService,
-             ITouXiangsService touXiangsService
+             ITouXiangsService touXiangsService,
+             IToolService toolService
              ) : base(authService,
+                 datasService,
                  timesService,
                  videosService,
                  audiosService,
@@ -25,12 +29,12 @@ namespace SouthWall.Controllers
                  shiJusService,
                  touXiangsService)
         {
-
+            _toolService = toolService;
         }
         [HttpGet]
-        public Task<IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
-            return Times();
+            return await Times();
         }
         public IActionResult Owner()
         {

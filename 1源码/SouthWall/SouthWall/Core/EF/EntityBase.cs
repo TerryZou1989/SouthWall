@@ -6,8 +6,10 @@
         public DateTime? F_UpdateTime { get; set; }
 
         public virtual void InitCreate()
-        {            
-            this.F_CreateTime = DateTime.Now;
+        {
+            if (!this.F_CreateTime.HasValue) {
+                this.F_CreateTime = DateTime.Now;
+            }            
         }
 
         public void InitUpdate()

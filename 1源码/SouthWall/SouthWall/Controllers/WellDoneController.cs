@@ -11,6 +11,7 @@ namespace SouthWall.Controllers
     {
         public WellDoneController(
              IAuthService authService,
+             IDatasService datasService,
              ITimesService timesService,
              IVideosService videosService,
              IAudiosService audioService,
@@ -21,6 +22,7 @@ namespace SouthWall.Controllers
              ITouXiangsService touXiangsService
             ) :
             base(authService,
+                datasService,
                 timesService,
                 videosService,
                 audioService,
@@ -77,6 +79,160 @@ namespace SouthWall.Controllers
         }
         #endregion
         #endregion Auth
+
+        #region Datas
+        #region Datas_List
+        [HttpPost("datas/list")]
+        public Task<TZResponse> Datas_List([FromBody] Datas_List_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                var list = await _DatasService.GetList(new DatasEntity
+                {
+                    F_Type = args.F_Type
+                });
+                return Success("获取成功", list.Select(t => new
+                {
+                    t.F_Id,
+                    t.F_Type,
+                    t.F_Title,
+                    t.F_Description,
+                    t.F_Content,
+                    t.F_CoverImg,
+                    t.F_Imgs,
+                    t.F_Url,
+                    t.F_VideoUrl,
+                    t.F_AudioUrl,
+                    t.F_IFrameCode,
+                    t.F_CreateTime
+                }).ToList());
+            });
+        }
+        public class Datas_List_Args
+        {
+            public int? F_Type { get; set; }
+        }
+        #endregion Datas_List
+        #region Datas_Save
+        [HttpPost("datas/save")]
+        public Task<TZResponse> Datas_Save([FromBody] Datas_Save_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _DatasService.Save(new DatasEntity
+                {
+                    F_Id = args.F_Id,
+                    F_Title = args.F_Title,
+                    F_Description = args.F_Description,
+                    F_Content = args.F_Content,
+                    F_Type = args.F_Type,
+                    F_CoverImg = args.F_CoverImg,
+                    F_Imgs = args.F_Imgs,
+                    F_VideoUrl = args.F_VideoUrl,
+                    F_AudioUrl = args.F_AudioUrl,
+                    F_IFrameCode = args.F_IFrameCode,
+                    F_Url = args.F_Url
+                });
+                switch (args.F_Type)
+                {
+                    case 1:
+                        await this.SaveTimes(TimesType.Article, new DatasEntity
+                        {
+                            F_Title = args.F_Title,
+                            F_Imgs = args.F_CoverImg,
+                            F_Content = args.F_Content,
+                            F_Url = args.F_Url
+                        });
+                        break;
+                    case 2:
+                        await this.SaveTimes(TimesType.Video, new DatasEntity
+                        {
+                            F_Title = args.F_Title,
+                            F_Imgs = args.F_CoverImg,
+                            F_Url = args.F_Url
+                        });
+                        break;
+                    case 3:
+                        await this.SaveTimes(TimesType.Audio, new DatasEntity
+                        {
+                            F_Title = args.F_Title,
+                            F_Imgs = args.F_CoverImg,
+                            F_Url = args.F_Url
+                        });
+                        break;
+                    case 4:
+                        await this.SaveTimes(TimesType.WebSite, new DatasEntity
+                        {
+                            F_Title = args.F_Title,
+                            F_Imgs = args.F_CoverImg,
+                            F_Url = args.F_Url
+                        });
+                        break;
+                }
+                return Success("保存成功");
+            });
+        }
+        public class Datas_Save_Args
+        {
+            public string? F_Id { get; set; }
+            public string? F_Title { get; set; }
+            public string? F_Description { get; set; }
+            public string? F_Content { get; set; }
+            public int? F_Type { get; set; }
+            public string? F_Url { get; set; }
+            public string? F_Imgs { get; set; }
+            public string? F_CoverImg { get; set; }
+            public string? F_VideoUrl { get; set; }
+            public string? F_IFrameCode { get; set; }
+            public string? F_AudioUrl { get; set; }
+        }
+        #endregion Datas_Save
+        #region Datas_Delete
+        [HttpPost("datas/delete")]
+        public Task<TZResponse> Datas_Delete([FromBody] Videos_Delete_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _VideosService.Delete(args.F_Id);
+                return Success("删除成功");
+            });
+        }
+        public class Datas_Delete_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Datas_Delete
+        #region Datas_Get
+        [HttpPost("datas/get")]
+        public Task<TZResponse> Datas_Get([FromBody] Datas_Get_Args args)
+        {
+            return RunAction(CheckAuthType.None, async () =>
+            {
+                var entity = await _DatasService.GetById(args.F_Id);
+                return Success("获取成功", new
+                {
+                    entity.F_Id,
+                    entity.F_Type,
+                    entity.F_Title,
+                    entity.F_Description,
+                    entity.F_Content,
+                    entity.F_Url,
+                    entity.F_CoverImg,
+                    entity.F_Imgs,
+                    entity.F_VideoUrl,
+                    entity.F_AudioUrl,
+                    entity.F_IFrameCode,
+                    entity.F_CreateTime,
+                    F_ImgSrcList = entity.E_ImgSrcList
+                });
+            });
+        }
+        public class Datas_Get_Args
+        {
+            public string? F_Id { get; set; }
+        }
+        #endregion Datas_Get
+        #endregion
 
         #region Times
         #region Times_List
@@ -208,7 +364,7 @@ namespace SouthWall.Controllers
                 });
                 if (string.IsNullOrEmpty(args.F_Id))
                 {
-                    await this.SaveTimes(TimesType.Video, new TimesEntity
+                    await this.SaveTimes(TimesType.Video, new DatasEntity
                     {
                         F_Title = args.F_Title,
                         F_Imgs = args.F_CoverImg,
@@ -305,7 +461,7 @@ namespace SouthWall.Controllers
                 });
                 if (string.IsNullOrEmpty(args.F_Id))
                 {
-                    await this.SaveTimes(TimesType.Audio, new TimesEntity
+                    await this.SaveTimes(TimesType.Audio, new DatasEntity
                     {
                         F_Title = args.F_Title,
                         F_Imgs = args.F_CoverImg,
@@ -402,7 +558,7 @@ namespace SouthWall.Controllers
                 });
                 if (string.IsNullOrEmpty(args.F_Id))
                 {
-                    await this.SaveTimes(TimesType.Article, new TimesEntity
+                    await this.SaveTimes(TimesType.Article, new DatasEntity
                     {
                         F_Title = args.F_Title,
                         F_Imgs = args.F_CoverImg,
@@ -610,7 +766,7 @@ namespace SouthWall.Controllers
                 });
                 if (string.IsNullOrEmpty(args.F_Id))
                 {
-                    await this.SaveTimes(TimesType.WebSite, new TimesEntity
+                    await this.SaveTimes(TimesType.WebSite, new DatasEntity
                     {
                         F_Title = args.F_Title,
                         F_Imgs = args.F_CoverImg,

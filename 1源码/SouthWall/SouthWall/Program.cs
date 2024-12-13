@@ -11,6 +11,7 @@ builder.Services.AddDbContext<SWDbContext>(options =>
     options.UseMySql(connectionString,
          new MySqlServerVersion(new Version()))
 );
+builder.Services.AddScoped<IDatasDBAccess, DatasDBAccess>();
 builder.Services.AddScoped<ITimesDBAccess, TimesDBAccess>();
 builder.Services.AddScoped<IVideosDBAccess, VideosDBAccess>();
 builder.Services.AddScoped<IAudiosDBAccess, AudiosDBAccess>();
@@ -20,7 +21,9 @@ builder.Services.AddScoped<IWebSitesDBAccess, WebSitesDBAccess>();
 builder.Services.AddScoped<IShiJusDBAccess, ShiJusDBAccess>();
 builder.Services.AddScoped<ITouXiangsDBAccess, TouXiangsDBAccess>();
 
+builder.Services.AddScoped<IToolService, ToolService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IDatasService, DatasService>();
 builder.Services.AddScoped<ITimesService, TimesService>();
 builder.Services.AddScoped<IVideosService, VideosService>();
 builder.Services.AddScoped<IAudiosService, AudiosService>();

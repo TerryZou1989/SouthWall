@@ -31,6 +31,48 @@ var apiClient = {
             });
         }
     },
+    datas: {
+        save: function (F_Id, F_Title, F_Description,F_Content, F_Type, F_CoverImg, F_Imgs, F_Url, F_VideoUrl, F_AudioUrl, F_IFrameCode, succ, err) {
+            apiPostAction({
+                action: "datas/save",
+                data: {
+                    F_Id, F_Title, F_Description, F_Content, F_Type, F_CoverImg, F_Imgs, F_Url, F_VideoUrl, F_AudioUrl, F_IFrameCode
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        delete: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "datas/delete",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        get: function (F_Id, succ, err) {
+            apiPostAction({
+                action: "datas/get",
+                data: {
+                    F_Id
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        list: function (succ, err) {
+            apiPostAction({
+                action: "datas/list",
+                data: {
+
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+    },
     times: {
         save: function (F_Id,F_Title, F_Content,F_Url, F_Imgs, F_Video, succ, err) {
             apiPostAction({

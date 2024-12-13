@@ -4,7 +4,7 @@
 @{
     Layout = "_MatrixLayout";
     ViewData["Title"] = "梦链阁";
-    var list = this.ViewData["list"] as List<WebSitesEntity>;
+    var list = this.ViewData["list"] as List<DatasEntity>;
     var websiteIndex = 0;
 }
 @foreach (var item in list)
@@ -105,7 +105,8 @@
             var title = $.trim($("#txtTitle").val());
             var description = $.trim($("#txtDescription").val());
             var url = $.trim($("#txtUrl").val());
-            apiClient.websites.save(editId, title, description, url, coverImgSrc, function (d) {
+            //F_Id, F_Title, F_Description, F_Content, F_Type, F_CoverImg, F_Imgs, F_Url, F_VideoUrl, F_AudioUrl, F_IFrameCode
+            apiClient.datas.save(editId, title, description,null,4,coverImgSrc,null, url,null,null,null,  function (d) {
                 alert(d);
                 modalForm.hide();
                 location.reload();
@@ -120,7 +121,7 @@
                 $(btndeleteList[i]).click(function () {
                     if (confirm("是否忍心删除此文章？")) {
                         var id = $(this).attr("data-id");
-                        apiClient.websites.delete(id, function (d) {
+                        apiClient.datas.delete(id, function (d) {
                             alert(d);
                             location.reload();
                         }, function (err) {
@@ -137,7 +138,7 @@
             for (var i = 0; i < btneditList.length; i++) {
                 $(btneditList[i]).click(function () {
                     editId = $(this).attr("data-id");
-                    apiClient.websites.get(editId, function (d) {
+                    apiClient.datas.get(editId, function (d) {
                         $("#txtTitle").val(d.f_Title);
                         $("#txtDescription").val(d.f_Description);
                         $("#txtUrl").val(d.f_Url);
@@ -165,7 +166,7 @@
                     var website = $(this);
                     websiteIndex = parseInt(website.attr("data-index"));
                     var websiteId = website.attr("data-id");
-                    apiClient.websites.get(websiteId, function (d) {
+                    apiClient.datas.get(websiteId, function (d) {
                         $("#modalWebSiteViewLabel").html(d.f_Title);
                         $("#modalWebSiteView .modal-body").html("<iframe src='" + d.f_Url + "' scrolling='yes' border='0' frameborder='no' framespacing='0' allowfullscreen='true' class='w-100 h-100'></iframe>");
                         modalWebSiteView.show();

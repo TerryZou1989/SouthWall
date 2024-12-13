@@ -4,7 +4,7 @@
 @{
     Layout = "_MatrixLayout";
     ViewData["Title"] = "光影阁";
-    var list = this.ViewData["list"] as List<VideosEntity>;
+    var list = this.ViewData["list"] as List<DatasEntity>;
     var videoIndex = 0;
 }
 <div class="row p-0 m-0">
@@ -14,7 +14,7 @@
             <div class="card bg-dark text-light border-1 border-secondary" title="@(item.F_Title)">
                 <img referrer="no-referrer|origin|unsafe-url" src="@(item.F_CoverImg)" class="card-img-top rounded-3 videoimg" data-index="@(videoIndex)" data-id="@(item.F_Id)" alt="@(item.F_Title)">
                 <div class="card-body">
-                    <a href="@(item.F_VideoUrl)" target="_blank" class="card-text fs-6 text-ccc text-decoration-none multi-line-ellipsis">@(item.F_Title)</a>
+                    <a href="@(item.F_Url)" target="_blank" class="card-text fs-6 text-ccc text-decoration-none multi-line-ellipsis">@(item.F_Title)</a>
                 </div>
                 <div class="card-footer text-end border-secondary">
                     <button class="btn btn-sm btn-outline-primary btnedit" data-id="@(item.F_Id)">编辑</button>
@@ -105,7 +105,8 @@
             var title = $.trim($("#txtTitle").val());
             var videoUrl = $.trim($("#txtVideoUrl").val());
             var videoCode = $.trim($("#txtVideoCode").val());
-            apiClient.videos.save(editId, title, videoUrl, videoCode, coverImgSrc, function (d) {
+            apiClient.datas.save(editId, title,null,null,2, coverImgSrc,null,videoUrl, null,null,videoCode, function (d) {
+                //F_Id, F_Title, F_Description, F_Content, F_Type, F_CoverImg, F_Imgs, F_Url, F_VideoUrl, F_AudioUrl, F_IFrameCode
                 alert(d);
                 modalForm.hide();
                 location.reload();
@@ -118,9 +119,9 @@
             var btndeleteList = $(".btndelete");
             for (var i = 0; i < btndeleteList.length; i++) {
                 $(btndeleteList[i]).click(function () {
-                    if (confirm("是否忍心删除此视频？")) {
+                    if (confirm("是否忍心删除此数据？")) {
                         var id = $(this).attr("data-id");
-                        apiClient.videos.delete(id, function (d) {
+                        apiClient.datas.delete(id, function (d) {
                             alert(d);
                             location.reload();
                         }, function (err) {
@@ -137,10 +138,10 @@
             for (var i = 0; i < btneditList.length; i++) {
                 $(btneditList[i]).click(function () {
                     editId = $(this).attr("data-id");
-                    apiClient.videos.get(editId, function (d) {
+                    apiClient.datas.get(editId, function (d) {
                         $("#txtTitle").val(d.f_Title);
-                        $("#txtVideoUrl").val(d.f_VideoUrl);
-                        $("#txtVideoCode").val(d.f_VideoCode);
+                        $("#txtVideoUrl").val(d.f_Url);
+                        $("#txtVideoCode").val(d.f_IFrameCode);
                         $("#txtImgSrc").val(d.f_CoverImg);
                         $("#btnAddImg").click();
                         modalForm.show();
@@ -164,9 +165,9 @@
                     var video = $(this);
                     videoIndex = parseInt(video.attr("data-index"));
                     var videoId = video.attr("data-id");
-                    apiClient.videos.get(videoId, function (d) {
+                    apiClient.datas.get(videoId, function (d) {
                         $("#modalVideoViewLabel").html(d.f_Title);
-                        $("#modalVideoView .modal-body").html(d.f_VideoCode);
+                        $("#modalVideoView .modal-body").html(d.f_IFrameCode);
                         modalVideoView.show();
                     }, function (err) {
                         alert(err.message);
