@@ -27,6 +27,7 @@ namespace SouthWall
             return this.Database.BeginTransaction();
         }
         public DbSet<DatasEntity> Datas { get; set; }
+        public DbSet<RequestLogsEntity> RequestLogs { get; set; }
         public DbSet<TimesEntity> Times { get; set; }
         public DbSet<VideosEntity> Videos { get; set; }
         public DbSet<AudiosEntity> Audios { get; set; }

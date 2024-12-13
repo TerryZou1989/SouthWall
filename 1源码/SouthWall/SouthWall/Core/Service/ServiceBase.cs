@@ -2,6 +2,7 @@
 {
     public class ServiceBase
     {
+        protected readonly IRequestLogsDBAccess _RequestLogsDBAccess;
         protected readonly IDatasDBAccess _DatasDBAccess;
         protected readonly ITimesDBAccess _TimesDBAccess;
         protected readonly IVideosDBAccess _VideosDBAccess;
@@ -12,6 +13,10 @@
         protected readonly IShiJusDBAccess _ShiJusDBAccess;
         protected readonly ITouXiangsDBAccess _TouXiangsDBAccess;
         public ServiceBase() { }
+        public ServiceBase(IRequestLogsDBAccess requestLogsDBAccess)
+        {
+            _RequestLogsDBAccess = requestLogsDBAccess;
+        }
         public ServiceBase(IDatasDBAccess datasDBAccess)
         {
             _DatasDBAccess = datasDBAccess;
@@ -49,6 +54,7 @@
             _TouXiangsDBAccess = touXiangsDBAccess;
         }
         public ServiceBase(
+            IRequestLogsDBAccess  requestLogsDBAccess,
             IDatasDBAccess datasDBAccess,
             ITimesDBAccess timesDBAccess,
             IVideosDBAccess videosDBAccess,
@@ -59,6 +65,7 @@
             IShiJusDBAccess shiJusDBAccess,
             ITouXiangsDBAccess touXiangsDBAccess)
         {
+            _RequestLogsDBAccess = requestLogsDBAccess;
             _DatasDBAccess = datasDBAccess;
             _TimesDBAccess = timesDBAccess;
             _VideosDBAccess = videosDBAccess;

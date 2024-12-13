@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 namespace SouthWall
 {
     public class PageControllerBase : Controller
     {
         protected readonly IAuthService _AuthService;
+        protected readonly IRequestLogsService _RequestLogsService;
         protected readonly IDatasService _DatasService;
         protected readonly ITimesService _TimesService;
         protected readonly IVideosService _VideosService;
@@ -15,6 +17,7 @@ namespace SouthWall
         protected readonly ITouXiangsService _TouXiangsService;
         public PageControllerBase(
             IAuthService authService,
+            IRequestLogsService requestLogsService,
             IDatasService datasService,
             ITimesService timesService,
             IVideosService videosService,
@@ -27,6 +30,7 @@ namespace SouthWall
             )
         {
             _AuthService = authService;
+            _RequestLogsService = requestLogsService;
             _DatasService = datasService;
             _TimesService = timesService;
             _VideosService = videosService;
@@ -40,8 +44,9 @@ namespace SouthWall
         public async Task<IActionResult> Times()
         {
             //var list = await this._TimesService.GetList(null);
-            var list = await this._DatasService.GetList(new DatasEntity { 
-                 F_Type=0
+            var list = await this._DatasService.GetList(new DatasEntity
+            {
+                F_Type = 0
             });
             this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
             return View();
@@ -78,8 +83,9 @@ namespace SouthWall
         }
         public async Task<IActionResult> Article(string id)
         {
+            //await RequestLog();
             var entity = await this._DatasService.GetById(id);
-            if(entity == null)
+            if (entity == null)
             {
                 return RedirectToAction("Articles");
             }
@@ -104,5 +110,7 @@ namespace SouthWall
             this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
             return View();
         }
+
+        
     }
 }

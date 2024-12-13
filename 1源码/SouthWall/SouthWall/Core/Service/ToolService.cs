@@ -7,6 +7,7 @@
     public class ToolService : ServiceBase, IToolService
     {
         public ToolService(
+            IRequestLogsDBAccess requestLogsAccess,
              IDatasDBAccess datasDBAccess,
             ITimesDBAccess timesDBAccess,
             IVideosDBAccess videosDBAccess,
@@ -16,7 +17,9 @@
             IWebSitesDBAccess webSitesDBAccess,
             IShiJusDBAccess shiJusDBAccess,
             ITouXiangsDBAccess touXiangsDBAccess
-            ) : base(datasDBAccess,
+            ) : base(
+                requestLogsAccess,
+                datasDBAccess,
                 timesDBAccess,
                 videosDBAccess,
                 audiosDBAccess,

@@ -8,6 +8,7 @@ namespace SouthWall.Controllers
     {
         private readonly IToolService _toolService;
         public BlogController(IAuthService authService,
+            IRequestLogsService requestLogsService,
              IDatasService datasService, 
              ITimesService timesService,
              IVideosService videosService,
@@ -19,6 +20,7 @@ namespace SouthWall.Controllers
              ITouXiangsService touXiangsService,
              IToolService toolService
              ) : base(authService,
+                 requestLogsService,
                  datasService,
                  timesService,
                  videosService,

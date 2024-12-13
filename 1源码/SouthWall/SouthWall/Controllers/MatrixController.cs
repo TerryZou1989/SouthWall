@@ -5,7 +5,8 @@ namespace SouthWall.Controllers
     public class MatrixController : PageControllerBase
     {
         public MatrixController(
-            IAuthService authService,             
+            IAuthService authService,    
+            IRequestLogsService requestLogsService,
              IDatasService datasService, 
              ITimesService timesService,
              IVideosService videosService,
@@ -16,6 +17,7 @@ namespace SouthWall.Controllers
              IShiJusService shiJusService,
              ITouXiangsService touXiangsService
              ):base(authService,
+                 requestLogsService,
                  datasService,
                  timesService,
                  videosService,

@@ -5,6 +5,7 @@ namespace SouthWall
     {
         protected readonly IAuthService _AuthService;
         protected readonly IDatasService _DatasService;
+        protected readonly IRequestLogsService _RequestLogsService;
         protected readonly ITimesService _TimesService;
         protected readonly IVideosService _VideosService;
         protected readonly IAudiosService _AudiosService;
@@ -15,6 +16,7 @@ namespace SouthWall
         protected readonly ITouXiangsService _TouXiangsService;
         public TZControllerBase(
             IAuthService authService,
+            IRequestLogsService requestLogsService,
             IDatasService datasService,
             ITimesService timesService,
             IVideosService videosService,
@@ -27,6 +29,7 @@ namespace SouthWall
             )
         {
             _AuthService = authService;
+            _RequestLogsService = requestLogsService;
             _DatasService = datasService;
             _TimesService = timesService;
             _VideosService = videosService;

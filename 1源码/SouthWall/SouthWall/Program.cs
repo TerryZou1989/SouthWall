@@ -11,6 +11,7 @@ builder.Services.AddDbContext<SWDbContext>(options =>
     options.UseMySql(connectionString,
          new MySqlServerVersion(new Version()))
 );
+builder.Services.AddScoped<IRequestLogsDBAccess, RequestLogsDBAccess>();
 builder.Services.AddScoped<IDatasDBAccess, DatasDBAccess>();
 builder.Services.AddScoped<ITimesDBAccess, TimesDBAccess>();
 builder.Services.AddScoped<IVideosDBAccess, VideosDBAccess>();
@@ -23,6 +24,7 @@ builder.Services.AddScoped<ITouXiangsDBAccess, TouXiangsDBAccess>();
 
 builder.Services.AddScoped<IToolService, ToolService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IRequestLogsService, RequestLogsService>();
 builder.Services.AddScoped<IDatasService, DatasService>();
 builder.Services.AddScoped<ITimesService, TimesService>();
 builder.Services.AddScoped<IVideosService, VideosService>();
@@ -50,7 +52,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-
+app.UseMiddleware<RequestLoggingMiddleware>();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Blog}/{action=Index}/{id?}");

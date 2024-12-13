@@ -11,6 +11,7 @@ namespace SouthWall.Controllers
     {
         public WellDoneController(
              IAuthService authService,
+             IRequestLogsService requestLogsService,
              IDatasService datasService,
              ITimesService timesService,
              IVideosService videosService,
@@ -22,6 +23,7 @@ namespace SouthWall.Controllers
              ITouXiangsService touXiangsService
             ) :
             base(authService,
+                requestLogsService,
                 datasService,
                 timesService,
                 videosService,
@@ -193,7 +195,7 @@ namespace SouthWall.Controllers
         {
             return RunAction(CheckAuthType.User, async () =>
             {
-                await _VideosService.Delete(args.F_Id);
+                await _DatasService.Delete(args.F_Id);
                 return Success("删除成功");
             });
         }
