@@ -21,6 +21,7 @@ builder.Services.AddScoped<IMessagesDBAccess, MessagesDBAccess>();
 builder.Services.AddScoped<IWebSitesDBAccess, WebSitesDBAccess>();
 builder.Services.AddScoped<IShiJusDBAccess, ShiJusDBAccess>();
 builder.Services.AddScoped<ITouXiangsDBAccess, TouXiangsDBAccess>();
+builder.Services.AddScoped<IMDBAccess, MDBAccess>();
 
 builder.Services.AddScoped<IToolService, ToolService>();
 builder.Services.AddScoped<IAuthService, AuthService>();

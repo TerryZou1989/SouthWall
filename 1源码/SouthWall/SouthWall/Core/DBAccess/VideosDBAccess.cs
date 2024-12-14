@@ -10,7 +10,7 @@ namespace SouthWall
         Task<int> Save(VideosEntity entity);
         Task Delete(string id);
     }
-    public class VideosDBAccess : DBAccessBase<VideosEntity>, IVideosDBAccess
+    public class VideosDBAccess : DBAccessBase, IVideosDBAccess
     {
         public VideosDBAccess(SWDbContext context) : base(context) { }
         private Expression<Func<VideosEntity, bool>> GetExpression(VideosEntity query)

@@ -1,6 +1,6 @@
 ﻿namespace SouthWall
 {
-    public class DBAccessBase<T>
+    public class DBAccessBase
     {
         protected readonly SWDbContext _context;
         public DBAccessBase(SWDbContext context)

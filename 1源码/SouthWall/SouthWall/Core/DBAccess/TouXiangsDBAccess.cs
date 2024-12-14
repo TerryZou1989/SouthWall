@@ -10,7 +10,7 @@ namespace SouthWall
         Task<int> Save(TouXiangsEntity entity);
         Task Delete(string id);
     }
-    public class TouXiangsDBAccess : DBAccessBase<TouXiangsEntity>, ITouXiangsDBAccess
+    public class TouXiangsDBAccess : DBAccessBase, ITouXiangsDBAccess
     {
         public TouXiangsDBAccess(SWDbContext context) : base(context) { }
         private Expression<Func<TouXiangsEntity, bool>> GetExpression(TouXiangsEntity query)

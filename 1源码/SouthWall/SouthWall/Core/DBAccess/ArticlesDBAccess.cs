@@ -10,7 +10,7 @@ namespace SouthWall
         Task<int> Save(ArticlesEntity entity);
         Task Delete(string id);
     }
-    public class ArticlesDBAccess : DBAccessBase<ArticlesEntity>, IArticlesDBAccess
+    public class ArticlesDBAccess : DBAccessBase, IArticlesDBAccess
     {
         public ArticlesDBAccess(SWDbContext context) : base(context) { }
         private Expression<Func<ArticlesEntity, bool>> GetExpression(ArticlesEntity query)

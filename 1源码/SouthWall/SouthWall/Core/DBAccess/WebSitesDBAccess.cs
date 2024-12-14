@@ -10,7 +10,7 @@ namespace SouthWall
         Task<int> Save(WebSitesEntity entity);
         Task Delete(string id);
     }
-    public class WebSitesDBAccess : DBAccessBase<WebSitesEntity>, IWebSitesDBAccess
+    public class WebSitesDBAccess : DBAccessBase, IWebSitesDBAccess
     {
         public WebSitesDBAccess(SWDbContext context) : base(context) { }
         private Expression<Func<WebSitesEntity, bool>> GetExpression(WebSitesEntity query)

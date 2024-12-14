@@ -10,7 +10,7 @@ namespace SouthWall
         Task<int> Save(TimesEntity entity);
         Task Delete(string id);
     }
-    public class TimesDBAccess : DBAccessBase<TimesEntity>, ITimesDBAccess
+    public class TimesDBAccess : DBAccessBase, ITimesDBAccess
     {
         public TimesDBAccess(SWDbContext context) : base(context) { }
         private Expression<Func<TimesEntity, bool>> GetExpression(TimesEntity query)

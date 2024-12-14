@@ -10,7 +10,7 @@ namespace SouthWall
         Task<int> Save(ShiJusEntity entity);
         Task Delete(string id);
     }
-    public class ShiJusDBAccess : DBAccessBase<ShiJusEntity>, IShiJusDBAccess
+    public class ShiJusDBAccess : DBAccessBase, IShiJusDBAccess
     {
         public ShiJusDBAccess(SWDbContext context) : base(context) { }
         private Expression<Func<ShiJusEntity, bool>> GetExpression(ShiJusEntity query)

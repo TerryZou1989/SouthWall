@@ -4,6 +4,7 @@ namespace SouthWall.Controllers
 {
     public class MatrixController : PageControllerBase
     {
+        private readonly IToolService _toolService;
         public MatrixController(
             IAuthService authService,    
             IRequestLogsService requestLogsService,
@@ -15,8 +16,9 @@ namespace SouthWall.Controllers
              IMessagesService messagesService,
              IWebSitesService webSitesService,
              IShiJusService shiJusService,
-             ITouXiangsService touXiangsService
-             ):base(authService,
+             ITouXiangsService touXiangsService,
+             IToolService toolService
+             ) :base(authService,
                  requestLogsService,
                  datasService,
                  timesService,
@@ -28,6 +30,7 @@ namespace SouthWall.Controllers
                 shiJusService,
                 touXiangsService)
         {
+            this._toolService = toolService;
         }
         public IActionResult Login()
         {
@@ -53,6 +56,16 @@ namespace SouthWall.Controllers
             var list = await this._TouXiangsService.GetList(null);
             this.ViewData["list"] = list.OrderByDescending(t => t.F_CreateTime).ToList();
             return View();
+        }
+
+        public async Task<string> AutoAddPartitions(DateTime? end)
+        {
+            if (!end.HasValue)
+            {
+                end = DateTime.Now.AddDays(2);
+            }
+            await _toolService.AddDBPartition(end.Value);
+            return "Success";
         }
     }
 }

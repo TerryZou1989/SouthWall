@@ -10,7 +10,7 @@ namespace SouthWall
         Task<int> Save(AudiosEntity entity);
         Task Delete(string id);
     }
-    public class AudiosDBAccess : DBAccessBase<AudiosEntity>, IAudiosDBAccess
+    public class AudiosDBAccess : DBAccessBase, IAudiosDBAccess
     {
         public AudiosDBAccess(SWDbContext context) : base(context) { }
         private Expression<Func<AudiosEntity, bool>> GetExpression(AudiosEntity query)

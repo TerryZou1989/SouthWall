@@ -1,12 +1,17 @@
-﻿namespace SouthWall
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Collections.Concurrent;
+
+namespace SouthWall
 {
     public interface IToolService
     {
         Task SyncData();
+        Task AddDBPartition(DateTime end);
     }
     public class ToolService : ServiceBase, IToolService
     {
         public ToolService(
+            IMDBAccess mDBAccess,
             IRequestLogsDBAccess requestLogsAccess,
              IDatasDBAccess datasDBAccess,
             ITimesDBAccess timesDBAccess,
@@ -18,6 +23,7 @@
             IShiJusDBAccess shiJusDBAccess,
             ITouXiangsDBAccess touXiangsDBAccess
             ) : base(
+                mDBAccess,
                 requestLogsAccess,
                 datasDBAccess,
                 timesDBAccess,
@@ -29,6 +35,28 @@
                 shiJusDBAccess,
                 touXiangsDBAccess)
         { }
+
+        public async Task AddDBPartition(DateTime end)
+        {
+            int partitionkey = end.ToString("yyyyMMdd").ToInt32();
+            List<string> tables = new List<string> { "t_requestlogs" };
+            foreach (string table in tables) {
+                var plist=await this._MDBAccess.QueryDBPartitions(table);
+                var keys = plist.Select(t => { string key = t.Partition_Name; return key.Substring(1, 8).ToInt32(); }).ToList();
+                var key = keys.Max().ToString();
+                DateTime dt = Convert.ToDateTime(key.Substring(0, 4) + "-" + key.Substring(4, 2) + "-" + key.Substring(6, 2));
+                while (dt <= end)
+                {
+                    string partitionName = "p" + dt.ToString("yyyyMMdd");
+                    if (plist.Count(t => t.Partition_Name.ToUpper() == partitionName.ToUpper()) == 0)
+                    {
+                        string lessValue = dt.AddDays(1).ToString("yyyyMMdd");
+                        await this._MDBAccess.AddDBPartition(table, partitionName, lessValue);
+                    }
+                    dt = dt.AddDays(1);
+                }
+            }
+        }
 
         public async Task SyncData()
         {
