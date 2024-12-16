@@ -14,7 +14,9 @@ namespace SouthWall
         public string? F_City { get; set; }
         public string? F_Lat {  get; set; }
         public string? F_Lon {  get; set; }
-        public string? F_Url { get; set; }        
+        public string? F_Url { get; set; }    
+        public string? F_Method {  get; set; }
+        public string? F_UserAgent {  get; set; }
         /// <summary>
         /// 页面
         /// index;

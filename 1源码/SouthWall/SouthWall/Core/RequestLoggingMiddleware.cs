@@ -34,6 +34,8 @@ namespace SouthWall
                  {
                      F_DataId = request.RouteValues["id"]?.ToString(),
                      F_Url = request.Path,
+                     F_Method = request.Method,
+                     F_UserAgent = request.Headers["User-Agent"],
                      F_Module = request.RouteValues["action"]?.ToString(),
                      F_IP = ip,
                      F_City = ipinfo.City,
