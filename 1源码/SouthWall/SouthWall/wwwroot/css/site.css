@@ -25,9 +25,13 @@ textarea {
     resize: none;
 }
 
+.rounded-4 {
+    border-radius: .4rem !important;
+}
 
-.fs-7{
-    font-size:0.75rem !important;
+
+.fs-7 {
+    font-size: 0.75rem !important;
 }
 .text-aaa{
     color:#aaa !important;
