@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging.Abstractions;
 using Org.BouncyCastle.Asn1.Ocsp;
+using System.Runtime;
 
 namespace SouthWall
 {
@@ -16,38 +18,64 @@ namespace SouthWall
 
         public async Task InvokeAsync(HttpContext context)
         {
-            await RequestLog(context);
-            // 调用下一个中间件
-            await _next(context);
+            var logEntity = new RequestLogsEntity();
+            await RequestLog(context, logEntity);
+            // 复制原始响应流
+            var originalResponseBodyStream = context.Response.Body;
+            using (var responseBody = new MemoryStream())
+            {
+                context.Response.Body = responseBody;
+
+                // 调用下一个中间件
+                await _next(context);
+
+                // 记录响应信息
+                await ResponseLog(context, logEntity);
+
+                // 将响应流内容复制回原始响应流
+                await responseBody.CopyToAsync(originalResponseBodyStream);
+            }
+
+            // 保存合并的日志
+            await SaveLog(logEntity);
         }
 
-        private async Task RequestLog(HttpContext context)
+        private async Task RequestLog(HttpContext context, RequestLogsEntity logEntity)
+        {            
+                var request = context.Request;
+                string ip = GetClientRealIp(request);
+                var ipinfo = await IPHelper.GetIPInfo(ip);
+                logEntity.F_DataId = request.RouteValues["id"]?.ToString();
+                logEntity.F_Url = request.Path;
+                logEntity.F_Method = request.Method;
+                logEntity.F_UserAgent = request.Headers["User-Agent"];
+                logEntity.F_Module = request.RouteValues["action"]?.ToString();
+                logEntity.F_IP = ip;
+                logEntity.F_City = ipinfo.City;
+                logEntity.F_Country = ipinfo.Country;
+                logEntity.F_Province = ipinfo.RegionName;
+                logEntity.F_Lat = ipinfo.Lat;
+                logEntity.F_Lon = ipinfo.Lon;            
+        }
+        private async Task ResponseLog(HttpContext context, RequestLogsEntity logEntry)
+        {
+            var response = context.Response;
+            response.Body.Seek(0, SeekOrigin.Begin);
+            string responseBody = await new StreamReader(response.Body).ReadToEndAsync();
+            response.Body.Seek(0, SeekOrigin.Begin);
+            logEntry.F_StatusCode = response.StatusCode;
+        }
+
+        private async Task SaveLog(RequestLogsEntity logEntry)
         {
             using (var scope = _ServiceScopeFactory.CreateScope())
             {
                 var requestLogsService = scope.ServiceProvider.GetRequiredService<IRequestLogsService>();
-                var request = context.Request;
-                string ip = GetClientRealIp(request);
-                var ipinfo = await IPHelper.GetIPInfo(ip);
-                await requestLogsService.Save(
-                 new RequestLogsEntity
-                 {
-                     F_DataId = request.RouteValues["id"]?.ToString(),
-                     F_Url = request.Path,
-                     F_Method = request.Method,
-                     F_UserAgent = request.Headers["User-Agent"],
-                     F_Module = request.RouteValues["action"]?.ToString(),
-                     F_IP = ip,
-                     F_City = ipinfo.City,
-                     F_Country = ipinfo.Country,
-                     F_Province = ipinfo.RegionName,
-                     F_Lat = ipinfo.Lat,
-                     F_Lon = ipinfo.Lon
-                 });
+                await requestLogsService.Save(logEntry);
             }
         }
 
-        public string GetClientRealIp(HttpRequest request)
+        private string GetClientRealIp(HttpRequest request)
         {
             // 获取代理头 X-Forwarded-For 或自定义 Real-IP
             var realIp = request.Headers["X-Forwarded-For"].FirstOrDefault();

@@ -17,6 +17,7 @@ namespace SouthWall
         public string? F_Url { get; set; }    
         public string? F_Method {  get; set; }
         public string? F_UserAgent {  get; set; }
+        public int? F_StatusCode { get; set; }
         /// <summary>
         /// 页面
         /// index;
