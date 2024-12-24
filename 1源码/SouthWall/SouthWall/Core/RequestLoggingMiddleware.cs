@@ -25,13 +25,18 @@ namespace SouthWall
             using (var responseBody = new MemoryStream())
             {
                 context.Response.Body = responseBody;
-
-                // 调用下一个中间件
-                await _next(context);
-
+                if (!IsBrowserRequest(context.Request))
+                {
+                    context.Response.StatusCode = StatusCodes.Status403Forbidden;
+                    await context.Response.WriteAsync("Forbidden: Non-browser requests are not allowed.");
+                }
+                else
+                {
+                    // 调用下一个中间件
+                    await _next(context);
+                }
                 // 记录响应信息
                 await ResponseLog(context, logEntity);
-
                 // 将响应流内容复制回原始响应流
                 await responseBody.CopyToAsync(originalResponseBodyStream);
             }
@@ -40,22 +45,29 @@ namespace SouthWall
             await SaveLog(logEntity);
         }
 
+        private bool IsBrowserRequest(HttpRequest request)
+        {
+            var userAgent = request.Headers["User-Agent"].ToString();
+            return !string.IsNullOrEmpty(userAgent) &&
+                   (userAgent.Contains("Mozilla") || userAgent.Contains("Chrome") || userAgent.Contains("Safari") || userAgent.Contains("Edge"));
+        }
+
         private async Task RequestLog(HttpContext context, RequestLogsEntity logEntity)
-        {            
-                var request = context.Request;
-                string ip = GetClientRealIp(request);
-                var ipinfo = await IPHelper.GetIPInfo(ip);
-                logEntity.F_DataId = request.RouteValues["id"]?.ToString();
-                logEntity.F_Url = request.Path;
-                logEntity.F_Method = request.Method;
-                logEntity.F_UserAgent = request.Headers["User-Agent"];
-                logEntity.F_Module = request.RouteValues["action"]?.ToString();
-                logEntity.F_IP = ip;
-                logEntity.F_City = ipinfo.City;
-                logEntity.F_Country = ipinfo.Country;
-                logEntity.F_Province = ipinfo.RegionName;
-                logEntity.F_Lat = ipinfo.Lat;
-                logEntity.F_Lon = ipinfo.Lon;            
+        {
+            var request = context.Request;
+            string ip = GetClientRealIp(request);
+            var ipinfo = await IPHelper.GetIPInfo(ip);
+            logEntity.F_DataId = request.RouteValues["id"]?.ToString();
+            logEntity.F_Url = request.Path;
+            logEntity.F_Method = request.Method;
+            logEntity.F_UserAgent = request.Headers["User-Agent"];
+            logEntity.F_Module = request.RouteValues["action"]?.ToString();
+            logEntity.F_IP = ip;
+            logEntity.F_City = ipinfo.City;
+            logEntity.F_Country = ipinfo.Country;
+            logEntity.F_Province = ipinfo.RegionName;
+            logEntity.F_Lat = ipinfo.Lat;
+            logEntity.F_Lon = ipinfo.Lon;
         }
         private async Task ResponseLog(HttpContext context, RequestLogsEntity logEntry)
         {
