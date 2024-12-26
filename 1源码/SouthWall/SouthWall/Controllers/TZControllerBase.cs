@@ -14,6 +14,7 @@ namespace SouthWall
         protected readonly IWebSitesService _WebSitesService;
         protected readonly IShiJusService _ShiJusService;
         protected readonly ITouXiangsService _TouXiangsService;
+        protected readonly IStatisticsServiceService _StatisticsServiceService;
         public TZControllerBase(
             IAuthService authService,
             IRequestLogsService requestLogsService,
@@ -25,7 +26,8 @@ namespace SouthWall
             IMessagesService messagesService,
             IWebSitesService webSitesService,
             IShiJusService shiJusService,
-            ITouXiangsService touXiangsService
+            ITouXiangsService touXiangsService,
+            IStatisticsServiceService statisticsServiceService
             )
         {
             _AuthService = authService;
@@ -39,6 +41,7 @@ namespace SouthWall
             _WebSitesService = webSitesService;
             _ShiJusService = shiJusService;
             _TouXiangsService = touXiangsService;
+            _StatisticsServiceService = statisticsServiceService;
         }
         /// <summary>
         /// imgs 逗号隔开即可

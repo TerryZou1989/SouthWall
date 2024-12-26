@@ -40,4 +40,31 @@ namespace SouthWall
             F_PartitionKey=this.F_CreateTime.Value.ToString("yyyyMMdd").ToInt32();          
         }
     }
+
+    public class RequestAndIPCountEntity
+    {
+        public int F_PartitionKey { get; set; }
+        public int F_RequestCount { get; set; }
+        public int F_IPCount { get; set; }
+    }
+    public class IPRequestCountEntity
+    {
+        public string? F_IP { get; set; }
+        public string? F_Country { get; set; }
+        public string? F_Province { get; set; }
+        public string? F_City { get; set; }
+        public int? F_RequestCount { get; set; }
+    }
+    public class CountryRequestCountEntity
+    {
+        public string? F_Country { get; set; }
+        public int F_RequestTotal { get; set; }
+        public int F_DailyRequestCount { get; set; }
+    }
+    public class ProvinceRequestCountEntity
+    {
+        public string? F_Province { get; set; }
+        public int F_RequestTotal { get; set; }
+        public int F_DailyRequestCount { get; set; }
+    }
 }

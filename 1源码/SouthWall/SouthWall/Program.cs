@@ -35,6 +35,7 @@ builder.Services.AddScoped<IMessagesService, MessagesService>();
 builder.Services.AddScoped<IWebSitesService, WebSitesService>();
 builder.Services.AddScoped<IShiJusService, ShiJusService>();
 builder.Services.AddScoped<ITouXiangsService, TouXiangsService>();
+builder.Services.AddScoped<IStatisticsServiceService, StatisticsServiceService>();
 
 var app = builder.Build();
 AppSettingsHelper.SetAppSettings(app.Configuration.GetSection("AppSettings"));

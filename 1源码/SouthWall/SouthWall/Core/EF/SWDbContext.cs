@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using MySqlConnector;
+using System.Data;
 
 namespace SouthWall
 {
@@ -25,6 +27,25 @@ namespace SouthWall
         public IDbContextTransaction BeginTransaction()
         {
             return this.Database.BeginTransaction();
+        }
+        public async Task<DataTable> QuerySql(string sql,params MySqlParameter[] parameters)
+        {
+            DataTable dataTable = new DataTable();
+            // 使用 ADO.NET 直接执行 SQL 查询
+            using (var connection = this.Database.GetDbConnection())
+            {
+                connection.Open(); // 打开连接
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = sql;
+                    command.Parameters.AddRange(parameters);
+                    using (var reader =await command.ExecuteReaderAsync())
+                    {
+                        dataTable.Load(reader); // 将结果加载到 DataTable
+                    }
+                }
+            }
+            return dataTable;
         }
         public DbSet<DatasEntity> Datas { get; set; }
         public DbSet<RequestLogsEntity> RequestLogs { get; set; }
