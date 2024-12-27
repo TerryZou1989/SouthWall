@@ -440,20 +440,31 @@ var apiClient = {
                 err: function (ex) { if (err) err(ex) }
             });
         },
-        count_countryrequest: function (succ, err) {
+        count_countryrequest: function (F_StartTime, F_EndTime, succ, err) {
             apiPostAction({
                 action: "statistics/count/countryrequest",
                 data: {
+                    F_StartTime, F_EndTime
                 },
                 succ: function (d) { if (succ) succ(d) },
                 err: function (ex) { if (err) err(ex) }
             });
         },
-        count_provincerequest: function (F_Country,succ, err) {
+        count_provincerequest: function (F_Country, F_StartTime, F_EndTime, succ, err) {
             apiPostAction({
                 action: "statistics/count/provincerequest",
                 data: {
-                    F_Country
+                    F_Country, F_StartTime, F_EndTime
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        },
+        count_provinceip: function (F_Country, F_StartTime, F_EndTime, succ, err) {
+            apiPostAction({
+                action: "statistics/count/provinceip",
+                data: {
+                    F_Country, F_StartTime, F_EndTime
                 },
                 succ: function (d) { if (succ) succ(d) },
                 err: function (ex) { if (err) err(ex) }

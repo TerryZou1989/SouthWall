@@ -67,4 +67,9 @@ namespace SouthWall
         public int F_RequestTotal { get; set; }
         public int F_DailyRequestCount { get; set; }
     }
+    public class ProvinceIPCountEntity
+    {
+        public string? F_Province { get; set; }
+        public int F_IPCount { get; set; }        
+    }
 }

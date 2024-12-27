@@ -13,8 +13,9 @@ namespace SouthWall
         Task Delete(string id);
         Task<List<RequestAndIPCountEntity>> StatisticalRequestAndIPCount(DateTime start, DateTime end);
         Task<List<IPRequestCountEntity>> StatisticalIPRequestCount(DateTime date);
-        Task<List<CountryRequestCountEntity>> StatisticalCountryRequestCount();
-        Task<List<ProvinceRequestCountEntity>> StatisticalProvicneRequestCount(string country);
+        Task<List<CountryRequestCountEntity>> StatisticalCountryRequestCount(DateTime start, DateTime end);
+        Task<List<ProvinceRequestCountEntity>> StatisticalProvicneRequestCount(string country, DateTime start, DateTime end);
+        Task<List<ProvinceIPCountEntity>> StatisticalProvicneIPCount(string country, DateTime start, DateTime end);
     }
     public class RequestLogsDBAccess : DBAccessBase, IRequestLogsDBAccess
     {
@@ -99,14 +100,16 @@ namespace SouthWall
             return _context.Database.SqlQueryRaw<IPRequestCountEntity>(sql,
                 new MySqlParameter("@pkey", pkey)).ToListAsync();
         }
-
-        public Task<List<CountryRequestCountEntity>> StatisticalCountryRequestCount()
+        public Task<List<CountryRequestCountEntity>> StatisticalCountryRequestCount(DateTime start, DateTime end)
         {
+            int partitionKeyStart = start.ToString("yyyyMMdd").ToInt32();
+            int partitionKeyEnd = end.ToString("yyyyMMdd").ToInt32();
             int pkey = DateTime.Now.ToString("yyyyMMdd").ToInt32();
             string sql = @"SELECT t.F_Country,t.F_RequestCount F_RequestTotal,IFNULL(s.F_RequestCount,0) F_DailyRequestCount 
                            from 
                            (SELECT F_Country,count(1) F_RequestCount
                            FROM `t_requestlogs`
+                            WHERE F_PartitionKey>=@startkey and F_PartitionKey<=@endkey 
                            group by F_Country) t
                            left join 
                            (SELECT F_Country,count(1) F_RequestCount
@@ -116,17 +119,20 @@ namespace SouthWall
                            on t.F_Country=s.F_Country
                            ORDER BY F_RequestTotal desc;";
             return _context.Database.SqlQueryRaw<CountryRequestCountEntity>(sql,
+                new MySqlParameter("@startkey", partitionKeyStart), new MySqlParameter("@endkey", partitionKeyEnd),
                 new MySqlParameter("@pkey", pkey)).ToListAsync();
         }
-
-        public Task<List<ProvinceRequestCountEntity>> StatisticalProvicneRequestCount(string country)
+        public Task<List<ProvinceRequestCountEntity>> StatisticalProvicneRequestCount(string country, DateTime start, DateTime end)
         {
+            int partitionKeyStart = start.ToString("yyyyMMdd").ToInt32();
+            int partitionKeyEnd = end.ToString("yyyyMMdd").ToInt32();
             int pkey = DateTime.Now.ToString("yyyyMMdd").ToInt32();
             string sql = @"SELECT t.F_Province,t.F_RequestCount F_RequestTotal,IFNULL(s.F_RequestCount,0) F_DailyRequestCount 
                            from 
                            (SELECT F_Province,count(1) F_RequestCount
                            FROM `t_requestlogs`
-                           where F_Country=@country
+                           where F_PartitionKey>=@startkey and F_PartitionKey<=@endkey
+                           and F_Country=@country
                            group by F_Province) t
                            left join 
                            (SELECT F_Province,count(1) F_RequestCount
@@ -137,7 +143,24 @@ namespace SouthWall
                            on t.F_Province=s.F_Province
                            ORDER BY F_RequestTotal desc;";
             return _context.Database.SqlQueryRaw<ProvinceRequestCountEntity>(sql,
+                new MySqlParameter("@startkey", partitionKeyStart), new MySqlParameter("@endkey", partitionKeyEnd),
                 new MySqlParameter("@pkey", pkey), new MySqlParameter("@country", country)
+                ).ToListAsync();
+        }
+
+        public Task<List<ProvinceIPCountEntity>> StatisticalProvicneIPCount(string country, DateTime start, DateTime end)
+        {
+            int partitionKeyStart = start.ToString("yyyyMMdd").ToInt32();
+            int partitionKeyEnd = end.ToString("yyyyMMdd").ToInt32();
+            string sql = @"SELECT F_Province,count(DISTINCT F_IP) F_IPCount
+                            FROM `t_requestlogs`
+                           WHERE F_PartitionKey>=@startkey and F_PartitionKey<=@endkey 
+                            and F_Country=@country
+                            group by F_Province
+                            ORDER BY F_IPCount desc;";
+            return _context.Database.SqlQueryRaw<ProvinceIPCountEntity>(sql,
+                new MySqlParameter("@startkey", partitionKeyStart), new MySqlParameter("@endkey", partitionKeyEnd),
+                new MySqlParameter("@country", country)
                 ).ToListAsync();
         }
     }

@@ -94,6 +94,15 @@ var com = {
         return fmtDateTime(date);
     }
 };
+var dictUtil = {
+    getProvinceName: function (pinyin) {
+        var p = provinceDict.find(t => t.pinyin == pinyin);
+        if (p != null) {
+            return p.name;
+        }
+        return pinyin;
+    }
+};
 
 var util = {
     GetCurrentTime: function () {
@@ -262,3 +271,40 @@ var copyToClipboard = function (txt) {
         alert("复制成功！");
     }
 }
+
+var provinceDict = [
+    { name: '北京', "pinyin": "Beijing" },
+    { name: '天津', "pinyin": "Tianjin" },
+    { name: '上海', "pinyin": "Shanghai" },
+    { name: '重庆', "pinyin": "Chongqing" },
+    { name: '河北', "pinyin": "Hebei" },
+    { name: '河南', "pinyin": "Henan" },
+    { name: '云南', "pinyin": "Yunnan" },
+    { name: '辽宁', "pinyin": "Liaoning" },
+    { name: '黑龙江', "pinyin":"Heilongjiang" },
+    { name: '湖南', "pinyin": "Hunan" },
+    { name: '安徽', "pinyin": "Anhui" },
+    { name: '山东', "pinyin": "Shandong" },
+    { name: '新疆', "pinyin": "Xinjiang" },
+    { name: '江苏', "pinyin": "Jiangsu" },
+    { name: '浙江', "pinyin": "Zhejiang" },
+    { name: '江西', "pinyin": "Jiangxi" },
+    { name: '湖北', "pinyin": "Hubei" },
+    { name: '广西', "pinyin": "Guangxi" },
+    { name: '甘肃', "pinyin": "Gansu" },
+    { name: '山西', "pinyin": "Shanxi" },
+    { name: '内蒙古', "pinyin":"Inner Mongolia"},
+    { name: '陕西', "pinyin": "Shaanxi" },
+    { name: '吉林', "pinyin": "Jilin" },
+    { name: '福建', "pinyin": "Fujian" },
+    { name: '贵州', "pinyin": "Guizhou" },
+    { name: '广东', "pinyin": "Guangdong" },
+    { name: '青海', "pinyin": "Qinghai" },
+    { name: '西藏', "pinyin": "Xizang" },
+    { name: '四川', "pinyin": "Sichuan" },
+    { name: '宁夏', "pinyin": "Ningxia" },
+    { name: '海南', "pinyin": "Hainan" },
+    { name: '台湾', "pinyin": "Taiwan" },
+    { name: '香港', "pinyin": "Hong Kong" },
+    { name: '澳门', "pinyin": "Aomen" }
+];

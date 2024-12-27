@@ -18,9 +18,31 @@ namespace SouthWall
     }
     public class IPInfo
     {
-        public string Country {  get; set; }
+        private string _country;
+        public string Country { get {
+                if(_country == "Hong Kong"|| _country == "Taiwan")
+                {
+                    return "China";                    
+                }
+                return _country;
+            } set { 
+                    _country = value;               
+            } 
+        }
         public string City { get; set; }
-        public string RegionName {  get; set; }
+        private string _regionName;
+        public string RegionName { 
+            get {
+                if (_country == "Hong Kong" || _country == "Taiwan")
+                {
+                    return _country;
+                }
+                return _regionName;
+            }
+            set {
+                _regionName = value;
+            }
+        }
         public string Lat {  get; set; }
         public string Lon {  get; set; }
     }

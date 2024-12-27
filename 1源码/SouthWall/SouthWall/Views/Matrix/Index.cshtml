@@ -5,41 +5,30 @@
     Layout = "_MatrixLayout";
     ViewData["Title"] = "广场";
 }
+<script src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+
 <div class="card bg-dark border-1 border-secondary text-light">
     <div class="card-header border-secondary">
-        每日访问次数&IP个数
+        每日访问次数&IP个数（最近30天）
     </div>
     <div class="card-body">
         <div id="chartRequestAndIP" style="width:100%; height:300px"></div>
     </div>
 </div>
-<div class="row mt-2">
-    <div class="col-6">
-        <div class="card bg-dark border-1 border-secondary text-light">
-            <div class="card-header border-secondary">
-                统计不同国家累计访问次数
-            </div>
-            <div class="card-body">
-                <div id="chartCountryRequestTotal" style="width:100%; height:300px"></div>
-            </div>
-        </div>
+<div class="card bg-dark border-1 border-secondary text-light  mt-2">
+    <div class="card-header border-secondary">
+        统计全国IP分布（最近30天）
     </div>
-    <div class="col-6">
-        <div class="card bg-dark border-1 border-secondary text-light">
-            <div class="card-header border-secondary">
-                统计不同国家今日访问次数
-            </div>
-            <div class="card-body">
-                <div id="chartCountryRequestDailyCount" style="width:100%; height:300px"></div>
-            </div>
-        </div>
+    <div class="card-body">
+        <div id="chartProvinceIPCount" style="width:100%; height:600px"></div>
     </div>
 </div>
+
 <div class="row mt-2">
     <div class="col-6">
         <div class="card bg-dark border-1 border-secondary text-light">
             <div class="card-header border-secondary">
-                统计不同省份累计访问次数
+                统计不同省份累计访问次数（最近30天）
             </div>
             <div class="card-body">
                 <div id="chartProvinceRequestTotal" style="width:100%; height:300px"></div>
@@ -57,9 +46,32 @@
         </div>
     </div>
 </div>
+<div class="row mt-2">
+    <div class="col-6">
+        <div class="card bg-dark border-1 border-secondary text-light">
+            <div class="card-header border-secondary">
+                统计不同国家累计访问次数（最近30天）
+            </div>
+            <div class="card-body">
+                <div id="chartCountryRequestTotal" style="width:100%; height:300px"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card bg-dark border-1 border-secondary text-light">
+            <div class="card-header border-secondary">
+                统计不同国家今日访问次数
+            </div>
+            <div class="card-body">
+                <div id="chartCountryRequestDailyCount" style="width:100%; height:300px"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="card bg-dark border-1 border-secondary text-light mt-2">
     <div class="card-header border-secondary">
-        IP访问排名
+        今日IP访问排名
     </div>
     <div class="card-body">
         <table class="table table-dark table-striped-columns" id="tableIPRequest">
@@ -81,7 +93,7 @@
 <script>
     var pageMatrix = function () {
         var endTime=util.GetCurrentTime();
-        var startTime=util.GetTimeAddDays(-15);
+        var startTime=util.GetTimeAddDays(-30);
 
         var queryCountRequestAndIP=function(){
              apiClient.statistics.count_requestandip(startTime,endTime, function (d) {
@@ -174,7 +186,7 @@
         queryCountIPRequest();
 
         var queryCountryRequest=function(){
-            apiClient.statistics.count_countryrequest(function (d) {
+            apiClient.statistics.count_countryrequest(startTime,endTime,function (d) {
                 var tData=new Array();
                 var cData=new Array();
                 for(var i=0;i<d.length;i++){
@@ -262,13 +274,13 @@
 
 
          var queryProvinceRequest=function(){
-            apiClient.statistics.count_provincerequest("China",function (d) {
+            apiClient.statistics.count_provincerequest("China",startTime,endTime,function (d) {
                 var tData=new Array();
                 var cData=new Array();
                 for(var i=0;i<d.length;i++){
                     var item=d[i];
-                    tData.push({value:item.f_RequestTotal,name:item.f_Province});
-                    cData.push({value:item.f_DailyRequestCount,name:item.f_Province});
+                    tData.push({value:item.f_RequestTotal,name:dictUtil.getProvinceName(item.f_Province)});
+                    cData.push({value:item.f_DailyRequestCount,name:dictUtil.getProvinceName(item.f_Province)});
                 }
                             showChartProvinceRequestTotal(tData);
                             showChartProvinceRequestDailyCount(cData);
@@ -347,6 +359,72 @@
             myChart.setOption(option);
         }
         queryProvinceRequest();
+
+         var queryProvinceIP=function(){
+            apiClient.statistics.count_provinceip("China",startTime,endTime,function (d) {
+                var tData=new Array();
+                var maxValue=0;
+                for(var i=0;i<d.length;i++){
+                    var item=d[i];
+                    if(item.f_IPCount>maxValue){
+                        maxValue=item.f_IPCount;
+                    }
+                    tData.push({value:item.f_IPCount,name:dictUtil.getProvinceName(item.f_Province)});
+                }
+                showChartProvinceIPMap(tData,maxValue);
+            }, function (err) {
+                alert(err.message);
+            });
+        }
+        var showChartProvinceIPMap=function(data,maxValue){
+            console.log(data);
+            var myChart = echarts.init(document.getElementById('chartProvinceIPCount'));
+               var option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b}: {c}'
+            },
+             grid: {
+                top:'5%',
+                left: '5%',
+                right: '5%',
+                bottom: '5%',
+                containLabel: true
+            },
+            visualMap: {
+                min: 0,
+                max: maxValue,
+                left: 'left',
+                top: 'bottom',
+                text: ['高', '低'],
+                calculable: true,
+                inRange: {
+                    color: [    
+                      '#fee090',
+                      '#fdae61',
+                      '#f46d43',
+                      '#d73027',
+                      '#a50026'
+                    ]
+                  },
+            },
+            series: [
+                {
+                    name: '中国人口',
+                    type: 'map',
+                    mapType: 'china',
+                    roam: false,
+                    label: {
+                        show: true
+                    },
+                    data: data
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+        }
+        queryProvinceIP();
     };
     $(function () {
         new pageMatrix();

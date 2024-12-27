@@ -1036,18 +1036,30 @@ namespace SouthWall.Controllers
         #endregion Statistics_Count_IPRequest
         #region Statistics_Count_CountryRequest
         [HttpPost("statistics/count/countryrequest")]
-        public Task<TZResponse> Statistics_Count_CountryRequest([FromBody] Statistics_Count_IPRequest_Args args)
+        public Task<TZResponse> Statistics_Count_CountryRequest([FromBody] Statistics_Count_CountryRequest_Args args)
         {
             return RunAction(CheckAuthType.User, async () =>
             {
-                var list = await _StatisticsServiceService.StatisticalCountryRequestCount();
+                DateTime start = DateTime.Now.AddDays(-30);
+                if (!string.IsNullOrEmpty(args.F_StartTime) && DateTime.TryParse(args.F_StartTime, out DateTime st))
+                {
+                    start = st;
+                }
+                DateTime end = DateTime.Now;
+                if (!string.IsNullOrEmpty(args.F_EndTime) && DateTime.TryParse(args.F_EndTime, out DateTime et))
+                {
+                    end = et;
+                }
+                var list = await _StatisticsServiceService.StatisticalCountryRequestCount(start,end);
                 return Success("获取成功", list);
             });
         }
         public class Statistics_Count_CountryRequest_Args
         {
+            public string? F_StartTime { get; set; }
+            public string? F_EndTime { get; set; }
         }
-        #endregion Statistics_Count_IPRequest
+        #endregion Statistics_Count_CountryRequest
         #region Statistics_Count_ProvinceRequest
         [HttpPost("statistics/count/provincerequest")]
         public Task<TZResponse> Statistics_Count_ProvinceRequest([FromBody] Statistics_Count_ProvinceRequest_Args args)
@@ -1056,17 +1068,60 @@ namespace SouthWall.Controllers
             {
                 if (!string.IsNullOrEmpty(args.F_Country))
                 {
-                    args.F_Country= "China";    
+                    args.F_Country= "China";
                 }
-                var list = await _StatisticsServiceService.StatisticalProvicneRequestCount(args.F_Country);
+                DateTime start = DateTime.Now.AddDays(-30);
+                if (!string.IsNullOrEmpty(args.F_StartTime) && DateTime.TryParse(args.F_StartTime, out DateTime st))
+                {
+                    start = st;
+                }
+                DateTime end = DateTime.Now;
+                if (!string.IsNullOrEmpty(args.F_EndTime) && DateTime.TryParse(args.F_EndTime, out DateTime et))
+                {
+                    end = et;
+                }
+                var list = await _StatisticsServiceService.StatisticalProvicneRequestCount(args.F_Country,start,end);
                 return Success("获取成功", list);
             });
         }
         public class Statistics_Count_ProvinceRequest_Args
         {
             public string? F_Country { get; set; }
+            public string? F_StartTime { get; set; }
+            public string? F_EndTime { get; set; }
         }
-        #endregion Statistics_Count_IPRequest
+        #endregion Statistics_Count_ProvinceRequest
+        #region Statistics_Count_ProvinceIP
+        [HttpPost("statistics/count/provinceip")]
+        public Task<TZResponse> Statistics_Count_ProvinceIP([FromBody] Statistics_Count_ProvinceIP_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                if (!string.IsNullOrEmpty(args.F_Country))
+                {
+                    args.F_Country = "China";
+                }
+                DateTime start = DateTime.Now.AddDays(-30);
+                if (!string.IsNullOrEmpty(args.F_StartTime) && DateTime.TryParse(args.F_StartTime, out DateTime st))
+                {
+                    start = st;
+                }
+                DateTime end = DateTime.Now;
+                if (!string.IsNullOrEmpty(args.F_EndTime) && DateTime.TryParse(args.F_EndTime, out DateTime et))
+                {
+                    end = et;
+                }
+                var list = await _StatisticsServiceService.StatisticalProvicneIPCount(args.F_Country, start, end);
+                return Success("获取成功", list);
+            });
+        }
+        public class Statistics_Count_ProvinceIP_Args
+        {
+            public string? F_Country { get; set; }
+            public string? F_StartTime { get; set; }
+            public string? F_EndTime { get; set; }
+        }
+        #endregion Statistics_Count_ProvinceIP
         #endregion Statistics
 
         public class List_Page_Args_Base : List_Args_Base

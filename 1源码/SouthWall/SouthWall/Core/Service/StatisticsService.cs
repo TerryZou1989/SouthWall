@@ -7,8 +7,9 @@ namespace SouthWall
     {
         Task<List<RequestAndIPCountEntity>> StatisticalRequestAndIPCount(DateTime start, DateTime end);
         Task<List<IPRequestCountEntity>> StatisticalIPRequestCount(DateTime date);
-        Task<List<CountryRequestCountEntity>> StatisticalCountryRequestCount();
-        Task<List<ProvinceRequestCountEntity>> StatisticalProvicneRequestCount(string country);
+        Task<List<CountryRequestCountEntity>> StatisticalCountryRequestCount(DateTime start, DateTime end);
+        Task<List<ProvinceRequestCountEntity>> StatisticalProvicneRequestCount(string country, DateTime start, DateTime end);
+        Task<List<ProvinceIPCountEntity>> StatisticalProvicneIPCount(string country, DateTime start, DateTime end);
     }
     public class StatisticsServiceService : ServiceBase, IStatisticsServiceService
     {
@@ -37,9 +38,9 @@ namespace SouthWall
                  )
         { }
 
-        public Task<List<CountryRequestCountEntity>> StatisticalCountryRequestCount()
+        public Task<List<CountryRequestCountEntity>> StatisticalCountryRequestCount( DateTime start, DateTime end)
         {
-            return _RequestLogsDBAccess.StatisticalCountryRequestCount();
+            return _RequestLogsDBAccess.StatisticalCountryRequestCount(start,end );
         }
 
         public Task<List<IPRequestCountEntity>> StatisticalIPRequestCount(DateTime date)
@@ -47,14 +48,18 @@ namespace SouthWall
             return _RequestLogsDBAccess.StatisticalIPRequestCount(date);
         }
 
-        public Task<List<ProvinceRequestCountEntity>> StatisticalProvicneRequestCount(string country)
+        public Task<List<ProvinceRequestCountEntity>> StatisticalProvicneRequestCount(string country, DateTime start, DateTime end)
         {
-            return _RequestLogsDBAccess.StatisticalProvicneRequestCount(country);
+            return _RequestLogsDBAccess.StatisticalProvicneRequestCount(country,start,end);
         }
 
         public Task<List<RequestAndIPCountEntity>> StatisticalRequestAndIPCount(DateTime start, DateTime end)
         {
             return _RequestLogsDBAccess.StatisticalRequestAndIPCount(start, end);
+        }
+        public Task<List<ProvinceIPCountEntity>> StatisticalProvicneIPCount(string country, DateTime start, DateTime end)
+        {
+            return _RequestLogsDBAccess.StatisticalProvicneIPCount(country, start, end);
         }
     }
 }
