@@ -29,13 +29,28 @@ namespace SouthWall
                     _country = value;               
             } 
         }
-        public string City { get; set; }
+        private string _city;
+        public string City
+        {
+            get { return _city; } set
+            {
+                _city = value;
+            }
+        }
         private string _regionName;
         public string RegionName { 
             get {
                 if (_country == "Hong Kong" || _country == "Taiwan")
                 {
                     return _country;
+                }
+                if (_regionName == "Sai Kung District"||_regionName== "Central and Western District"||_regionName== "Kowloon City"||_regionName== "Kwai Tsing")
+                {
+                    return "Hong Kong";
+                }
+                if(_city== "Chai Wan")
+                {
+                    return "Hong Kong";
                 }
                 return _regionName;
             }
