@@ -25,7 +25,9 @@ namespace SouthWall
             using (var responseBody = new MemoryStream())
             {
                 context.Response.Body = responseBody;
-                if (!IsBrowserRequest(context.Request))
+                string action =context.Request.RouteValues["action"]?.ToString().ToLower();
+
+                if (!IsBrowserRequest(context.Request)&&action!= "autoaddpartitions")
                 {
                     context.Response.StatusCode = StatusCodes.Status403Forbidden;
                     await context.Response.WriteAsync("Forbidden: Non-browser requests are not allowed.");
