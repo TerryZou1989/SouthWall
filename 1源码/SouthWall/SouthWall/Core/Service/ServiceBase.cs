@@ -3,6 +3,7 @@
     public class ServiceBase
     {
         protected readonly IMDBAccess _MDBAccess;
+        protected readonly IIPInfosDBAccess _IPInfosDBAccess;
         protected readonly IRequestLogsDBAccess _RequestLogsDBAccess;
         protected readonly IDatasDBAccess _DatasDBAccess;
         protected readonly ITimesDBAccess _TimesDBAccess;
@@ -21,6 +22,10 @@
         public ServiceBase(IRequestLogsDBAccess requestLogsDBAccess)
         {
             _RequestLogsDBAccess = requestLogsDBAccess;
+        }
+        public ServiceBase(IIPInfosDBAccess ipInfosDBAccess)
+        {
+            _IPInfosDBAccess = ipInfosDBAccess;
         }
         public ServiceBase(IDatasDBAccess datasDBAccess)
         {
@@ -61,6 +66,7 @@
         public ServiceBase(
             IMDBAccess mdBAccess,
             IRequestLogsDBAccess  requestLogsDBAccess,
+            IIPInfosDBAccess ipInfosDBAccess,
             IDatasDBAccess datasDBAccess,
             ITimesDBAccess timesDBAccess,
             IVideosDBAccess videosDBAccess,
@@ -73,6 +79,7 @@
         {
             _MDBAccess = mdBAccess;
             _RequestLogsDBAccess = requestLogsDBAccess;
+            _IPInfosDBAccess = ipInfosDBAccess;
             _DatasDBAccess = datasDBAccess;
             _TimesDBAccess = timesDBAccess;
             _VideosDBAccess = videosDBAccess;

@@ -15,5 +15,6 @@
         public static readonly int ServiceMailPort = AppSettingsHelper.AppSetting("ServiceMailPort").ToInt32();
         public static readonly bool ServiceMailSSL = AppSettingsHelper.AppSetting("ServiceMailSSL").ToBoolean();
         public static readonly string ServiceMailSMTP = AppSettingsHelper.AppSetting("ServiceMailSMTP");
+        public static readonly string IPGeolocationAPIKey = AppSettingsHelper.AppSetting("IPGeolocationAPIKey");
     }
 }

@@ -15,6 +15,7 @@ namespace SouthWall
     {
         public StatisticsServiceService(IMDBAccess mdBAccess,
             IRequestLogsDBAccess requestLogsDBAccess,
+            IIPInfosDBAccess ipInfosDBAccess,
             IDatasDBAccess datasDBAccess,
             ITimesDBAccess timesDBAccess,
             IVideosDBAccess videosDBAccess,
@@ -26,6 +27,7 @@ namespace SouthWall
             ITouXiangsDBAccess touXiangsDBAccess)
             : base(mdBAccess,
                  requestLogsDBAccess,
+                 ipInfosDBAccess,
                  datasDBAccess,
                  timesDBAccess,
                     videosDBAccess,
@@ -38,9 +40,9 @@ namespace SouthWall
                  )
         { }
 
-        public Task<List<CountryRequestCountEntity>> StatisticalCountryRequestCount( DateTime start, DateTime end)
+        public Task<List<CountryRequestCountEntity>> StatisticalCountryRequestCount(DateTime start, DateTime end)
         {
-            return _RequestLogsDBAccess.StatisticalCountryRequestCount(start,end );
+            return _RequestLogsDBAccess.StatisticalCountryRequestCount(start, end);
         }
 
         public Task<List<IPRequestCountEntity>> StatisticalIPRequestCount(DateTime date)
@@ -50,7 +52,7 @@ namespace SouthWall
 
         public Task<List<ProvinceRequestCountEntity>> StatisticalProvicneRequestCount(string country, DateTime start, DateTime end)
         {
-            return _RequestLogsDBAccess.StatisticalProvicneRequestCount(country,start,end);
+            return _RequestLogsDBAccess.StatisticalProvicneRequestCount(country, start, end);
         }
 
         public Task<List<RequestAndIPCountEntity>> StatisticalRequestAndIPCount(DateTime start, DateTime end)

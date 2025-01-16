@@ -13,6 +13,7 @@ namespace SouthWall
         public ToolService(
             IMDBAccess mDBAccess,
             IRequestLogsDBAccess requestLogsAccess,
+            IIPInfosDBAccess ipInfosAccess,
              IDatasDBAccess datasDBAccess,
             ITimesDBAccess timesDBAccess,
             IVideosDBAccess videosDBAccess,
@@ -25,6 +26,7 @@ namespace SouthWall
             ) : base(
                 mDBAccess,
                 requestLogsAccess,
+                ipInfosAccess,
                 datasDBAccess,
                 timesDBAccess,
                 videosDBAccess,

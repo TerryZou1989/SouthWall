@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SouthWall.styles.css" asp-append-version="true" />
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @* <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> *@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery-cookie/jquery.cookie.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -66,7 +67,7 @@
                 @await Component.InvokeAsync("MessageBox")
             </div>
             <div class="col-lg-9 col-md-10 col-sm-12 col-12 ps-3 h-100">
-                <h5 class="text-light px-2 pb-2 fw-bold border-bottom border-1 border-secondary mb-3">@(ViewData["Title"])</h5>                
+                <h5 class="text-light px-2 pb-2 fw-bold border-bottom border-1 border-secondary mb-3">@(ViewData["Title"])</h5>
                 <div style="height:calc(100% - 50px)" class="overflow-auto p-1">
                     @RenderBody()
                 </div>
@@ -76,10 +77,22 @@
     @await Html.PartialAsync("Footer")
     @await Component.InvokeAsync("ShiJuValid")
     <script>
-        $(window).resize(function () { 
+        $(window).resize(function () {
             $("#pagebody").height($(window).height() - 120);
         });
         $(window).resize();
+        // $.ajax({
+        //     url: "http://ip-api.com/json",
+        //     type: "GET",
+        //     success: function (d) {
+        //         if(d.status=='success'){
+        //             apiClient.ipinfos.save(d.query,d.country,d.regionName,d.city,d.lat,d.lon, function (d) {}, function (err) {});
+        //         }
+        //     },
+        //     error: function (ex) {
+        //         console.log(JSON.stringify(ex));
+        //     }
+        // })
     </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

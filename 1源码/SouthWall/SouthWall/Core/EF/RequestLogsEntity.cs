@@ -12,6 +12,7 @@ namespace SouthWall
         public string? F_Country { get; set; }
         public string? F_Province { get; set; }
         public string? F_City { get; set; }
+        public string? F_District { get; set; }
         public string? F_Lat {  get; set; }
         public string? F_Lon {  get; set; }
         public string? F_Url { get; set; }    

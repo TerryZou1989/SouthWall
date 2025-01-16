@@ -1,5 +1,17 @@
 ﻿var api_url = `/api/welldone`;
 var apiClient = {
+    ipinfos: {
+        save: function (F_IP, F_Country, F_Province, F_City, F_Lat, F_Lon, succ, err) {
+            apiPostAction({
+                action: "ipinfos/save",
+                data: {
+                    F_IP, F_Country, F_Province, F_City, F_Lat, F_Lon
+                },
+                succ: function (d) { if (succ) succ(d) },
+                err: function (ex) { if (err) err(ex) }
+            });
+        }
+    },
     datas: {
         get: function (F_Id, succ, err) {
             apiPostAction({

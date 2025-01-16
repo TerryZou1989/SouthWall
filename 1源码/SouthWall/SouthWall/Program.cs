@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using SouthWall;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +11,7 @@ builder.Services.AddDbContext<SWDbContext>(options =>
          new MySqlServerVersion(new Version()))
 );
 builder.Services.AddScoped<IRequestLogsDBAccess, RequestLogsDBAccess>();
+builder.Services.AddScoped<IIPInfosDBAccess, IPInfosDBAccess>();
 builder.Services.AddScoped<IDatasDBAccess, DatasDBAccess>();
 builder.Services.AddScoped<ITimesDBAccess, TimesDBAccess>();
 builder.Services.AddScoped<IVideosDBAccess, VideosDBAccess>();
@@ -26,6 +26,7 @@ builder.Services.AddScoped<IMDBAccess, MDBAccess>();
 builder.Services.AddScoped<IToolService, ToolService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IRequestLogsService, RequestLogsService>();
+builder.Services.AddScoped<IIPInfosService, IPInfosService>();
 builder.Services.AddScoped<IDatasService, DatasService>();
 builder.Services.AddScoped<ITimesService, TimesService>();
 builder.Services.AddScoped<IVideosService, VideosService>();

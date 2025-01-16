@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.Http;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,6 +13,7 @@ namespace SouthWall.Controllers
         public WellDoneController(
              IAuthService authService,
              IRequestLogsService requestLogsService,
+             IIPInfosService ipInfosService,
              IDatasService datasService,
              ITimesService timesService,
              IVideosService videosService,
@@ -21,10 +23,11 @@ namespace SouthWall.Controllers
              IWebSitesService webSitesService,
              IShiJusService shiJusService,
              ITouXiangsService touXiangsService,
-                IStatisticsServiceService statisticsServiceService
+             IStatisticsServiceService statisticsServiceService
             ) :
             base(authService,
                 requestLogsService,
+                ipInfosService,
                 datasService,
                 timesService,
                 videosService,
@@ -37,6 +40,84 @@ namespace SouthWall.Controllers
                 statisticsServiceService)
         {
         }
+
+        #region IPInfos_Save
+        [HttpPost("ipinfos/save")]
+        public Task<TZResponse> IPInfos_Save([FromBody] IPInfos_Save_Args args)
+        {
+            return RunAction(CheckAuthType.User, async () =>
+            {
+                await _IPInfosService.Save(new IPInfosEntity
+                {
+                    F_City = args.F_City,
+                    F_Country = args.F_Country,
+                    F_District = args.F_District,
+                    F_Province = args.F_Province,
+                    F_IP = args.F_IP,
+                    F_Lat = args.F_Lat.HasValue ? args.F_Lat.Value.ToString() : null,
+                    F_Lon = args.F_Lon.HasValue ? args.F_Lon.Value.ToString() : null
+                });
+                return Success("保存成功");
+            });
+        }
+        public class IPInfos_Save_Args
+        {
+            public string? F_IP { get; set; }
+            private string? _country;
+            public string? F_Country
+            {
+                get
+                {
+                    if (_country == "Hong Kong" || _country == "Taiwan")
+                    {
+                        return "China";
+                    }
+                    return _country;
+                }
+                set
+                {
+                    _country = value;
+                }
+            }
+            private string? _regionName;
+            public string? F_Province
+            {
+                get
+                {
+                    if (_country == "Hong Kong" || _country == "Taiwan")
+                    {
+                        return _country;
+                    }
+                    if (_regionName == "Sai Kung District" || _regionName == "Central and Western District" || _regionName == "Kowloon City" || _regionName == "Kwai Tsing")
+                    {
+                        return "Hong Kong";
+                    }
+                    if (_city == "Chai Wan")
+                    {
+                        return "Hong Kong";
+                    }
+                    return _regionName;
+                }
+                set
+                {
+                    _regionName = value;
+                }
+            }
+            private string? _city;
+            public string? F_City
+            {
+                get { return _city; }
+                set
+                {
+                    _city = value;
+                }
+            }
+            public string? F_District { get; set; }
+            public double? F_Lat { get; set; }
+            public double? F_Lon { get; set; }
+        }
+        #endregion IPInfos_Save
+
         #region Auth   
         #region Auth_Login_ByCode
         [HttpPost("auth/loginbycode")]
@@ -994,17 +1075,17 @@ namespace SouthWall.Controllers
         {
             return RunAction(CheckAuthType.User, async () =>
             {
-                DateTime start=DateTime.Now.AddDays(-30);
-                if(!string.IsNullOrEmpty(args.F_StartTime)&&DateTime.TryParse(args.F_StartTime,out DateTime st))
+                DateTime start = DateTime.Now.AddDays(-30);
+                if (!string.IsNullOrEmpty(args.F_StartTime) && DateTime.TryParse(args.F_StartTime, out DateTime st))
                 {
-                    start =st;
+                    start = st;
                 }
                 DateTime end = DateTime.Now;
                 if (!string.IsNullOrEmpty(args.F_EndTime) && DateTime.TryParse(args.F_EndTime, out DateTime et))
                 {
                     end = et;
                 }
-                var list = await _StatisticsServiceService.StatisticalRequestAndIPCount(start,end);
+                var list = await _StatisticsServiceService.StatisticalRequestAndIPCount(start, end);
                 return Success("获取成功", list);
             });
         }
@@ -1050,7 +1131,7 @@ namespace SouthWall.Controllers
                 {
                     end = et;
                 }
-                var list = await _StatisticsServiceService.StatisticalCountryRequestCount(start,end);
+                var list = await _StatisticsServiceService.StatisticalCountryRequestCount(start, end);
                 return Success("获取成功", list);
             });
         }
@@ -1068,7 +1149,7 @@ namespace SouthWall.Controllers
             {
                 if (!string.IsNullOrEmpty(args.F_Country))
                 {
-                    args.F_Country= "China";
+                    args.F_Country = "China";
                 }
                 DateTime start = DateTime.Now.AddDays(-30);
                 if (!string.IsNullOrEmpty(args.F_StartTime) && DateTime.TryParse(args.F_StartTime, out DateTime st))
@@ -1080,7 +1161,7 @@ namespace SouthWall.Controllers
                 {
                     end = et;
                 }
-                var list = await _StatisticsServiceService.StatisticalProvicneRequestCount(args.F_Country,start,end);
+                var list = await _StatisticsServiceService.StatisticalProvicneRequestCount(args.F_Country, start, end);
                 return Success("获取成功", list);
             });
         }
